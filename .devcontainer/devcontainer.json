@@ -2,15 +2,35 @@
   "name": "Label Lab",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": { "moby": false }
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": false
+    },
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
   },
-  "hostRequirements": { "cpus": 4, "memory": "16gb" },
-  "containerEnv": { "OLLAMA_MODEL": "qwen2.5:3b" },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  },
+  "containerEnv": {
+    "OLLAMA_MODEL": "qwen2.5:3b"
+  },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
-  "forwardPorts": [8000, 8080, 5678],
+  "forwardPorts": [
+    8000,
+    8080,
+    5678
+  ],
   "portsAttributes": {
-    "8000": { "label": "API und Dashboard" },
-    "8080": { "label": "Dashboard (make run)" },
-    "5678": { "label": "n8n" }
+    "8000": {
+      "label": "API und Dashboard"
+    },
+    "8080": {
+      "label": "Dashboard (make run)"
+    },
+    "5678": {
+      "label": "n8n"
+    }
   }
 }
