@@ -4,6 +4,7 @@ set -euo pipefail
 
 MODEL="${OLLAMA_MODEL:-qwen2.5:3b}"
 
+sudo apt-get update -qq && sudo apt-get install -y -qq zstd
 curl -fsSL https://ollama.com/install.sh | sh
 nohup ollama serve > /tmp/ollama.log 2>&1 &
 for _ in $(seq 1 30); do
