@@ -1,0 +1,17 @@
+[project]
+name = "label-lab"
+version = "0.1.0"
+description = "Produktdaten-Check für Supplement- und Proteinprodukte"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["fastapi", "uvicorn", "psycopg[binary]", "httpx"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["labellab"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

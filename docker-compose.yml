@@ -1,0 +1,55 @@
+# Startet Postgres (Port 5442), den Pruefdienst mit Dashboard (Port 8000) und n8n (Port 5678).
+# Ollama laeuft nativ auf dem Mac (GPU) und wird ueber host.docker.internal erreicht.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: labellab
+      POSTGRES_PASSWORD: labellab
+      POSTGRES_DB: labellab
+    ports:
+      - "5442:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U labellab -d labellab"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://labellab:labellab@postgres:5432/labellab
+      LLM_MODE: ${LLM_MODE:-fake}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./web:/app/web
+      - ./data:/app/data
+
+  n8n:
+    image: n8nio/n8n:latest
+    depends_on:
+      - api
+    ports:
+      - "5678:5678"
+    environment:
+      GENERIC_TIMEZONE: Europe/Berlin
+      N8N_SECURE_COOKIE: "false"
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["n8n import:workflow --input=/workflow/workflow.json && n8n start"]
+    volumes:
+      - ./n8n:/workflow:ro
+      - n8ndata:/home/node/.n8n
+
+volumes:
+  pgdata:
+  n8ndata:
