@@ -28,7 +28,7 @@ services:
       DATABASE_URL: postgresql://labellab:labellab@postgres:5432/labellab
       LLM_MODE: ${LLM_MODE:-fake}
       OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
-      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:3b}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:

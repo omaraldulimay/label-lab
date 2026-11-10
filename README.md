@@ -4,7 +4,9 @@ Produktdaten Check für Supplements und Proteinprodukte. Gedacht für Fitness Ma
 
 ## Das Problem
 
-Bei Proteinpulver und Riegeln stecken die Fehler oft in den Daten: Nährwerte fehlen, Zucker ist höher als Kohlenhydrate, die Kalorien passen nicht zu den Makros, ein Allergen steht in den Zutaten, aber nicht in der Deklaration. Dazu kommen Werbeaussagen, die nach der EU Verordnung 1924/2006 nicht zulässig sind. Label Lab prüft das für rund 200 Produkte und zeigt das Ergebnis als Ampel.
+Bei Proteinpulver und Riegeln stecken die Fehler oft in den Daten: Nährwerte fehlen, Zucker ist höher als Kohlenhydrate, die Kalorien passen nicht zu den Makros, ein Allergen steht in den Zutaten, aber nicht in der Deklaration. Dazu kommen Werbeaussagen, die nach der EU Verordnung 1924/2006 nicht zulässig sind. Label Lab prüft das für rund 250 Produkte aus zwei Quellen und zeigt das Ergebnis als Ampel. Die Standardansicht ist der Katalog der Marke Stahlkern Nutrition, daneben lassen sich rund 200 Supplements von Open Food Facts umschalten.
+
+Stahlkern Nutrition ist eine fiktive Marke, Name und Texte sind erfunden. Der Katalog (`data/brand_catalog.json`) ist dem Sortiment einer typischen D2C Fitnessmarke nachgebaut.
 
 ## Was geprüft wird
 
@@ -18,7 +20,7 @@ Ampel: rot bei mindestens einem Fehler, gelb bei Hinweisen, grün ohne Funde.
 ## Architektur
 
 ```
-Open Food Facts -> data/products.json (Snapshot) -> FastAPI Dienst -> PostgreSQL (Port 5442)
+Markenkatalog (data/brand_catalog.json) + Open Food Facts (data/products.json) -> FastAPI Dienst -> PostgreSQL (Port 5442)
                                                          |  Regeln in Python
                                                          |  Claims: Ollama (lokal)
 n8n: holen -> prüfen -> exportieren -> Alarm bei roten Produkten
@@ -27,7 +29,7 @@ web/public/results.json -> statisches Dashboard (HTML, JS, CSS)
 
 Warum Regeln zuerst: Rechnen, Vergleichen und Wortlisten kann Python exakt, schnell und ohne Kosten. Es braucht dafür kein Modell, und das Ergebnis ist jedes Mal gleich und nachvollziehbar. Das Modell kommt nur dort zum Einsatz, wo es um Sprache geht, also bei der Frage, ob ein Werbesatz zulässig ist und wie er zulässig klingen könnte.
 
-Warum ein lokales Modell: Die Produkttexte verlassen den Rechner nicht, und es fallen keine laufenden Kosten an. Das Modell läuft über Ollama (Standard `qwen2.5:7b`, gut bei Deutsch). Pro Produkt werden Laufzeit und Token (`prompt_eval_count`, `eval_count`) gespeichert, das Dashboard zeigt sie an. Ein Cache über den Hash des Produkttexts sorgt dafür, dass nichts doppelt gerechnet wird.
+Warum ein lokales Modell: Die Produkttexte verlassen den Rechner nicht, und es fallen keine laufenden Kosten an. Das Modell läuft über Ollama (Standard `qwen2.5:3b`, klein genug für einen Codespace und brauchbar bei Deutsch). Pro Produkt werden Laufzeit und Token (`prompt_eval_count`, `eval_count`) gespeichert, das Dashboard zeigt sie an. Ein Cache über den Hash des Produkttexts sorgt dafür, dass nichts doppelt gerechnet wird.
 
 Der Fake Modus (`LLM_MODE=fake`, Standard) arbeitet mit festen Stichwortregeln und braucht kein Netzwerk. Die Tests laufen damit.
 
@@ -55,11 +57,25 @@ Echter Lauf mit dem lokalen Modell. Ollama läuft nativ auf dem Mac, nicht in Do
 ```
 brew install ollama
 ollama serve
-ollama pull qwen2.5:7b
+make pull
 LLM_MODE=ollama make real        # oder in Docker: LLM_MODE=ollama docker compose up --build
 ```
 
-Anderes Modell: `OLLAMA_MODEL=...`, andere Adresse: `OLLAMA_URL=...`.
+Anderes Modell: `OLLAMA_MODEL=...` (zum Beispiel `qwen2.5:7b`), andere Adresse: `OLLAMA_URL=...`.
+
+## In Codespaces ausführen
+
+Wer kein Ollama auf dem eigenen Rechner hat, kann den echten Lauf in GitHub Codespaces machen. Die Datei `.devcontainer/devcontainer.json` richtet Python 3.12, Docker in Docker, Ollama und das Modell `qwen2.5:3b` automatisch ein.
+
+1. Das Repository auf GitHub öffnen, "Code", "Codespaces", "Create codespace on main" wählen. Einen Rechner mit mindestens 4 Kernen und 16 GB Arbeitsspeicher nehmen.
+2. Warten, bis das Terminal bereit ist. Das Einrichtungsskript installiert Ollama, lädt `qwen2.5:3b` und führt `make setup` aus (einige Minuten).
+3. Prüfen, dass Ollama läuft: `curl localhost:11434/api/tags`. Falls nicht, `ollama serve &` starten.
+4. Den echten Lauf starten: `make real`. Er prüft alle Produkte beider Quellen mit dem Modell, auf CPU dauert das einige Minuten bis wenige Dutzend Minuten.
+5. Das Ergebnis ansehen: `make run`, danach den weitergeleiteten Port 8080 im Reiter "Ports" öffnen.
+6. `web/public/results.json` herunterladen: Datei im Explorer rechts anklicken, "Download". Oder im Terminal `cat web/public/results.json` und lokal einfügen.
+7. Lokal die Datei nach `web/public/results.json` kopieren, damit das Dashboard die echten Ergebnisse und keinen Platzhalter zeigt.
+
+Die Ports 8000 (API und Dashboard) und 5678 (n8n) werden ebenfalls weitergeleitet, falls dort `docker compose up --build` laufen soll. Der Codespace sollte danach gelöscht werden, damit keine Stunden weiterlaufen.
 
 Die Ergebnisse in `web/public/results.json` stammen bis zum ersten echten Lauf aus dem Fake Modus. Das Dashboard zeigt dann ein Platzhalter Banner.
 
@@ -69,6 +85,6 @@ API Kosten: 0 €. Es gibt keinen API Key. Es entstehen nur Rechenzeit und Strom
 
 ## Daten und Lizenz
 
-Produktdaten von [Open Food Facts](https://world.openfoodfacts.org), Lizenz ODbL. Der Snapshot `data/products.json` wurde mit `scripts/fetch_off.py` erzeugt. Open Food Facts wird von Freiwilligen gepflegt, viele Funde sind also echte Datenlücken der Community und keine Fehler der Hersteller. Die Allergen Wortliste ist eine Hilfe und ersetzt keine rechtliche Prüfung.
+Die Daten der Marke Stahlkern sind fiktiv. Die zweite Quelle sind echte Produktdaten von [Open Food Facts](https://world.openfoodfacts.org), Lizenz ODbL. Der Snapshot `data/products.json` wurde mit `scripts/fetch_off.py` erzeugt und enthält nur Supplements (Proteinpulver, Riegel, Creatin, Aminosäuren, Vitamine und Kapseln, Pre Workout). Open Food Facts wird von Freiwilligen gepflegt, viele Funde sind also echte Datenlücken der Community und keine Fehler der Hersteller. Die Allergen Wortliste ist eine Hilfe und ersetzt keine rechtliche Prüfung.
 
 Code: MIT, siehe `LICENSE`.

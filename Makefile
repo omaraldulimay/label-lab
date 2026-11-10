@@ -1,5 +1,6 @@
 PY := .venv/bin/python
-.PHONY: setup run test check-all up down real
+export OLLAMA_MODEL ?= qwen2.5:3b
+.PHONY: setup run test check-all up down real pull
 
 setup:
 	python3.12 -m venv .venv
@@ -28,3 +29,7 @@ down:
 # Echter Lauf mit lokalem Modell (Ollama muss laufen)
 real:
 	LLM_MODE=ollama $(PY) -m labellab.cli
+
+# Modell fuer den echten Lauf laden (Ollama muss laufen)
+pull:
+	ollama pull $(OLLAMA_MODEL)

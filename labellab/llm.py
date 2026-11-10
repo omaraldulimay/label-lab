@@ -13,7 +13,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 PROMPT_VERSION = "1"
-DEFAULT_MODEL = "qwen2.5:7b"
+DEFAULT_MODEL = "qwen2.5:3b"
 DEFAULT_URL = "http://localhost:11434"
 VERDICTS = {"unzulaessig", "pruefen"}
 
@@ -56,7 +56,7 @@ class LLMResult:
 
 def product_text(p: dict) -> str:
     """Text, in dem Werbeaussagen stehen koennen."""
-    parts = [p.get("name"), p.get("generic_name"), p.get("labels")]
+    parts = [p.get("name"), p.get("generic_name"), p.get("labels"), p.get("description")]
     return "\n".join(x.strip() for x in parts if x and x.strip())
 
 

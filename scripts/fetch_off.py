@@ -4,6 +4,7 @@ Nur beim ersten Aufbau noetig. Der Snapshot data/products.json liegt im Repo.
 Daten: Open Food Facts, ODbL (https://world.openfoodfacts.org).
 """
 import json
+import re
 import sys
 import time
 from datetime import date
@@ -14,15 +15,56 @@ import httpx
 OUT = Path(__file__).resolve().parent.parent / "data" / "products.json"
 URL = "https://world.openfoodfacts.org/cgi/search.pl"
 FIELDS = ("code,product_name,generic_name,brands,ingredients_text,ingredients_text_de,allergens_tags,"
-          "nutriments,serving_size,labels,lang,url")
-TERMS = ["protein", "whey", "eiweiss", "proteinpulver", "casein", "kreatin", "protein riegel",
-         "aminosaeuren", "bcaa", "vegan protein", "mass gainer", "pre workout", "isolate", "shake protein"]
+          "nutriments,serving_size,labels,categories_tags,lang,url")
+TERMS = ["whey protein", "whey isolate", "proteinpulver", "eiweisspulver", "casein", "creatin", "kreatin",
+         "protein riegel", "protein bar", "aminosaeuren", "bcaa", "eaa", "vegan protein", "mass gainer",
+         "pre workout", "isolate", "vitamin c kapseln", "vitamin d3", "magnesium kapseln", "omega 3 kapseln",
+         "multivitamin", "zink kapseln", "l-carnitin", "glutamin", "beta alanin", "protein shake pulver"]
 TARGET = 200
 HEADERS = {"User-Agent": "LabelLab/0.1 (Portfolio, github.com/omaraldulimay)"}
 
 
+# Nur echte Supplements: Proteinpulver, Riegel, Creatin, Aminosaeuren, Vitamine und Kapseln, Pre Workout.
+INCLUDE = re.compile(
+    r"whey|molkenprotein|molkeneiwei|isolat|isolate|casein|kasein|proteinpulver|eiweisspulver|eiweißpulver|"
+    r"protein\s*(powder|pulver|shake|riegel|bar|crisp)|(riegel|bar)\b.*protein|protein.*(riegel|bar)\b|"
+    r"vegan\s*protein|mass\s*gainer|gainer|creatin|kreatin|creapure|bcaa|eaa\b|amino|glutamin|glutamine|"
+    r"carnitin|beta[\s-]?alanin|citrullin|arginin|pre[\s-]?workout|booster|vitamin|multivitamin|magnesium|"
+    r"zink|zinc|omega|kapsel|capsule|tablette|tablet|kurkuma|ashwagandha|coffein|caffeine|electrolyt|"
+    r"collagen|kollagen|erbsenprotein|reisprotein|hanfprotein|sojaprotein|protein\s*\d|protein\b",
+    re.IGNORECASE)
+EXCLUDE = re.compile(
+    r"linse|bohne|bean|kicherbse|hummus|nudel|pasta|\bbrot|bread|müsli|muesli|joghurt|yogurt|jogurt|quark|skyr|"
+    r"käse|cheese|\bmilch|\bmilk|drink|getränk|suppe|soup|salat|burger|bratling|schnitzel|wurst|fleisch|chips|"
+    r"tofu|tempeh|seitan|porridge|pudding|dessert|aufstrich|spread|sauce|soße|döner|kebab|frika|bites|"
+    r"monster|energy|waffel|waffle|cookie|brownie\b|\bballs?\b|crispies|snack|gummies|huel|yfood|flavour$|"
+    r"mehl\b|flour|wrap|tortilla|ice cream|\beis\b|döner",
+    re.IGNORECASE)
+CATEGORIES = [  # (Name, Muster, Hoechstzahl), Reihenfolge zaehlt
+    ("riegel", re.compile(r"riegel|\bbar\b", re.I), 45),
+    ("creatin", re.compile(r"creatin|kreatin|creapure", re.I), 25),
+    ("pre", re.compile(r"pre[\s-]?workout|booster|citrullin|beta[\s-]?alanin|koffein|caffeine", re.I), 20),
+    ("amino", re.compile(r"bcaa|eaa\b|amino|glutamin|carnitin|arginin", re.I), 20),
+    ("vitamine", re.compile(r"vitamin|multivitamin|magnesium|zink|zinc|omega|kapsel|capsule|tablet|komplex", re.I), 30),
+    ("protein", re.compile(r"whey|molke|casein|kasein|isolat|protein|gainer|eiwei", re.I), 70),
+]
+
+
+def category(p: dict) -> str | None:
+    text = " ".join([p.get("product_name") or "", p.get("generic_name") or ""])
+    for name, pat, _ in CATEGORIES:
+        if pat.search(text):
+            return name
+    return None
+
+
 def keep(p: dict) -> bool:
-    return bool(p.get("code") and (p.get("product_name") or "").strip())
+    if not (p.get("code") and (p.get("product_name") or "").strip()):
+        return False
+    text = " ".join([p.get("product_name") or "", p.get("generic_name") or ""])
+    if EXCLUDE.search(text):
+        return False
+    return category(p) is not None
 
 
 def slim(p: dict) -> dict:
@@ -55,17 +97,24 @@ def main() -> None:
                           "sort_by": "unique_scn_n"}
                 if country:
                     params.update(tagtype_0="countries", tag_contains_0="contains", tag_0=country)
-                try:
-                    data = client.get(URL, params=params).json()
-                except Exception as exc:  # Netzwerk oder Rate Limit: weiter mit dem naechsten Begriff
-                    print("Fehler", term, exc, file=sys.stderr)
-                    time.sleep(3)
+                data = None
+                for attempt in range(4):  # Rate Limit: warten und neu versuchen
+                    try:
+                        data = client.get(URL, params=params).json()
+                        break
+                    except Exception as exc:
+                        print("Fehler", term, exc, file=sys.stderr)
+                        time.sleep(5 * (attempt + 1))
+                if data is None:
                     continue
                 for p in data.get("products", []):
                     if keep(p) and p["code"] not in found:
-                        found[p["code"]] = slim(p)
+                        cat = category(p)
+                        limit = next(m for n, _, m in CATEGORIES if n == cat)
+                        if sum(1 for q in found.values() if q["category"] == cat) < limit:
+                            found[p["code"]] = slim(p) | {"category": cat}
                 print(f"{country} {term}: {len(found)}")
-                time.sleep(1)
+                time.sleep(2)
     products = list(found.values())[:TARGET]
     snapshot = {"source": "Open Food Facts (ODbL)", "fetched": date.today().isoformat(), "products": products}
     OUT.write_text(json.dumps(snapshot, ensure_ascii=False, indent=1))

@@ -10,6 +10,7 @@ from .llm import ResultCache, check_claims, get_llm
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAPSHOT = ROOT / "data" / "products.json"
+BRAND_CATALOG = ROOT / "data" / "brand_catalog.json"
 RESULTS_JSON = ROOT / "web" / "public" / "results.json"
 CACHE_FILE = ROOT / "data" / "llm_cache.json"
 CHECKS = ["luecken", "widersprueche", "allergene", "claims"]
@@ -18,6 +19,17 @@ ORDER = {"green": 0, "yellow": 1, "red": 2}
 
 def load_snapshot(path: Path = SNAPSHOT) -> dict:
     return json.loads(Path(path).read_text())
+
+
+def load_brand_catalog(path: Path = BRAND_CATALOG) -> dict:
+    return json.loads(Path(path).read_text())
+
+
+def load_products() -> list[dict]:
+    """Markenkatalog zuerst, danach Open Food Facts. Jedes Produkt bekommt seine Quelle."""
+    brand = [dict(p, source="brand") for p in load_brand_catalog()["products"]]
+    off = [dict(p, source="off") for p in load_snapshot()["products"]]
+    return brand + off
 
 
 def ampel(findings: list[dict]) -> str:
@@ -46,13 +58,13 @@ def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
     }
     findings = [f for c in CHECKS for f in per_check[c]]
     return {
-        "code": p["code"], "name": p["name"], "brand": p.get("brand", ""),
+        "code": p["code"], "name": p["name"], "brand": p.get("brand", ""), "source": p.get("source", "off"),
         "status": ampel(findings),
         "checks": {c: ampel(per_check[c]) for c in CHECKS},
         "findings": findings,
         "llm": {"model": res.model, "mode": res.mode, "cached": res.cached, "seconds": res.seconds,
                 "tokens_in": res.tokens_in, "tokens_out": res.tokens_out, "error": res.error},
-        "product": {k: p.get(k) for k in ("generic_name", "labels", "ingredients", "allergens_tags",
+        "product": {k: p.get(k) for k in ("generic_name", "labels", "description", "ingredients", "allergens_tags",
                                            "serving_size", "nutriments", "url")},
     }
 
@@ -60,9 +72,14 @@ def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
 def summarize(results: list[dict], llm) -> dict:
     counts = {s: sum(1 for r in results if r["status"] == s) for s in ORDER}
     seconds = sum(r["llm"]["seconds"] for r in results)
+    sources = {}
+    for s in ("brand", "off"):
+        rs = [r for r in results if r.get("source") == s]
+        sources[s] = {"products": len(rs), "counts": {k: sum(1 for r in rs if r["status"] == k) for k in ORDER}}
     return {
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "source": "Open Food Facts (ODbL), https://world.openfoodfacts.org",
+        "source": "Markenkatalog und Open Food Facts (ODbL), https://world.openfoodfacts.org",
+        "sources": sources,
         "mode": llm.mode, "model": llm.model,
         "placeholder": llm.mode == "fake",
         "products": len(results), "counts": counts,

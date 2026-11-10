@@ -6,12 +6,12 @@ import sys
 import time
 
 from .llm import LLMError, get_llm
-from .pipeline import default_cache, export_results, load_snapshot, run_all
+from .pipeline import default_cache, export_results, load_products, run_all
 
 
 def main() -> int:
     llm = get_llm()
-    products = load_snapshot()["products"]
+    products = load_products()
     start = time.monotonic()
 
     def progress(i, n, r):

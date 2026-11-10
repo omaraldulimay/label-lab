@@ -1,0 +1,1280 @@
+{
+ "source": "Stahlkern Nutrition Produktkatalog",
+ "brand": "Stahlkern",
+ "products": [
+  {
+   "code": "SK-1001",
+   "name": "Stahlkern Whey Core Vanille 1000 g",
+   "generic_name": "Molkenproteinpulver mit Vanillegeschmack",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Whey Core ist unser Allrounder für den Alltag: ein Molkenprotein, das ohne Schnickschnack auskommt und jeden Tag funktioniert. Jede Charge wird im Labor auf Eiweißgehalt und Reinheit geprüft. Protein trägt zu einer Zunahme an Muskelmasse bei. Rühre eine Portion in 300 ml Wasser oder Milch ein und trinke den Shake sofort.",
+   "ingredients": "Molkenproteinkonzentrat (Milch) 92 %, Vanillearoma, Aroma, Verdickungsmittel Xanthan, Emulgator Sonnenblumenlecithin, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 393,
+    "fat_100g": 6.1,
+    "saturated-fat_100g": 3.6,
+    "carbohydrates_100g": 7.5,
+    "sugars_100g": 6.2,
+    "proteins_100g": 77,
+    "salt_100g": 0.65
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1001"
+  },
+  {
+   "code": "SK-1002",
+   "name": "Stahlkern Whey Core Schoko 1000 g",
+   "generic_name": "Molkenproteinpulver mit Schokoladengeschmack",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Die Sorte Schoko ist seit dem Launch unser meistverkaufter Geschmack und erinnert an einen kalten Kakao. Mit rund 24 g Eiweiß pro Portion deckt der Shake einen großen Teil deines Tagesbedarfs. Wir verwenden Molkenprotein aus deutscher Weidemilch und verzichten auf Füllstoffe. Rühre eine Portion in 300 ml Wasser oder Milch ein und trinke den Shake sofort.",
+   "ingredients": "Molkenproteinkonzentrat (Milch) 87 %, fettarmer Kakao 6 %, Aroma, Verdickungsmittel Xanthan, Emulgator Sonnenblumenlecithin, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 391,
+    "fat_100g": 6.4,
+    "saturated-fat_100g": 3.9,
+    "carbohydrates_100g": 9.4,
+    "sugars_100g": 6.8,
+    "proteins_100g": 74,
+    "salt_100g": 0.7
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1002"
+  },
+  {
+   "code": "SK-1003",
+   "name": "Stahlkern Whey Core Erdbeere 1000 g",
+   "generic_name": "Molkenproteinpulver mit Erdbeergeschmack",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Fruchtig, cremig und nicht zu süß: Erdbeere ist die leichte Sorte für alle, die keinen Schoko Shake mögen. Protein trägt zum Erhalt von Muskelmasse bei. Protein trägt zu einer Zunahme an Muskelmasse bei. Jede Charge wird im Labor auf Eiweißgehalt und Reinheit geprüft.",
+   "ingredients": "Molkenproteinkonzentrat (Milch) 90 %, Erdbeerpulver 1,5 %, Rote Bete Extrakt (färbend), Aroma, Verdickungsmittel Xanthan, Emulgator Sonnenblumenlecithin, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 389,
+    "fat_100g": 5.8,
+    "saturated-fat_100g": 3.4,
+    "carbohydrates_100g": 8.1,
+    "sugars_100g": 6.9,
+    "proteins_100g": 76,
+    "salt_100g": 0.68
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1003"
+  },
+  {
+   "code": "SK-1004",
+   "name": "Stahlkern Whey Core Cookies & Cream 1000 g",
+   "generic_name": "Molkenproteinpulver mit Keksgeschmack",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Cookies & Cream bringt echte Keksstückchen in den Shaker und schmeckt wie ein flüssiges Dessert. Wegen der Keksstückchen enthält die Sorte Gluten. Rühre eine Portion in 300 ml Wasser oder Milch ein und trinke den Shake sofort. Protein trägt zu einer Zunahme an Muskelmasse bei.",
+   "ingredients": "Molkenproteinkonzentrat (Milch) 84 %, Keksstückchen 5 % (Weizenmehl, Zucker, Palmfett, Kakao), Aroma, Verdickungsmittel Xanthan, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk",
+    "en:gluten"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 390,
+    "fat_100g": 6.5,
+    "saturated-fat_100g": 3.9,
+    "carbohydrates_100g": 11,
+    "sugars_100g": 7.5,
+    "proteins_100g": 72,
+    "salt_100g": 0.72
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1004"
+  },
+  {
+   "code": "SK-1005",
+   "name": "Stahlkern Whey Core Cookies Burn 1000 g",
+   "generic_name": "Molkenproteinpulver mit Keksgeschmack",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen. Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien. Ideal direkt nach dem Training oder als Eiweißbaustein zwischen den Mahlzeiten. Rühre eine Portion in 300 ml Wasser oder Milch ein und trinke den Shake sofort. Eine Portion täglich genügt für sichtbare Ergebnisse in zwei Wochen.",
+   "ingredients": "Molkenproteinkonzentrat (Milch) 88 %, Kakao 4 %, Aroma, Verdickungsmittel Xanthan, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 388,
+    "fat_100g": 6.2,
+    "saturated-fat_100g": 3.7,
+    "carbohydrates_100g": 10,
+    "sugars_100g": 7,
+    "proteins_100g": 73,
+    "salt_100g": 0.7
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1005"
+  },
+  {
+   "code": "SK-1006",
+   "name": "Stahlkern Whey Hydro 750 g",
+   "generic_name": "Molkenproteinhydrolysat Pulver, neutral",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Das Hydrolysat ist vorverdaut und wird in kleine Peptide aufgespalten, daher ist es besonders leicht verträglich. Ideal direkt nach dem Training oder als Eiweißbaustein zwischen den Mahlzeiten. Wir verwenden Molkenprotein aus deutscher Weidemilch und verzichten auf Füllstoffe. Rühre eine Portion in 300 ml Wasser oder Milch ein und trinke den Shake sofort.",
+   "ingredients": "Molkenproteinhydrolysat (Milch) 70 %, Molkenproteinisolat (Milch) 28 %, Emulgator Sonnenblumenlecithin",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 372,
+    "fat_100g": 4.2,
+    "saturated-fat_100g": 2.5,
+    "carbohydrates_100g": 3.5,
+    "sugars_100g": 2.0,
+    "proteins_100g": 80,
+    "salt_100g": 0.9
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1006"
+  },
+  {
+   "code": "SK-1011",
+   "name": "Stahlkern Isolate Neutral 1000 g",
+   "generic_name": "Molkenproteinisolat, geschmacksneutral",
+   "brand": "Stahlkern",
+   "category": "isolate",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Unser reines Isolat ohne Geschmack lässt sich in Haferbrei, Pfannkuchenteig oder Shakes mixen. Eine Portion in 250 ml kaltem Wasser aufschütteln und direkt trinken. Protein trägt zu einer Zunahme an Muskelmasse bei. Der Geschmack ist neutral und passt zu süßen wie herzhaften Gerichten.",
+   "ingredients": "Molkenproteinisolat (Milch) 99 %, Emulgator Sonnenblumenlecithin",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 376,
+    "fat_100g": 1.0,
+    "saturated-fat_100g": 0.7,
+    "carbohydrates_100g": 1.8,
+    "sugars_100g": 1.2,
+    "proteins_100g": 90,
+    "salt_100g": 0.8
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1011"
+  },
+  {
+   "code": "SK-1012",
+   "name": "Stahlkern Isolate Vanille 1000 g",
+   "generic_name": "Molkenproteinisolat mit Vanillegeschmack",
+   "brand": "Stahlkern",
+   "category": "isolate",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Isolate Vanille hat einen runden, milden Geschmack und enthält pro Portion über 26 g Protein. Das Isolat enthält besonders viel Eiweiß und nur sehr wenig Kohlenhydrate und Fett. Für alle, die ihre Eiweißzufuhr sauber und kalorienbewusst steuern wollen. Der Geschmack ist cremig und nicht zu süß, auch mit Wasser angerührt.",
+   "ingredients": "Molkenproteinisolat (Milch) 95 %, Vanillearoma, Aroma, Süßungsmittel Sucralose, Verdickungsmittel Xanthan",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 377,
+    "fat_100g": 1.4,
+    "saturated-fat_100g": 0.9,
+    "carbohydrates_100g": 3.0,
+    "sugars_100g": 2.1,
+    "proteins_100g": 88,
+    "salt_100g": 0.85
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1012"
+  },
+  {
+   "code": "SK-1013",
+   "name": "Stahlkern Isolate Schoko 1000 g",
+   "generic_name": "Molkenproteinisolat mit Schokoladengeschmack",
+   "brand": "Stahlkern",
+   "category": "isolate",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Das Schoko Isolat schmeckt dunkel und kräftig, ohne dass der Shake schwer im Magen liegt. Eine Portion in 250 ml kaltem Wasser aufschütteln und direkt trinken. Durch Mikrofiltration bleibt der Laktoseanteil gering, vollständig laktosefrei ist das Produkt nicht. Für alle, die ihre Eiweißzufuhr sauber und kalorienbewusst steuern wollen.",
+   "ingredients": "Molkenproteinisolat (Milch) 90 %, fettarmer Kakao 5 %, Aroma, Süßungsmittel Sucralose, Verdickungsmittel Xanthan",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 375,
+    "fat_100g": 1.6,
+    "saturated-fat_100g": 1.0,
+    "carbohydrates_100g": 4.2,
+    "sugars_100g": 2.6,
+    "proteins_100g": 86,
+    "salt_100g": 0.9
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1013"
+  },
+  {
+   "code": "SK-1014",
+   "name": "Stahlkern Isolate Salted Caramel 1000 g",
+   "generic_name": "Molkenproteinisolat mit Salted Caramel Geschmack",
+   "brand": "Stahlkern",
+   "category": "isolate",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Salted Caramel kombiniert eine milde Süße mit einer feinen Salznote und ist unsere beliebteste Sorte aus der Isolate Reihe. Das Isolat enthält besonders viel Eiweiß und nur sehr wenig Kohlenhydrate und Fett. Der Geschmack ist cremig und nicht zu süß, auch mit Wasser angerührt. Eine Portion in 250 ml kaltem Wasser aufschütteln und direkt trinken.",
+   "ingredients": "Molkenproteinisolat (Milch) 89 %, Karamellaroma, Meersalz, Aroma, Süßungsmittel Sucralose, Verdickungsmittel Xanthan",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 450,
+    "fat_100g": 1.8,
+    "saturated-fat_100g": 1.1,
+    "carbohydrates_100g": 5.5,
+    "sugars_100g": 3.8,
+    "proteins_100g": 85,
+    "salt_100g": 1.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1014"
+  },
+  {
+   "code": "SK-1021",
+   "name": "Stahlkern Clear Whey Pfirsich Eistee 500 g",
+   "generic_name": "Klares Molkenproteingetränkepulver, Pfirsich Eistee",
+   "brand": "Stahlkern",
+   "category": "clear",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Clear Whey Pfirsich Eistee erinnert an einen gekühlten Eistee und liefert trotzdem 20 g Eiweiß pro Portion. Die klare Textur ist gerade im Sommer eine leichte Alternative zum cremigen Shake. Mit hochwertigem Molkenproteinisolat und ohne künstliche Farbstoffe. Clear Whey wird mit Wasser angerührt und schmeckt fruchtig wie ein Erfrischungsgetränk.",
+   "ingredients": "Molkenproteinisolat (Milch) 82 %, Säuerungsmittel Citronensäure, Aroma, Schwarztee Extrakt 1 %, Süßungsmittel Sucralose, Acesulfam K",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "25 g",
+   "nutriments": {
+    "energy-kcal_100g": 344,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.3,
+    "carbohydrates_100g": 5.0,
+    "sugars_100g": 3.2,
+    "proteins_100g": 80,
+    "salt_100g": 0.55
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1021"
+  },
+  {
+   "code": "SK-1022",
+   "name": "Stahlkern Clear Whey Zitrone 500 g",
+   "generic_name": "Klares Molkenproteingetränkepulver, Zitrone",
+   "brand": "Stahlkern",
+   "category": "clear",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Frisch und sauer: Clear Whey Zitrone ist die Sorte für heiße Tage. Die klare Textur ist gerade im Sommer eine leichte Alternative zum cremigen Shake. Mit hochwertigem Molkenproteinisolat und ohne künstliche Farbstoffe. Eine Portion mit 300 ml kaltem Wasser anrühren und gut schütteln.",
+   "ingredients": "Molkenproteinisolat (Milch) 82 %, Säuerungsmittel Citronensäure, Zitronenaroma, Süßungsmittel Sucralose, Acesulfam K",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "25 g",
+   "nutriments": {
+    "energy-kcal_100g": 344,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 1.4,
+    "carbohydrates_100g": 5.0,
+    "sugars_100g": 3.0,
+    "proteins_100g": 80,
+    "salt_100g": 0.55
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1022"
+  },
+  {
+   "code": "SK-1031",
+   "name": "Stahlkern Casein Night Vanille 900 g",
+   "generic_name": "Micellares Caseinpulver mit Vanillegeschmack",
+   "brand": "Stahlkern",
+   "category": "casein",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Casein Night ist der Shake für den Abend und sättigt über eine längere Zeit. Casein wird langsamer verdaut und passt deshalb gut zum Abend. Protein trägt zum Erhalt von Muskelmasse bei. Jede Charge wird auf Proteingehalt geprüft.",
+   "ingredients": "Micellares Casein (Milch) 90 %, Aroma, Verdickungsmittel Xanthan, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 358,
+    "fat_100g": 2.2,
+    "saturated-fat_100g": 1.4,
+    "carbohydrates_100g": 6.5,
+    "sugars_100g": 3.8,
+    "proteins_100g": 78,
+    "salt_100g": 0.5
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1031"
+  },
+  {
+   "code": "SK-1032",
+   "name": "Stahlkern Casein Night Schoko 900 g",
+   "generic_name": "Micellares Caseinpulver mit Schokoladengeschmack",
+   "brand": "Stahlkern",
+   "category": "casein",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Casein Night Schoko liefert ein cremiges Schokoladenerlebnis und passt gut vor dem Schlafen. Jede Charge wird auf Proteingehalt geprüft. Angerührt entsteht eine dicke, puddingartige Konsistenz, die für viele ein Highlight ist. Protein trägt zum Erhalt von Muskelmasse bei.",
+   "ingredients": "",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "",
+   "nutriments": {
+    "energy-kcal_100g": 358,
+    "fat_100g": 2.4,
+    "saturated-fat_100g": 1.5,
+    "carbohydrates_100g": 8.0,
+    "sugars_100g": 4.5,
+    "proteins_100g": 76,
+    "salt_100g": 0.55
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1032"
+  },
+  {
+   "code": "SK-1041",
+   "name": "Stahlkern Vegan Blend Vanille 750 g",
+   "generic_name": "Pflanzliches Proteinpulver mit Vanillegeschmack",
+   "brand": "Stahlkern",
+   "category": "vegan",
+   "labels": "Vegan, Hergestellt in Deutschland",
+   "description": "Vegan Blend Vanille ist unser pflanzliches Pulver, das auch Mischköstler überzeugt. Für alle, die sich vegan ernähren und ihre Eiweißzufuhr im Blick behalten wollen. Komplett pflanzlich und ohne tierische Zusatzstoffe. Protein trägt zu einer Zunahme an Muskelmasse bei.",
+   "ingredients": "Erbsenprotein 55 %, Reisprotein 28 %, Sonnenblumenöl Pulver, Aroma, Verdickungsmittel Xanthan, Süßungsmittel Steviolglycoside",
+   "allergens_tags": [],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 378,
+    "fat_100g": 6.5,
+    "saturated-fat_100g": 1.4,
+    "carbohydrates_100g": 8.0,
+    "sugars_100g": 2.9,
+    "proteins_100g": 72,
+    "salt_100g": 1.0
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1041"
+  },
+  {
+   "code": "SK-1042",
+   "name": "Stahlkern Vegan Blend Schoko 750 g",
+   "generic_name": "Pflanzliches Proteinpulver mit Schokoladengeschmack",
+   "brand": "Stahlkern",
+   "category": "vegan",
+   "labels": "Vegan, Hergestellt in Deutschland",
+   "description": "Der Schoko Vegan Blend bietet einen vollen Kakaogeschmack und ist komplett pflanzlich. Löst sich gut auf und schmeckt nicht nach Erbse. Für alle, die sich vegan ernähren und ihre Eiweißzufuhr im Blick behalten wollen. Protein trägt zu einer Zunahme an Muskelmasse bei.",
+   "ingredients": "Erbsenprotein 52 %, Reisprotein 26 %, Kakao 6 %, Sojalecithin, Aroma, Verdickungsmittel Xanthan, Süßungsmittel Steviolglycoside",
+   "allergens_tags": [],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 379,
+    "fat_100g": 6.8,
+    "saturated-fat_100g": 1.5,
+    "carbohydrates_100g": 9.5,
+    "sugars_100g": 3.1,
+    "proteins_100g": 70,
+    "salt_100g": 1.0
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1042"
+  },
+  {
+   "code": "SK-1043",
+   "name": "Stahlkern Vegan Blend Neutral 750 g",
+   "generic_name": "Pflanzliches Proteinpulver, geschmacksneutral",
+   "brand": "Stahlkern",
+   "category": "vegan",
+   "labels": "Vegan, Hergestellt in Deutschland",
+   "description": "Neutral ist ideal für Smoothies, Müsli und zum Backen. Löst sich gut auf und schmeckt nicht nach Erbse. Protein trägt zu einer Zunahme an Muskelmasse bei. Komplett pflanzlich und ohne tierische Zusatzstoffe.",
+   "ingredients": "Erbsenprotein 60 %, Reisprotein 30 %, Sonnenblumenöl Pulver",
+   "allergens_tags": [],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 366,
+    "fat_100g": 5.5,
+    "saturated-fat_100g": 1.1,
+    "carbohydrates_100g": 3.0,
+    "sugars_100g": 0.8,
+    "proteins_100g": 76,
+    "salt_100g": 1.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1043"
+  },
+  {
+   "code": "SK-1044",
+   "name": "Stahlkern Vegan Blend Erdnuss Karamell 750 g",
+   "generic_name": "Pflanzliches Proteinpulver, Erdnuss Karamell",
+   "brand": "Stahlkern",
+   "category": "vegan",
+   "labels": "Vegan, Hergestellt in Deutschland",
+   "description": "Erdnuss Karamell ist unsere würzigste vegane Sorte und erinnert an eine Erdnussbutter Schnitte. Löst sich gut auf und schmeckt nicht nach Erbse. Komplett pflanzlich und ohne tierische Zusatzstoffe. Die Mischung aus Erbsen- und Reisprotein liefert ein rundes Aminosäureprofil.",
+   "ingredients": "Erbsenprotein 48 %, Reisprotein 24 %, Erdnusspulver 8 %, Karamellaroma, Verdickungsmittel Xanthan, Süßungsmittel Steviolglycoside",
+   "allergens_tags": [
+    "en:peanuts"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 384,
+    "fat_100g": 7.1,
+    "saturated-fat_100g": 1.5,
+    "carbohydrates_100g": 12,
+    "sugars_100g": 5.4,
+    "proteins_100g": 68,
+    "salt_100g": 1.2
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1044"
+  },
+  {
+   "code": "SK-1051",
+   "name": "Stahlkern Protein Bar Brownie 12 x 55 g",
+   "generic_name": "Proteinriegel mit Brownie Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Der Brownie Riegel hat einen weichen Kern und eine Schokoladenhülle, die auch bei Zimmertemperatur nicht klebt. Kann Spuren von Erdnüssen und Gluten enthalten. Mit weniger Zucker als klassische Schokoriegel und einer weichen Füllung. Der Geschmack kommt aus echtem Kakao und Nüssen, nicht aus künstlichen Aromen.",
+   "ingredients": "Proteinmischung 38 % (Milcheiweiß, Molkenprotein), Mandeln 5 %, Kakaomasse 4 %, Süßungsmittel Maltit, Feuchthaltemittel Glycerin, Kakaobutter, Aroma, Salz",
+   "allergens_tags": [
+    "en:milk",
+    "en:nuts",
+    "en:soybeans"
+   ],
+   "serving_size": "55 g",
+   "nutriments": {
+    "energy-kcal_100g": 374,
+    "fat_100g": 14,
+    "saturated-fat_100g": 7.0,
+    "carbohydrates_100g": 26,
+    "sugars_100g": 4.0,
+    "proteins_100g": 36,
+    "salt_100g": 0.45
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1051"
+  },
+  {
+   "code": "SK-1052",
+   "name": "Stahlkern Protein Bar Cookie Dough 12 x 55 g",
+   "generic_name": "Proteinriegel mit Cookie Dough Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Cookie Dough ist der Riegel für alle, die es süß und weich mögen. Der Riegel enthält viel Eiweiß und passt in jede Sporttasche. Der Geschmack kommt aus echtem Kakao und Nüssen, nicht aus künstlichen Aromen. Bei Zimmertemperatur lagern und vor Hitze schützen.",
+   "ingredients": "Proteinmischung 38 % (Milcheiweiß, Molkenprotein), Weizenflocken 6 %, Sojakrispies 5 %, Süßungsmittel Maltit, Feuchthaltemittel Glycerin, Kakaobutter, Aroma, Salz",
+   "allergens_tags": [
+    "en:milk",
+    "en:gluten",
+    "en:soybeans"
+   ],
+   "serving_size": "55 g",
+   "nutriments": {
+    "energy-kcal_100g": 378,
+    "fat_100g": 14,
+    "saturated-fat_100g": 7.2,
+    "carbohydrates_100g": 28,
+    "sugars_100g": 5.2,
+    "proteins_100g": 35,
+    "salt_100g": 0.5
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1052"
+  },
+  {
+   "code": "SK-1053",
+   "name": "Stahlkern Protein Bar Peanut Crunch 12 x 55 g",
+   "generic_name": "Proteinriegel mit Erdnuss Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Peanut Crunch liefert Erdnussgeschmack mit knackigen Stückchen und viel Eiweiß. Bei Zimmertemperatur lagern und vor Hitze schützen. Mit weniger Zucker als klassische Schokoriegel und einer weichen Füllung. Mit über 30 g Eiweiß pro 100 g ist er ein schneller Snack zwischendurch.",
+   "ingredients": "Proteinmischung 38 % (Milcheiweiß, Molkenprotein), Erdnüsse 12 %, Erdnussmus 6 %, Süßungsmittel Maltit, Feuchthaltemittel Glycerin, Kakaobutter, Aroma, Salz",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "55 g",
+   "nutriments": {
+    "energy-kcal_100g": 388,
+    "fat_100g": 16,
+    "saturated-fat_100g": 6.0,
+    "carbohydrates_100g": 27,
+    "sugars_100g": 4.8,
+    "proteins_100g": 34,
+    "salt_100g": 0.6
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1053"
+  },
+  {
+   "code": "SK-1054",
+   "name": "Stahlkern Protein Bar Vanille Mandel 12 x 55 g",
+   "generic_name": "Proteinriegel mit Vanille Mandel Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Der Vanille Mandel Riegel hat eine feine Süße und ist unser leichtester Riegel. Der Riegel enthält viel Eiweiß und passt in jede Sporttasche. Bei Zimmertemperatur lagern und vor Hitze schützen. Mit über 30 g Eiweiß pro 100 g ist er ein schneller Snack zwischendurch.",
+   "ingredients": "Proteinmischung 38 % (Milcheiweiß, Molkenprotein), Mandeln 8 %, Süßungsmittel Maltit, Feuchthaltemittel Glycerin, Kakaobutter, Aroma, Salz",
+   "allergens_tags": [
+    "en:milk",
+    "en:nuts"
+   ],
+   "serving_size": "55 g",
+   "nutriments": {
+    "energy-kcal_100g": 353,
+    "fat_100g": 13,
+    "saturated-fat_100g": 6.8,
+    "carbohydrates_100g": 24,
+    "sugars_100g": 31,
+    "proteins_100g": 35,
+    "salt_100g": 0.5
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1054"
+  },
+  {
+   "code": "SK-1055",
+   "name": "Stahlkern Protein Bar Salted Caramel 12 x 55 g",
+   "generic_name": "Proteinriegel mit Salted Caramel Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Salted Caramel kombiniert Karamell mit einer feinen Prise Salz. Der Riegel enthält viel Eiweiß und passt in jede Sporttasche. Mit weniger Zucker als klassische Schokoriegel und einer weichen Füllung. Der Geschmack kommt aus echtem Kakao und Nüssen, nicht aus künstlichen Aromen.",
+   "ingredients": "Proteinmischung 38 % (Milcheiweiß, Molkenprotein), Karamellsauce 8 %, Süßungsmittel Maltit, Feuchthaltemittel Glycerin, Kakaobutter, Aroma, Salz",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "55 g",
+   "nutriments": {
+    "energy-kcal_100g": 369,
+    "fat_100g": 13,
+    "saturated-fat_100g": 7.5,
+    "carbohydrates_100g": 30,
+    "proteins_100g": 33
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1055"
+  },
+  {
+   "code": "SK-1056",
+   "name": "Stahlkern Protein Bar Zitrone Joghurt 12 x 55 g",
+   "generic_name": "Proteinriegel mit Joghurt Zitrone Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Zitrone Joghurt ist die frische Variante für zwischendurch. Der Geschmack kommt aus echtem Kakao und Nüssen, nicht aus künstlichen Aromen. Protein trägt zum Erhalt von Muskelmasse bei. Mit weniger Zucker als klassische Schokoriegel und einer weichen Füllung.",
+   "ingredients": "Proteinmischung 38 % (Milcheiweiß, Molkenprotein), Joghurtpulver 6 %, Süßungsmittel Maltit, Feuchthaltemittel Glycerin, Kakaobutter, Aroma, Salz",
+   "allergens_tags": [
+    "en:milk",
+    "en:soybeans"
+   ],
+   "serving_size": "55 g",
+   "nutriments": {
+    "energy-kcal_100g": 360,
+    "fat_100g": 12,
+    "saturated-fat_100g": 8.0,
+    "carbohydrates_100g": 32,
+    "sugars_100g": 8.0,
+    "proteins_100g": 31,
+    "salt_100g": 0.4
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1056"
+  },
+  {
+   "code": "SK-1057",
+   "name": "Stahlkern Protein Bar Vegan Hazelnut 12 x 50 g",
+   "generic_name": "Veganer Proteinriegel mit Haselnuss Geschmack",
+   "brand": "Stahlkern",
+   "category": "riegel",
+   "labels": "Vegan, Hergestellt in Deutschland",
+   "description": "Der vegane Haselnuss Riegel verzichtet vollständig auf tierische Zutaten. Mit über 30 g Eiweiß pro 100 g ist er ein schneller Snack zwischendurch. Der Geschmack kommt aus echtem Kakao und Nüssen, nicht aus künstlichen Aromen. Mit weniger Zucker als klassische Schokoriegel und einer weichen Füllung.",
+   "ingredients": "Erbsenprotein 30 %, Datteln 15 %, Haselnüsse 10 %, Reissirup, Kakaomasse 5 %, Kokosöl, Salz",
+   "allergens_tags": [
+    "en:nuts"
+   ],
+   "serving_size": "50 g",
+   "nutriments": {
+    "energy-kcal_100g": 369,
+    "fat_100g": 13,
+    "saturated-fat_100g": 3.5,
+    "carbohydrates_100g": 33,
+    "sugars_100g": 9.0,
+    "proteins_100g": 30,
+    "salt_100g": 0.55
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1057"
+  },
+  {
+   "code": "SK-1061",
+   "name": "Stahlkern Creatin Monohydrat Pulver 500 g",
+   "generic_name": "Creatin Monohydrat Pulver",
+   "brand": "Stahlkern",
+   "category": "creatin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Unser Creatin Monohydrat besteht aus einer einzigen Zutat und kommt ohne Aroma aus. Das Pulver ist geschmacksneutral und lässt sich in jedes Getränk einrühren. Kreatin erhöht die körperliche Leistung bei kurzzeitigen, intensiven Belastungen, wenn du täglich 3 g einnimmst. Täglich eine Portion mit ausreichend Flüssigkeit einnehmen.",
+   "ingredients": "Creatin Monohydrat 100 %",
+   "allergens_tags": [],
+   "serving_size": "3 g",
+   "nutriments": {
+    "energy-kcal_100g": 0,
+    "fat_100g": 0,
+    "saturated-fat_100g": 0,
+    "carbohydrates_100g": 0,
+    "sugars_100g": 0,
+    "proteins_100g": 0,
+    "salt_100g": 0
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1061"
+  },
+  {
+   "code": "SK-1062",
+   "name": "Stahlkern Creatin Kapseln 240 Stück",
+   "generic_name": "Creatin Monohydrat Kapseln",
+   "brand": "Stahlkern",
+   "category": "creatin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Die Kapseln sind für alle, die kein Pulver einrühren möchten und lieber unterwegs einnehmen. Wir verwenden reines Creatin Monohydrat ohne Zusätze. Die Kapseln sind klein und lassen sich gut schlucken. Täglich eine Portion mit ausreichend Flüssigkeit einnehmen.",
+   "ingredients": "Creatin Monohydrat 91 %, Kapselhülle Hydroxypropylmethylcellulose, Trennmittel Magnesiumsalze der Speisefettsäuren",
+   "allergens_tags": [],
+   "serving_size": "3 g (6 Kapseln)",
+   "nutriments": {
+    "energy-kcal_100g": 13,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.2,
+    "carbohydrates_100g": 2,
+    "sugars_100g": 0,
+    "proteins_100g": 0,
+    "salt_100g": 0.05
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1062"
+  },
+  {
+   "code": "SK-1063",
+   "name": "Stahlkern Creatin HCl Kapseln 120 Stück",
+   "generic_name": "Creatin Hydrochlorid Kapseln",
+   "brand": "Stahlkern",
+   "category": "creatin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin. Du wirst den Unterschied schon nach der ersten Woche spüren. Täglich eine Portion mit ausreichend Flüssigkeit einnehmen. Die Kapseln sind klein und lassen sich gut schlucken.",
+   "ingredients": "Creatinhydrochlorid 94 %, Kapselhülle Hydroxypropylmethylcellulose, Trennmittel Magnesiumsalze der Speisefettsäuren",
+   "allergens_tags": [],
+   "serving_size": "1,5 g (3 Kapseln)",
+   "nutriments": {
+    "energy-kcal_100g": 6,
+    "fat_100g": 0.2,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 1,
+    "sugars_100g": 0,
+    "proteins_100g": 0,
+    "salt_100g": 0.05
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1063"
+  },
+  {
+   "code": "SK-1064",
+   "name": "Stahlkern Creatin Gummies Beere 60 Stück",
+   "generic_name": "Fruchtgummi mit Creatin, Beerengeschmack",
+   "brand": "Stahlkern",
+   "category": "creatin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Die Gummies liefern Creatin im Fruchtgummi Format und schmecken nach Waldbeeren. Kreatin erhöht die körperliche Leistung bei kurzzeitigen, intensiven Belastungen, wenn du täglich 3 g einnimmst. Täglich drei Gummies kauen, ein Glas Wasser dazu trinken. Die Gummies enthalten Gelatine und sind nicht vegan.",
+   "ingredients": "Glukosesirup, Zucker, Creatin Monohydrat 15 %, Gelatine, Säuerungsmittel Citronensäure, Aroma, Farbstoff Anthocyane",
+   "allergens_tags": [],
+   "serving_size": "3 g Creatin (3 Gummies)",
+   "nutriments": {
+    "energy-kcal_100g": 281,
+    "fat_100g": 0.1,
+    "saturated-fat_100g": 0.0,
+    "carbohydrates_100g": 62,
+    "sugars_100g": 38,
+    "proteins_100g": 4.0,
+    "salt_100g": 0.05
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1064"
+  },
+  {
+   "code": "SK-1071",
+   "name": "Stahlkern Vitamin D3 + K2 Tropfen 50 ml",
+   "generic_name": "Vitamin D3 und K2 Tropfen, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Vitamin D trägt zur Erhaltung normaler Knochen bei, Vitamin K2 zur Erhaltung normaler Knochen. Eine Flasche reicht für rund 1000 Tage. Die Tropfen sind geschmacksneutral und lassen sich auf Löffel oder Brot geben. Nahrungsergänzungsmittel sind kein Ersatz für eine abwechslungsreiche und ausgewogene Ernährung.",
+   "ingredients": "Mittelkettige Triglyceride (Kokos) 98 %, Cholecalciferol (Vitamin D3), Menachinon (Vitamin K2)",
+   "allergens_tags": [],
+   "serving_size": "1 Tropfen",
+   "nutriments": {
+    "energy-kcal_100g": 900,
+    "fat_100g": 100,
+    "saturated-fat_100g": 7,
+    "carbohydrates_100g": 0,
+    "sugars_100g": 0,
+    "proteins_100g": 0,
+    "salt_100g": 0.0
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1071"
+  },
+  {
+   "code": "SK-1072",
+   "name": "Stahlkern Vitamin C 500 mg Kapseln 120 Stück",
+   "generic_name": "Vitamin C Kapseln, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Vitamin C trägt zur Verringerung von Müdigkeit und Ermüdung bei. Jede Kapsel liefert 500 mg Vitamin C. Außerhalb der Reichweite von kleinen Kindern aufbewahren. Hochdosiert und in einer einfachen Tagesportion.",
+   "ingredients": "Ascorbinsäure 82 %, Kapselhülle Hydroxypropylmethylcellulose, Trennmittel Magnesiumsalze der Speisefettsäuren",
+   "allergens_tags": [],
+   "serving_size": "1 Kapsel",
+   "nutriments": {
+    "energy-kcal_100g": 59,
+    "fat_100g": 0.8,
+    "saturated-fat_100g": 0.2,
+    "carbohydrates_100g": 12,
+    "sugars_100g": 0.5,
+    "proteins_100g": 1.0,
+    "salt_100g": 0.05
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1072"
+  },
+  {
+   "code": "SK-1073",
+   "name": "Stahlkern Multivitamin Komplex 90 Kapseln",
+   "generic_name": "Multivitamin Kapseln, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten. Bei regelmäßiger Einnahme wirst du seltener krank. Die Kapseln sind klein und lassen sich gut schlucken. Hochdosiert und in einer einfachen Tagesportion.",
+   "ingredients": "Maltodextrin, Vitamin C, Magnesiumoxid, Zinkcitrat, Niacin, Vitamin E, Pantothensäure, Kapselhülle Hydroxypropylmethylcellulose, Vitamin B6, Vitamin B12, Folsäure, Biotin",
+   "allergens_tags": [],
+   "serving_size": "1 Kapsel",
+   "nutriments": {
+    "energy-kcal_100g": 82,
+    "fat_100g": 1.5,
+    "saturated-fat_100g": 0.3,
+    "carbohydrates_100g": 15,
+    "sugars_100g": 1.0,
+    "proteins_100g": 2.0,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1073"
+  },
+  {
+   "code": "SK-1074",
+   "name": "Stahlkern Vitamin B Komplex 120 Kapseln",
+   "generic_name": "Vitamin B Komplex Kapseln, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Vitamin B6 trägt zu einem normalen Eiweiß- und Glycogenstoffwechsel bei. Vitamin B12 trägt zu einem normalen Energiestoffwechsel bei. Außerhalb der Reichweite von kleinen Kindern aufbewahren. Hochdosiert und in einer einfachen Tagesportion.",
+   "ingredients": "Maltodextrin, Niacin, Pantothensäure, Kapselhülle Hydroxypropylmethylcellulose, Vitamin B6, Riboflavin, Thiamin, Folsäure, Biotin, Vitamin B12",
+   "allergens_tags": [],
+   "serving_size": "1 Kapsel",
+   "nutriments": {
+    "energy-kcal_100g": 73,
+    "fat_100g": 1.0,
+    "saturated-fat_100g": 0.2,
+    "carbohydrates_100g": 14,
+    "sugars_100g": 0.5,
+    "proteins_100g": 2.0,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1074"
+  },
+  {
+   "code": "SK-1075",
+   "name": "Stahlkern Magnesium Citrat 180 Kapseln",
+   "generic_name": "Magnesiumcitrat Kapseln, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Magnesium trägt zu einer normalen Muskelfunktion bei und zur Verringerung von Müdigkeit und Ermüdung. Drei Kapseln liefern 300 mg Magnesium. Ohne Gentechnik, ohne künstliche Farbstoffe und mit klar deklarierten Zutaten. Die Kapseln sind klein und lassen sich gut schlucken.",
+   "ingredients": "Magnesiumcitrat 90 %, Kapselhülle Hydroxypropylmethylcellulose, Trennmittel Magnesiumsalze der Speisefettsäuren",
+   "allergens_tags": [],
+   "serving_size": "3 Kapseln",
+   "nutriments": {
+    "energy-kcal_100g": 24,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 3,
+    "sugars_100g": 0,
+    "proteins_100g": 0,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1075"
+  },
+  {
+   "code": "SK-1076",
+   "name": "Stahlkern Zink 25 mg Tabletten 180 Stück",
+   "generic_name": "Zink Tabletten, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Zink trägt zu einer normalen Funktion des Immunsystems bei und zum Schutz der Zellen vor oxidativem Stress. Die Tabletten sind klein und lassen sich gut schlucken. Hochdosiert und in einer einfachen Tagesportion. Nahrungsergänzungsmittel sind kein Ersatz für eine abwechslungsreiche und ausgewogene Ernährung.",
+   "ingredients": "Füllstoff Mikrokristalline Cellulose, Zinkbisglycinat 40 %, Trennmittel Magnesiumsalze der Speisefettsäuren",
+   "allergens_tags": [],
+   "serving_size": "1 Tablette",
+   "nutriments": {
+    "energy-kcal_100g": 21,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 4,
+    "sugars_100g": 0,
+    "proteins_100g": 0,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1076"
+  },
+  {
+   "code": "SK-1077",
+   "name": "Stahlkern Ashwagandha 600 mg Kapseln 90 Stück",
+   "generic_name": "Ashwagandha Extrakt Kapseln, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "vitamin",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise. Die Wirkung ist klinisch belegt. Außerhalb der Reichweite von kleinen Kindern aufbewahren. Nahrungsergänzungsmittel sind kein Ersatz für eine abwechslungsreiche und ausgewogene Ernährung.",
+   "ingredients": "Ashwagandha Wurzelextrakt 85 %, Kapselhülle Hydroxypropylmethylcellulose, Trennmittel Siliciumdioxid",
+   "allergens_tags": [],
+   "serving_size": "2 Kapseln",
+   "nutriments": {
+    "energy-kcal_100g": 61,
+    "fat_100g": 1.0,
+    "saturated-fat_100g": 0.2,
+    "carbohydrates_100g": 6,
+    "sugars_100g": 0.5,
+    "proteins_100g": 3.0,
+    "salt_100g": 0.05
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1077"
+  },
+  {
+   "code": "SK-1081",
+   "name": "Stahlkern Omega 3 Algenöl 90 Kapseln",
+   "generic_name": "Omega 3 Algenöl Kapseln, vegan",
+   "brand": "Stahlkern",
+   "category": "omega",
+   "labels": "Vegan, Hergestellt in Deutschland",
+   "description": "Das Algenöl ist die pflanzliche Alternative zu Fischöl und liefert pro Tagesportion 250 mg DHA. Nahrungsergänzungsmittel sind kein Ersatz für eine abwechslungsreiche und ausgewogene Ernährung. Die Öle werden auf Schadstoffe geprüft. Jede Portion liefert EPA und DHA in einer festen Tagesdosis.",
+   "ingredients": "Algenöl (Schizochytrium) 80 %, Kapselhülle Stärke, Glycerin, Antioxidans Tocopherole",
+   "allergens_tags": [],
+   "serving_size": "2 Kapseln",
+   "nutriments": {
+    "energy-kcal_100g": 867,
+    "fat_100g": 95,
+    "saturated-fat_100g": 24,
+    "carbohydrates_100g": 2.0,
+    "sugars_100g": 0.2,
+    "proteins_100g": 1.0,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1081"
+  },
+  {
+   "code": "SK-1082",
+   "name": "Stahlkern Omega 3 Fischöl 120 Kapseln",
+   "generic_name": "Omega 3 Fischöl Kapseln, Nahrungsergänzungsmittel",
+   "brand": "Stahlkern",
+   "category": "omega",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen. Jede Kapsel liefert 330 mg EPA und 220 mg DHA. Die Öle werden auf Schadstoffe geprüft. DHA trägt zur Erhaltung einer normalen Gehirnfunktion bei.",
+   "ingredients": "Fischöl 85 % (Sardellen, Makrele), Kapselhülle Gelatine (Rind), Glycerin, Antioxidans Tocopherole",
+   "allergens_tags": [
+    "en:fish"
+   ],
+   "serving_size": "2 Kapseln",
+   "nutriments": {
+    "energy-kcal_100g": 872,
+    "fat_100g": 96,
+    "saturated-fat_100g": 28,
+    "carbohydrates_100g": 1.0,
+    "sugars_100g": 0.1,
+    "proteins_100g": 1.0,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1082"
+  },
+  {
+   "code": "SK-1091",
+   "name": "Stahlkern Pre Workout Rush Blaue Himbeere 400 g",
+   "generic_name": "Pre Workout Pulver, Blaue Himbeere",
+   "brand": "Stahlkern",
+   "category": "pre",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Rush Blaue Himbeere ist ein klassischer Booster für alle, die vor dem Training Konzentration brauchen. Nicht für Kinder, Schwangere und Stillende geeignet. 30 bis 45 Minuten vor dem Training einnehmen. Mit Citrullin, Beta Alanin und Taurin in praxisnaher Dosierung. Der Booster ist für harte Einheiten gedacht und enthält pro Portion 200 mg Koffein.",
+   "ingredients": "Citrullinmalat 40 %, Beta Alanin 20 %, Taurin, Säuerungsmittel Apfelsäure, Koffein, L Tyrosin, Aroma, Süßungsmittel Sucralose",
+   "allergens_tags": [],
+   "serving_size": "10 g",
+   "nutriments": {
+    "energy-kcal_100g": 29,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 6.0,
+    "sugars_100g": 1.0,
+    "proteins_100g": 0,
+    "salt_100g": 0.4
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1091"
+  },
+  {
+   "code": "SK-1092",
+   "name": "Stahlkern Pre Workout Rush Tropical 400 g",
+   "generic_name": "Pre Workout Pulver, Tropical",
+   "brand": "Stahlkern",
+   "category": "pre",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Die Sorte Tropical schmeckt nach Maracuja und Ananas und ist unser leichtester Booster. Der Geschmack ist fruchtig und das Pulver löst sich schnell auf. Nicht für Kinder, Schwangere und Stillende geeignet. 30 bis 45 Minuten vor dem Training einnehmen. Der Booster ist für harte Einheiten gedacht und enthält pro Portion 200 mg Koffein.",
+   "ingredients": "Citrullinmalat 40 %, Beta Alanin 20 %, Taurin, Säuerungsmittel Apfelsäure, Koffein, Arginin, Aroma, Süßungsmittel Sucralose",
+   "allergens_tags": [],
+   "serving_size": "10 g",
+   "nutriments": {
+    "energy-kcal_100g": 31,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 6.5,
+    "sugars_100g": 1.2,
+    "proteins_100g": 0,
+    "salt_100g": 0.4
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1092"
+  },
+  {
+   "code": "SK-1093",
+   "name": "Stahlkern Pre Workout Inferno Fatburner 300 g",
+   "generic_name": "Pre Workout Pulver mit Fatburner Formel",
+   "brand": "Stahlkern",
+   "category": "pre",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen. Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an. Mit Citrullin, Beta Alanin und Taurin in praxisnaher Dosierung. Nicht für Kinder, Schwangere und Stillende geeignet. 30 bis 45 Minuten vor dem Training einnehmen.",
+   "ingredients": "Citrullinmalat 30 %, Beta Alanin 15 %, Taurin, Säuerungsmittel Apfelsäure, Koffein, Grüntee Extrakt, L Carnitin, Aroma, Süßungsmittel Sucralose",
+   "allergens_tags": [],
+   "serving_size": "12 g",
+   "nutriments": {
+    "energy-kcal_100g": 25,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 5.0,
+    "sugars_100g": 1.0,
+    "proteins_100g": 0,
+    "salt_100g": 0.4
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1093"
+  },
+  {
+   "code": "SK-1094",
+   "name": "Stahlkern Pre Workout Stim Free Orange 400 g",
+   "generic_name": "Pre Workout Pulver ohne Koffein, Orange",
+   "brand": "Stahlkern",
+   "category": "pre",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Stim Free ist die Variante ohne Koffein für Abendtrainings. Mit Citrullin, Beta Alanin und Taurin in praxisnaher Dosierung. Koffein erhöht die Aufmerksamkeit und die Konzentration. Der Geschmack ist fruchtig und das Pulver löst sich schnell auf.",
+   "ingredients": "Citrullinmalat 50 %, Beta Alanin 20 %, Taurin, Säuerungsmittel Apfelsäure, Orangenaroma, Süßungsmittel Sucralose",
+   "allergens_tags": [],
+   "serving_size": "10 g",
+   "nutriments": {
+    "energy-kcal_100g": 27,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 5.5,
+    "sugars_100g": 1.0,
+    "proteins_100g": 0,
+    "salt_100g": 0.35
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1094"
+  },
+  {
+   "code": "SK-1101",
+   "name": "Stahlkern EAA Powder Wassermelone 400 g",
+   "generic_name": "EAA Aminosäurenpulver, Wassermelone",
+   "brand": "Stahlkern",
+   "category": "amino",
+   "labels": "Hergestellt in Deutschland",
+   "description": "EAA enthält alle neun essenziellen Aminosäuren in einer ausgewogenen Dosierung. Die Aminosäuren sind frei verfügbar und eignen sich auch während des Trainings. Das Pulver schmeckt fruchtig und löst sich ohne Rückstände auf. Alle Zutaten sind klar deklariert und frei von Füllstoffen.",
+   "ingredients": "L Leucin, L Lysin, L Valin, L Isoleucin, L Threonin, L Phenylalanin, L Methionin, L Histidin, L Tryptophan, Säuerungsmittel Citronensäure, Aroma, Süßungsmittel Sucralose",
+   "allergens_tags": [],
+   "serving_size": "10 g",
+   "nutriments": {},
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1101"
+  },
+  {
+   "code": "SK-1102",
+   "name": "Stahlkern BCAA 2:1:1 Cola 400 g",
+   "generic_name": "BCAA Pulver, Cola Geschmack",
+   "brand": "Stahlkern",
+   "category": "amino",
+   "labels": "Hergestellt in Deutschland",
+   "description": "BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein. Keine Pause mehr, kein Muskelkater, garantiert. Trinke eine Portion in 400 ml Wasser verteilt über die Einheit. Alle Zutaten sind klar deklariert und frei von Füllstoffen.",
+   "ingredients": "L Leucin, L Isoleucin, L Valin, Säuerungsmittel Citronensäure, Aroma, Süßungsmittel Sucralose, Farbstoff Zuckerkulör",
+   "allergens_tags": [],
+   "serving_size": "8 g",
+   "nutriments": {
+    "energy-kcal_100g": 332,
+    "fat_100g": 0.2,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 0.5,
+    "sugars_100g": 0.2,
+    "proteins_100g": 82,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1102"
+  },
+  {
+   "code": "SK-1103",
+   "name": "Stahlkern L Glutamin Pulver 500 g",
+   "generic_name": "L Glutamin Pulver, neutral",
+   "brand": "Stahlkern",
+   "category": "amino",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Reines L Glutamin ohne Zusätze, geschmacksneutral. Ein Messlöffel entspricht etwa 5 g. Das Pulver ist geschmacksneutral und lässt sich in jedes Getränk einrühren. Alle Zutaten sind klar deklariert und frei von Füllstoffen.",
+   "ingredients": "L Glutamin 100 %",
+   "allergens_tags": [],
+   "serving_size": "5 g",
+   "nutriments": {
+    "energy-kcal_100g": 396,
+    "fat_100g": 0,
+    "saturated-fat_100g": 0,
+    "carbohydrates_100g": 0,
+    "sugars_100g": 0,
+    "proteins_100g": 99,
+    "salt_100g": 0.0
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1103"
+  },
+  {
+   "code": "SK-1111",
+   "name": "Stahlkern Mass Gainer Vanille 3000 g",
+   "generic_name": "Gainer Pulver mit Vanillegeschmack",
+   "brand": "Stahlkern",
+   "category": "gainer",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Der Mass Gainer liefert 380 kcal pro Portion mit 24 g Protein und eignet sich für alle mit einem hohen Kalorienbedarf. Mit 300 ml Milch oder Wasser kräftig durchschütteln. Der Gainer kombiniert Eiweiß und Kohlenhydrate für Tage mit erhöhtem Energiebedarf. Protein trägt zu einer Zunahme an Muskelmasse bei.",
+   "ingredients": "Maltodextrin 42 %, Molkenproteinkonzentrat (Milch) 25 %, Haferflocken 10 %, Weizenmehl 6 %, Aroma, Verdickungsmittel Xanthan, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "100 g",
+   "nutriments": {
+    "energy-kcal_100g": 380,
+    "fat_100g": 4.0,
+    "saturated-fat_100g": 1.8,
+    "carbohydrates_100g": 62,
+    "sugars_100g": 9.0,
+    "proteins_100g": 24,
+    "salt_100g": 0.7
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1111"
+  },
+  {
+   "code": "SK-1112",
+   "name": "Stahlkern Mass Gainer Schoko 3000 g",
+   "generic_name": "Gainer Pulver mit Schokoladengeschmack",
+   "brand": "Stahlkern",
+   "category": "gainer",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Schoko ist die Sorte für Tage mit hohem Bedarf an Energie und Eiweiß. Protein trägt zu einer Zunahme an Muskelmasse bei. Der Gainer kombiniert Eiweiß und Kohlenhydrate für Tage mit erhöhtem Energiebedarf. Zwei Portionen am Tag lassen sich einfach in den Plan einbauen.",
+   "ingredients": "Maltodextrin 40 %, Molkenproteinkonzentrat (Milch) 26 %, Haferflocken 10 %, Kakao 5 %, Aroma, Verdickungsmittel Xanthan, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk",
+    "en:gluten"
+   ],
+   "serving_size": "100 g",
+   "nutriments": {
+    "energy-kcal_100g": 378,
+    "fat_100g": 4.2,
+    "saturated-fat_100g": 2.0,
+    "carbohydrates_100g": 60,
+    "sugars_100g": 10,
+    "proteins_100g": 25,
+    "salt_100g": 0.75
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1112"
+  },
+  {
+   "code": "SK-1113",
+   "name": "Stahlkern Beta Alanin Kapseln 240 Stück",
+   "generic_name": "Beta Alanin Kapseln",
+   "brand": "Stahlkern",
+   "category": "pre",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Beta Alanin ist ein Klassiker im Pre Workout und verursacht das typische Kribbeln auf der Haut. Die Kapseln sind klein und lassen sich gut schlucken. Wir verwenden reines Beta Alanin ohne Füllstoffe. Täglich vier Kapseln mit einer Mahlzeit einnehmen.",
+   "ingredients": "Beta Alanin 95 %, Kapselhülle Hydroxypropylmethylcellulose, Trennmittel Magnesiumsalze der Speisefettsäuren",
+   "allergens_tags": [],
+   "serving_size": "3,2 g (4 Kapseln)",
+   "nutriments": {
+    "energy-kcal_100g": 358,
+    "fat_100g": 0.5,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 0.5,
+    "sugars_100g": 0.0,
+    "proteins_100g": 88,
+    "salt_100g": 0.1
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1113"
+  },
+  {
+   "code": "SK-1114",
+   "name": "Stahlkern Collagen Peptide Neutral 450 g",
+   "generic_name": "Kollagenhydrolysat Pulver, neutral",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Kollagenpeptide aus Rinderhaut lösen sich in kalten und heißen Getränken auf. Das Pulver ist geschmacksneutral und löst sich auch in kalten Getränken auf. Frei von Zusatzstoffen und Aromen. Täglich 10 g in Kaffee, Tee oder Shake einrühren.",
+   "ingredients": "Rinderkollagenhydrolysat 100 %",
+   "allergens_tags": [],
+   "serving_size": "10 g",
+   "nutriments": {
+    "energy-kcal_100g": 367,
+    "fat_100g": 0.2,
+    "saturated-fat_100g": 0.1,
+    "carbohydrates_100g": 0.5,
+    "sugars_100g": 0.2,
+    "proteins_100g": 90,
+    "salt_100g": 0.3
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1114"
+  },
+  {
+   "code": "SK-1115",
+   "name": "Stahlkern Elektrolyt Mix Zitrone 300 g",
+   "generic_name": "Elektrolyt Getränkepulver, Zitrone",
+   "brand": "Stahlkern",
+   "category": "amino",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Der Elektrolyt Mix ersetzt Mineralstoffe, die du beim Training über den Schweiß verlierst. Ohne Farbstoffe und mit klar deklarierten Zutaten. Mit 500 ml Wasser anrühren und über das Training verteilt trinken. Ideal bei langen Einheiten oder im Sommer.",
+   "ingredients": "Dextrose, Natriumcitrat, Kaliumcitrat, Magnesiumcitrat, Säuerungsmittel Citronensäure, Zitronenaroma, Süßungsmittel Sucralose",
+   "allergens_tags": [],
+   "serving_size": "10 g",
+   "nutriments": {
+    "energy-kcal_100g": 352,
+    "fat_100g": 0,
+    "saturated-fat_100g": 0,
+    "carbohydrates_100g": 88,
+    "sugars_100g": 5.0,
+    "proteins_100g": 0,
+    "salt_100g": 12
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1115"
+  },
+  {
+   "code": "SK-1116",
+   "name": "Stahlkern Protein Pancake Mix 500 g",
+   "generic_name": "Backmischung mit Eiweiß, Pfannkuchen",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Mit dem Pancake Mix wird das Frühstück zur Eiweißquelle, einfach mit Wasser oder Milch anrühren und braten. Einfach mit Wasser oder Milch anrühren und in der Pfanne ausbacken. Ergibt etwa acht kleine Pancakes pro Portion. Protein trägt zu einer Zunahme an Muskelmasse bei.",
+   "ingredients": "Weizenmehl 40 %, Molkenproteinkonzentrat (Milch) 30 %, Haferflocken 10 %, Backpulver, Salz, Aroma",
+   "allergens_tags": [
+    "en:milk",
+    "en:gluten"
+   ],
+   "serving_size": "50 g",
+   "nutriments": {
+    "energy-kcal_100g": 370,
+    "fat_100g": 6.5,
+    "saturated-fat_100g": 2.0,
+    "carbohydrates_100g": 40,
+    "sugars_100g": 5.0,
+    "proteins_100g": 38,
+    "salt_100g": 1.3
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1116"
+  },
+  {
+   "code": "SK-1117",
+   "name": "Stahlkern Whey Core Banane 1000 g",
+   "generic_name": "Molkenproteinpulver mit Bananengeschmack",
+   "brand": "Stahlkern",
+   "category": "whey",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Banane ist die milde Sorte aus der Whey Core Reihe und passt gut zu Haferflocken. Protein trägt zu einer Zunahme an Muskelmasse bei. Protein trägt zum Erhalt von Muskelmasse bei. Ideal direkt nach dem Training oder als Eiweißbaustein zwischen den Mahlzeiten.",
+   "ingredients": "Molkenproteinkonzentrat (Milch) 91 %, Bananenpulver 2 %, Aroma, Verdickungsmittel Xanthan, Emulgator Sonnenblumenlecithin, Süßungsmittel Sucralose",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "30 g",
+   "nutriments": {
+    "energy-kcal_100g": 387,
+    "fat_100g": 6.0,
+    "saturated-fat_100g": 3.5,
+    "carbohydrates_100g": 8.2,
+    "sugars_100g": 6.5,
+    "proteins_100g": 75,
+    "salt_100g": 0.66
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1117"
+  },
+  {
+   "code": "SK-1118",
+   "name": "Stahlkern Clear Whey Kirsche 500 g",
+   "generic_name": "Klares Molkenproteingetränkepulver, Kirsche",
+   "brand": "Stahlkern",
+   "category": "clear",
+   "labels": "Hergestellt in Deutschland",
+   "description": "Clear Whey Kirsche schmeckt fruchtig und leicht und liefert 20 g Eiweiß pro Portion. Mit hochwertigem Molkenproteinisolat und ohne künstliche Farbstoffe. Die klare Textur ist gerade im Sommer eine leichte Alternative zum cremigen Shake. Eine Portion mit 300 ml kaltem Wasser anrühren und gut schütteln.",
+   "ingredients": "Molkenproteinisolat (Milch) 82 %, Säuerungsmittel Citronensäure, Kirscharoma, Süßungsmittel Sucralose, Acesulfam K",
+   "allergens_tags": [
+    "en:milk"
+   ],
+   "serving_size": "25 g",
+   "nutriments": {
+    "energy-kcal_100g": 344,
+    "fat_100g": 0.4,
+    "saturated-fat_100g": 0.3,
+    "carbohydrates_100g": 5.0,
+    "sugars_100g": 3.0,
+    "proteins_100g": 80,
+    "salt_100g": 0.55
+   },
+   "lang": "de",
+   "url": "https://stahlkern-nutrition.example/products/sk-1118"
+  }
+ ]
+}

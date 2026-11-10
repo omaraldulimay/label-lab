@@ -7,7 +7,7 @@ from fastapi.staticfiles import StaticFiles
 
 from . import store
 from .llm import LLMError, get_llm
-from .pipeline import (ROOT, check_product, default_cache, export_results, load_snapshot, run_all,
+from .pipeline import (ROOT, check_product, default_cache, export_results, load_products, run_all,
                        summarize)
 
 log = logging.getLogger("labellab")
@@ -23,9 +23,9 @@ def health():
 
 @app.post("/load")
 def load():
-    """Snapshot (Open Food Facts, ODbL) in die Datenbank laden."""
+    """Markenkatalog und Snapshot (Open Food Facts, ODbL) in die Datenbank laden."""
     store.init_db()
-    return {"loaded": store.save_products(load_snapshot()["products"])}
+    return {"loaded": store.save_products(load_products())}
 
 
 @app.post("/check/{code}")

@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
 from labellab import api
-from labellab.pipeline import load_snapshot
+from labellab.pipeline import load_products
 
 
 def memory_store(monkeypatch, tmp_path):
@@ -17,7 +17,7 @@ def memory_store(monkeypatch, tmp_path):
 
 def test_load_check_and_alert(monkeypatch, tmp_path):
     memory_store(monkeypatch, tmp_path)
-    monkeypatch.setattr(api, "load_snapshot", lambda: {"products": load_snapshot()["products"][:15]})
+    monkeypatch.setattr(api, "load_products", lambda: load_products()[:15])
     c = TestClient(api.app)
     assert c.get("/health").json()["mode"] == "fake"
     assert c.post("/load").json()["loaded"] == 15

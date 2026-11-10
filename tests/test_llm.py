@@ -131,9 +131,9 @@ def test_ollama_request_and_usage(monkeypatch):
 
     import httpx
     monkeypatch.setattr(httpx, "post", lambda url, json, timeout: sent.update(url=url, body=json) or Resp())
-    res = L.OllamaLLM(model="qwen2.5:7b", url="http://x:11434").check(product("Fatburner"))
+    res = L.OllamaLLM(model="qwen2.5:3b", url="http://x:11434").check(product("Fatburner"))
     assert sent["url"] == "http://x:11434/api/chat" and sent["body"]["format"] == "json"
-    assert sent["body"]["model"] == "qwen2.5:7b" and sent["body"]["stream"] is False
+    assert sent["body"]["model"] == "qwen2.5:3b" and sent["body"]["stream"] is False
     assert (res.tokens_in, res.tokens_out) == (321, 45) and res.seconds >= 0
     assert res.findings[0]["claim"] == "Fatburner"
 
@@ -142,7 +142,7 @@ def test_ollama_model_from_env(monkeypatch):
     monkeypatch.setenv("OLLAMA_MODEL", "llama3.1:8b")
     assert L.OllamaLLM().model == "llama3.1:8b"
     monkeypatch.delenv("OLLAMA_MODEL")
-    assert L.OllamaLLM().model == "qwen2.5:7b"
+    assert L.OllamaLLM().model == "qwen2.5:3b"
 
 
 def test_ollama_unreachable_gives_llm_error():
