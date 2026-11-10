@@ -44,7 +44,10 @@ def claim_findings(res) -> list[dict]:
         out.append({"check": "claims", "code": "claim_" + f["verdict"],
                     "severity": "error" if f["verdict"] == "unzulaessig" else "warn",
                     "message": f"\"{f['claim']}\": {f['reason']}",
-                    "claim": f["claim"], "replacement": f["replacement"]})
+                    "message_en": f"\"{f['claim']}\": {f['reason_en']}",
+                    "claim": f["claim"], "reason": f["reason"], "reason_en": f["reason_en"],
+                    "rule": f["rule"], "rule_en": f["rule_en"],
+                    "suggestion": f["suggestion"], "suggestion_en": f["suggestion_en"]})
     return out
 
 

@@ -62,3 +62,14 @@ def test_kcal_check_skipped_when_macros_missing():
 
 def test_value_above_100g():
     assert "wert_ueber_100g" in codes(check_contradictions(prod(proteins_100g=120)))
+
+
+def test_rule_findings_carry_rule_and_english_text():
+    from labellab.allergens import check_allergens
+    p = {"nutriments": {"sugars_100g": 30, "carbohydrates_100g": 10}, "ingredients": "", "serving_size": ""}
+    fs = check_gaps(p) + check_contradictions(p) + check_allergens("Molkenprotein, Soja", [])
+    assert len(fs) >= 5
+    for f in fs:
+        assert "1169/2011" in f["rule"] and "1169/2011" in f["rule_en"], f
+        assert f["message_en"] and f["message_en"] != f["message"], f
+    assert any("Art. 21" in f["rule"] for f in fs)

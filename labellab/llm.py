@@ -12,13 +12,28 @@ import time
 from dataclasses import dataclass, field
 from pathlib import Path
 
-PROMPT_VERSION = "1"
+PROMPT_VERSION = "2"
 DEFAULT_MODEL = "qwen2.5:3b"
 DEFAULT_URL = "http://localhost:11434"
 VERDICTS = {"unzulaessig", "pruefen"}
 
+# Rechtsgrundlagen als (Deutsch, Englisch). Das Modell soll genau diese Verweise verwenden.
+R_NOT_AUTH = ("Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
+              "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised")
+R_DISEASE = ("Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
+             "Art. 7(3) Reg. (EU) 1169/2011, reference to disease")
+R_WEIGHT = ("Art. 12 Buchst. b VO (EG) 1924/2006, Gewichtsverlust",
+            "Art. 12(b) Reg. (EC) 1924/2006, weight loss")
+R_MISLEADING = ("Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
+                "Art. 3(a) Reg. (EC) 1924/2006, misleading claim")
+R_NUTRITION = ("Art. 8 Abs. 1 VO (EG) 1924/2006 und Anhang, Bedingung nicht erfüllt",
+               "Art. 8(1) Reg. (EC) 1924/2006 and Annex, condition not met")
+R_WORDING = ("Art. 13 Abs. 1 VO (EG) 1924/2006, nur zugelassene Formulierung",
+             "Art. 13(1) Reg. (EC) 1924/2006, only the authorised wording")
+RULE_LIST = [R_NOT_AUTH, R_DISEASE, R_WEIGHT, R_MISLEADING, R_NUTRITION, R_WORDING]
+
 SYSTEM_PROMPT = """Du prüfst Werbeaussagen auf Lebensmitteln (Supplements, Proteinprodukte) nach der \
-EU-Verordnung 1924/2006 (Health-Claims-Verordnung).
+EU-Verordnung 1924/2006 (Health-Claims-Verordnung) und der Lebensmittelinformationsverordnung 1169/2011.
 
 Regeln:
 - Nährwertbezogene Angaben sind nur erlaubt, wenn die Bedingungen im Anhang erfüllt sind. \
@@ -32,9 +47,15 @@ wie "Fatburner", "entgiftet", "stärkt das Immunsystem", "beschleunigt die Fettv
 "garantiert Muskelaufbau".
 - Ein Nährwert oder eine Zahl ohne Werbeaussage ist kein Fund.
 
+Für "rule" und "rule_en" nimm genau eines dieser Paare (Deutsch | Englisch):
+""" + "\n".join(f"- {de} | {en}" for de, en in RULE_LIST) + """
+
 Antworte nur mit JSON in diesem Format:
 {"findings": [{"claim": "wörtliche Aussage aus dem Text", "verdict": "unzulaessig" oder "pruefen", \
-"reason": "ein kurzer Satz", "replacement": "zulässiger Ersatztext in einem Satz"}]}
+"reason": "ein kurzer Satz", "reason_en": "the same sentence in English", \
+"rule": "Rechtsgrundlage Deutsch", "rule_en": "legal basis in English", \
+"suggestion": "zulässiger Ersatzsatz", "suggestion_en": "the same sentence in English"}]}
+Der Ersatzsatz muss ein ganzer Satz sein, der die beanstandete Aussage ersetzen kann.
 Gibt es keine problematische Aussage, antworte {"findings": []}. Erfinde keine Aussagen, die nicht im Text stehen."""
 
 
@@ -120,35 +141,54 @@ def parse_findings(raw: str) -> list[dict]:
         claim, verdict = str(it.get("claim", "")).strip(), str(it.get("verdict", "")).strip().lower()
         if not claim or verdict not in VERDICTS:
             continue
-        out.append({"claim": claim, "verdict": verdict,
-                    "reason": str(it.get("reason", "")).strip(),
-                    "replacement": str(it.get("replacement", "")).strip()})
+        g = lambda k: str(it.get(k) or "").strip()  # noqa: E731
+        reason, rule = g("reason"), g("rule")
+        suggestion = g("suggestion") or g("replacement")  # replacement: alter Feldname
+        out.append({"claim": claim, "verdict": verdict, "reason": reason, "reason_en": g("reason_en") or reason,
+                    "rule": rule, "rule_en": g("rule_en") or rule,
+                    "suggestion": suggestion, "suggestion_en": g("suggestion_en") or suggestion})
     return out
 
 
 # ---- Fake: deterministisch, ohne Netzwerk ----------------------------------------------------
 
-FAKE_RULES = [  # (Muster, Urteil, Grund, Ersatz)
+# (Muster, Urteil, Grund DE, Grund EN, Rechtsgrundlage, Ersatz DE, Ersatz EN)
+# Die Ersatzsaetze enthalten selbst keinen Treffer der Regeln (siehe Test).
+_MUSCLE = ("Eiweiß trägt zu einer Zunahme an Muskelmasse bei.", "Protein contributes to a growth in muscle mass.")
+_FATBURN = ("Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
+            "Contains protein, which contributes to the maintenance of muscle mass.")
+_DISEASE_FIX = ("Dieses Produkt ist ein Nahrungsergänzungsmittel und ersetzt keine ausgewogene Ernährung.",
+                "This product is a food supplement and does not replace a balanced diet.")
+FAKE_RULES = [
     (r"fat\s?burn\w*|fettverbrenn\w*|fatburner", "unzulaessig",
      "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt."),
+     "A promise of fat burning is not authorised.", R_NOT_AUTH, *_FATBURN),
     (r"detox\w*|entgift\w*", "unzulaessig", "Entgiftungsversprechen ist nicht zugelassen.",
-     "Ohne Entgiftungsaussage vermarkten, nur den Nährwert nennen."),
-    (r"immun\w*", "unzulaessig", "Immunversprechen ist für Eiweiß nicht zugelassen.",
-     "Für Vitamin C: Vitamin C trägt zu einer normalen Funktion des Immunsystems bei."),
-    (r"heilt|heilend", "unzulaessig", "Krankheitsbezogene Aussagen sind verboten.",
-     "Aussage streichen, Lebensmittel dürfen keine Krankheiten heilen."),
+     "A detox promise is not authorised.", R_NOT_AUTH,
+     "Koffein erhöht die Aufmerksamkeit und die Konzentration.",
+     "Caffeine increases alertness and concentration."),
+    (r"immun\w*", "unzulaessig", "Immunversprechen ist für diese Zutat nicht zugelassen.",
+     "An immune claim is not authorised for this ingredient.", R_NOT_AUTH,
+     "Vitamin C trägt zur Verringerung von Müdigkeit und Ermüdung bei.",
+     "Vitamin C contributes to the reduction of tiredness and fatigue."),
+    (r"heilt|heilend|depression\w*|herzinfarkt|schlaganfall|cholesterin\w*|erkältung\w*", "unzulaessig",
+     "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
+     "Disease related statements are prohibited for foods.", R_DISEASE, *_DISEASE_FIX),
     (r"garantiert\w*", "unzulaessig", "Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "Eiweiß trägt zu einer Zunahme an Muskelmasse bei."),
+     "Guarantees of effects are not permitted.", R_MISLEADING, *_MUSCLE),
     (r"muskelaufbau|muskelwachstum|muskeln\s+aufbauen", "pruefen",
      "Nur die zugelassene Formulierung zur Muskelmasse ist erlaubt.",
-     "Eiweiß trägt zu einer Zunahme an Muskelmasse bei."),
+     "Only the authorised wording on muscle mass is permitted.", R_WORDING, *_MUSCLE),
     (r"abnehm\w*|schlank\w*", "pruefen", "Gewichtsbezogene Aussagen brauchen eine Zulassung.",
-     "Ohne Gewichtsversprechen, zum Beispiel nur den Kaloriengehalt nennen."),
+     "Weight related statements need an authorisation.", R_WEIGHT,
+     "Enthält pro Portion nur wenige Kalorien.", "Contains only a few calories per serving."),
     (r"proteinreich|high\s?protein|eiweißreich|eiweissreich", "pruefen",
      "Erlaubt nur, wenn mindestens 20 % der Energie aus Eiweiß stammen.",
-     "Quelle von Eiweiß, falls mindestens 12 % der Energie aus Eiweiß stammen."),
+     "Only allowed if at least 20 % of the energy comes from protein.", R_NUTRITION,
+     "Quelle von Eiweiß, falls mindestens 12 % der Energie aus Eiweiß stammen.",
+     "Source of protein, if at least 12 % of the energy comes from protein."),
 ]
+AUTHORISED_IMMUNE = re.compile(r"trägt zu einer normalen Funktion des Immunsystems bei", re.IGNORECASE)
 
 
 class FakeLLM:
@@ -159,13 +199,16 @@ class FakeLLM:
         text = product_text(p)
         findings = []
         share = protein_share(p)
-        for pattern, verdict, reason, repl in FAKE_RULES:
+        if AUTHORISED_IMMUNE.search(text):  # zugelassene Angabe (Zink, Vitamin C): kein Immun Fund
+            text = AUTHORISED_IMMUNE.sub(" ", text)
+        for pattern, verdict, reason, reason_en, rule, sug, sug_en in FAKE_RULES:
             m = re.search(pattern, text, re.IGNORECASE)
             if not m:
                 continue
             if "proteinreich" in pattern and share is not None and share >= 20:
                 continue  # Bedingung erfuellt, kein Fund
-            findings.append({"claim": m.group(0), "verdict": verdict, "reason": reason, "replacement": repl})
+            findings.append({"claim": m.group(0), "verdict": verdict, "reason": reason, "reason_en": reason_en,
+                             "rule": rule[0], "rule_en": rule[1], "suggestion": sug, "suggestion_en": sug_en})
         t_in = (len(SYSTEM_PROMPT) + len(build_user_prompt(p))) // 4
         t_out = max(1, len(json.dumps(findings)) // 4)
         return LLMResult(findings, self.model, self.mode, t_in, t_out, 0.0)

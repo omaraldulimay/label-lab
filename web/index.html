@@ -10,32 +10,33 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="placeholder" class="banner" hidden>Platzhalter: Diese Ergebnisse stammen aus dem Fake Modus, die Claim Funde sind nicht von einem echten Modell.</div>
+<div id="placeholder" class="banner" data-i18n="placeholder" hidden></div>
 <header class="wrap">
-  <p class="eyebrow">Produktdaten Check</p>
+  <div id="lang" class="lang" role="group" aria-label="Sprache / Language"></div>
+  <p class="eyebrow" data-i18n="eyebrow"></p>
   <h1>Label Lab</h1>
   <p id="claim" class="claim"></p>
 </header>
 <main class="wrap">
   <section id="stats" class="stats"></section>
   <section class="controls">
-    <div id="sourceFilter" class="chips" role="group" aria-label="Quelle"></div>
-    <div id="statusFilter" class="chips" role="group" aria-label="Ampel"></div>
-    <div id="checkFilter" class="chips" role="group" aria-label="Prüfungsart"></div>
-    <input id="search" type="search" placeholder="Produkt oder Marke suchen" aria-label="Suche">
+    <div id="sourceFilter" class="chips" role="group" data-i18n-aria="source"></div>
+    <div id="statusFilter" class="chips" role="group" data-i18n-aria="light"></div>
+    <div id="checkFilter" class="chips" role="group" data-i18n-aria="checktype"></div>
+    <input id="search" type="search" data-i18n-ph="search" data-i18n-aria="searchlabel">
   </section>
   <p id="count" class="muted"></p>
   <ul id="list" class="list"></ul>
 </main>
 <aside id="detail" class="detail" hidden>
-  <button id="close" class="close" aria-label="Schließen">Schließen</button>
+  <button id="close" class="close" data-i18n="close"></button>
   <div id="detailBody"></div>
 </aside>
 <footer class="wrap foot">
-  <p>Die Quelle Open Food Facts: Produktdaten von <a href="https://world.openfoodfacts.org">Open Food Facts</a>, Lizenz
-  <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a>. Eine Zusammenstellung der Daten bleibt unter ODbL.</p>
-  <p>Regeln laufen in Python, ein lokales Modell prüft nur die Sprache der Werbeaussagen.</p>
+  <p data-i18n-html="foot1"></p>
+  <p data-i18n="foot2"></p>
 </footer>
+<script src="fix.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -20,11 +20,31 @@ def test_fake_is_default_in_tests():
     assert L.get_llm().mode == "fake"
 
 
-def test_fake_finds_unauthorized_claim_with_replacement():
+def test_fake_finds_unauthorized_claim_with_suggestion_and_rule():
     res = FakeLLM().check(product("Fatburner Shake", generic_name="entgiftet den Körper"))
     verdicts = {f["claim"].lower(): f["verdict"] for f in res.findings}
     assert verdicts["fatburner"] == "unzulaessig" and "entgiftet" in verdicts
-    assert all(f["replacement"] for f in res.findings)
+    for f in res.findings:
+        for key in ("reason", "reason_en", "rule", "rule_en", "suggestion", "suggestion_en"):
+            assert f[key], key
+        assert "Art." in f["rule"] and "Art." in f["rule_en"]
+
+
+def test_fake_suggestions_do_not_trigger_the_fake_again():
+    """Grundlage fuer den Uebernehmen Button: der Vorschlag selbst ist unauffaellig."""
+    for *_, sug, sug_en in L.FAKE_RULES:
+        assert FakeLLM().check(product("Shake", description=sug)).findings == []
+        assert FakeLLM().check(product("Shake", description=sug_en)).findings == []
+
+
+def test_prompt_version_and_rule_list_in_prompt():
+    assert L.PROMPT_VERSION == "2"
+    assert all(de in L.SYSTEM_PROMPT for de, _ in L.RULE_LIST)
+
+
+def test_authorised_immune_claim_is_not_flagged():
+    p = product("Zink", description="Zink trägt zu einer normalen Funktion des Immunsystems bei.")
+    assert FakeLLM().check(p).findings == []
 
 
 def test_fake_is_deterministic():
@@ -47,11 +67,20 @@ def test_clean_text_no_findings():
 
 def test_parse_findings_valid_and_filters():
     raw = json.dumps({"findings": [
-        {"claim": "Fatburner", "verdict": "unzulaessig", "reason": "r", "replacement": "e"},
-        {"claim": "ok", "verdict": "zulaessig", "reason": "", "replacement": ""},
+        {"claim": "Fatburner", "verdict": "unzulaessig", "reason": "r", "rule": "Art. 10", "suggestion": "e"},
+        {"claim": "ok", "verdict": "zulaessig", "reason": "", "suggestion": ""},
         {"claim": "", "verdict": "pruefen"}]})
     out = parse_findings(raw)
     assert len(out) == 1 and out[0]["claim"] == "Fatburner"
+    assert out[0]["rule"] == "Art. 10" and out[0]["suggestion"] == "e"
+    assert out[0]["suggestion_en"] == "e" and out[0]["rule_en"] == "Art. 10"  # Rueckfall auf Deutsch
+
+
+def test_parse_findings_accepts_old_replacement_field_and_english():
+    raw = json.dumps({"findings": [{"claim": "x", "verdict": "pruefen", "reason": "r", "reason_en": "rr",
+                                    "replacement": "alt", "rule_en": "R"}]})
+    f = parse_findings(raw)[0]
+    assert f["suggestion"] == "alt" and f["reason_en"] == "rr" and f["rule_en"] == "R"
 
 
 def test_parse_findings_extracts_json_from_noise():
@@ -126,7 +155,7 @@ def test_ollama_request_and_usage(monkeypatch):
 
         def json(self):
             return {"message": {"content": '{"findings": [{"claim": "Fatburner", "verdict": "unzulaessig",'
-                                           ' "reason": "r", "replacement": "e"}]}'},
+                                           ' "reason": "r", "rule": "Art. 10", "suggestion": "e"}]}'},
                     "prompt_eval_count": 321, "eval_count": 45}
 
     import httpx

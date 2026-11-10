@@ -35,7 +35,7 @@ def test_brand_catalog_shape():
     assert 45 <= len(cat) <= 60
     assert len({p["code"] for p in cat}) == len(cat)
     for p in cat:
-        assert p["brand"] == "Stahlkern" and p["description"] and p["serving_size"] is not None
+        assert p["brand"] == "RAWFORM" and p["description"] and p["serving_size"] is not None
         assert 3 <= p["description"].count(". ") + 1 <= 7
 
 
@@ -45,9 +45,9 @@ def test_brand_catalog_mix_of_clean_and_problems():
     green = sum(1 for r in results if r["status"] == "green")
     assert green >= 0.5 * len(results) and 0.2 * len(results) <= red <= 0.45 * len(results)
     by_code = {r["code"]: r for r in results}
-    assert by_code["SK-1014"]["checks"]["widersprueche"] == "red"   # Kalorien passen nicht zu den Makros
-    assert by_code["SK-1042"]["checks"]["allergene"] == "red"       # Soja nicht deklariert
-    assert by_code["SK-1093"]["checks"]["claims"] == "red"          # Fatburner
+    assert by_code["RF-1014"]["checks"]["widersprueche"] == "red"   # Kalorien passen nicht zu den Makros
+    assert by_code["RF-1042"]["checks"]["allergene"] == "red"       # Soja nicht deklariert
+    assert by_code["RF-1093"]["checks"]["claims"] == "red"          # Fatburner
 
 
 def test_sources_are_tagged_and_summarized(tmp_path):
