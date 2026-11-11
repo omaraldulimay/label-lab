@@ -178,10 +178,45 @@ ALLOWED_CLAIMS: list[tuple[str, list[str]]] = [
         r"zur erhaltung einer normalen gehirnfunktion", r"zur erhaltung normaler sehkraft",
         r"zu einer normalen herzfunktion"]),
 ]
+# Dieselben Claims auf Englisch (EU Register Wortlaut). Nährstoff -> Funktionen.
+ALLOWED_CLAIMS_EN: list[tuple[str, list[str]]] = [
+    (r"protein", [
+        r"a growth in muscle mass", r"the maintenance of muscle mass", r"the maintenance of normal bones"]),
+    (r"vitamin c", [
+        r"the reduction of tiredness and fatigue", r"the normal function of the immune system",
+        r"the protection of cells from oxidative stress", r"normal collagen formation",
+        r"normal energy[- ]yielding metabolism", r"the normal function of the nervous system"]),
+    (r"vitamin d3?", [
+        r"the maintenance of normal bones", r"the maintenance of normal teeth",
+        r"the normal function of the immune system", r"the maintenance of normal muscle function",
+        r"the normal absorption/utilisation of calcium and phosphorus", r"normal blood calcium levels"]),
+    (r"vitamin k2?", [r"the maintenance of normal bones", r"normal blood clotting"]),
+    (r"vitamin b(?:6|12)", [
+        r"normal (?:protein and glycogen|energy[- ]yielding) metabolism",
+        r"the reduction of tiredness and fatigue", r"the normal function of the immune system",
+        r"the normal function of the nervous system"]),
+    (r"zinc", [
+        r"the normal function of the immune system", r"the protection of cells from oxidative stress",
+        r"the maintenance of normal skin", r"the maintenance of normal hair", r"the maintenance of normal nails",
+        r"the maintenance of normal bones"]),
+    (r"magnesium", [
+        r"normal muscle function", r"the reduction of tiredness and fatigue",
+        r"the normal function of the nervous system", r"normal energy[- ]yielding metabolism",
+        r"normal protein synthesis", r"the maintenance of normal bones"]),
+    (r"calcium", [r"normal muscle function", r"the maintenance of normal bones"]),
+    (r"iron", [r"the reduction of tiredness and fatigue", r"normal formation of red blood cells"]),
+    (r"(?:omega[ -]?3(?: fatty acids)?|dha(?: and epa)?|epa(?: and dha)?)", [
+        r"the maintenance of normal brain function", r"the maintenance of normal vision",
+        r"the normal function of the heart"]),
+]
 _ALLOWED_RE = re.compile("|".join(
     rf"\b{nut}\s+(?:trägt|tragen)\s+(?:{'|'.join(funcs)})(?:\s+bei)?" for nut, funcs in ALLOWED_CLAIMS
+) + "|" + "|".join(
+    rf"\b{nut}\s+contribut(?:es?|ing)\s+to\s+(?:{'|'.join(funcs)})" for nut, funcs in ALLOWED_CLAIMS_EN
 ) + r"|\b(?:kreatin|creatin)\s+erhöht\s+die\s+körperliche\s+leistung\s+bei\s+kurzzeitigen,?\s+"
-    r"intensiven\s+(?:und\s+aufeinanderfolgenden\s+)?\w+", re.IGNORECASE)
+    r"intensiven\s+(?:und\s+aufeinanderfolgenden\s+)?\w+"
+    r"|\bcreatine\s+increases\s+physical\s+performance\s+in\s+successive\s+bursts\s+of\s+short[- ]term,?\s+"
+    r"high[- ]intensity\s+exercise", re.IGNORECASE)
 
 # Verdaechtig: Wirkversprechen, Krankheit, Immun, Fettabbau, Garantien, Ergebnisse, Schutz, Detox, Stoffwechsel
 SUSPICIOUS_RE = re.compile(
@@ -190,9 +225,19 @@ SUSPICIOUS_RE = re.compile(
     r"angst\w*|schlafstör\w*|blutdruck|cholesterin\w*|herzinfarkt|schlaganfall|schmerz\w*|immun\w*|"
     r"garantier\w*|nachweislich|klinisch|studien\w*|ergebnis\w*|wirkt|wirkung\w*|schütz\w*|schutz\s+vor|"
     r"detox\w*|entgift\w*|stoffwechsel|stärkt|anheiz\w*|heizt|muskelaufbau|muskelwachstum|muskeln\s+aufbauen|"
-    r"um\s+bis\s+zu|zehnmal|sichtbar\w*|kein\w*\s+muskelkater|wunder\w*|doppelt\s+so",
+    r"um\s+bis\s+zu|zehnmal|sichtbar\w*|kein\w*\s+muskelkater|wunder\w*|doppelt\s+so|"
+    # Englisch (und einzelne Stichwoerter aus FR, ES, IT)
+    r"immune|immunity|fat[- ]?burn\w*|burns?\s+fat|lose\s+weight|weight[- ]loss|slimming|\bcures?\b|\bcured\b|"
+    r"\bheals?\b|healing|prevent\w*|\btreat(?:s|ment|ing)?\b|relie[fv]\w*|alleviat\w*|guarante\w*|"
+    r"detox\w*|metabolism|metabolic|clinically|scientifically\s+proven|\bproven\b|\bstudies\b|"
+    r"lowers?\b|reduces?\s+(?:cholesterol|blood|risk|inflammation)|cholesterol|blood\s+(?:pressure|sugar)|"
+    r"disease\w*|cancer|diabetes|arthritis|depress\w*|anxiety|inflammat\w*|insomnia|"
+    r"build(?:s|ing)?\s+(?:lean\s+)?muscle|muscle\s+(?:growth|gain|building)|miracle|"
+    r"\bboosts?\s+(?:your\s+)?(?:immun\w*|metabolism|testosterone)|testosteron\w*|anti[- ]?aging|"
+    r"inmun\w*|adelgaz\w*|quema\s+grasa|brûle\w*\s+(?:les\s+)?graisses|minceur|perte\s+de\s+poids|"
+    r"dimagr\w*|brucia\w*\s+grass\w*|odchudz\w*|spala\w*\s+tłuszcz",
     re.IGNORECASE)
-NUTRITION_CLAIM_RE = re.compile(r"proteinreich|high\s?protein|eiweißreich|eiweissreich", re.IGNORECASE)
+NUTRITION_CLAIM_RE = re.compile(r"proteinreich|high\s?protein|rich\s+in\s+protein|eiweißreich|eiweissreich", re.IGNORECASE)
 PROTEIN_RICH_MIN = 20.0  # % der Energie aus Eiweiß (VO 1924/2006 Anhang)
 
 
@@ -298,21 +343,24 @@ _FATBURN = ("Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
 _DISEASE_FIX = ("Dieses Produkt ist ein Nahrungsergänzungsmittel und ersetzt keine ausgewogene Ernährung.",
                 "This product is a food supplement and does not replace a balanced diet.")
 FAKE_RULES = [
-    (r"fat\s?burn\w*|fettverbrenn\w*|fatburner|verbrenn\w*|körperfett|fettabbau", "NOT_AUTH",
+    (r"fatburn\w*|fat[\s-]burn\w*|burns?\s+fat|fettverbrenn\w*|fatburner|verbrenn\w*|körperfett|fettabbau", "NOT_AUTH",
      "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
      "A promise of fat burning is not authorised.", *_FATBURN),
-    (r"detox\w*|entgift\w*", "NOT_AUTH", "Entgiftungsversprechen ist nicht zugelassen.",
+    (r"detox\w*|entgift\w*|metabolism", "NOT_AUTH", "Entgiftungsversprechen ist nicht zugelassen.",
      "A detox promise is not authorised.",
      "Koffein erhöht die Aufmerksamkeit und die Konzentration.",
      "Caffeine increases alertness and concentration."),
-    (r"immun\w*", "NOT_AUTH", "Immunversprechen ist für diese Zutat nicht zugelassen.",
+    (r"immun\w*|inmun\w*", "NOT_AUTH", "Immunversprechen ist für diese Zutat nicht zugelassen.",
      "An immune claim is not authorised for this ingredient.",
      "Vitamin C trägt zur Verringerung von Müdigkeit und Ermüdung bei.",
      "Vitamin C contributes to the reduction of tiredness and fatigue."),
     (r"heilt|heilend|depression\w*|herzinfarkt|schlaganfall|cholesterin\w*|erkältung\w*|blutdruck|angstzust\w*|krank\w*",
      "DISEASE", "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
      "Disease related statements are prohibited for foods.", *_DISEASE_FIX),
-    (r"garantiert\w*|zehnmal", "MISLEADING", "Garantieversprechen für Wirkungen sind nicht zulässig.",
+    (r"disease\w*|\bcures?\b|\bheals?\b|prevent\w*|cholesterol|cancer|diabetes|depress\w*", "DISEASE",
+     "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
+     "Disease related statements are prohibited for foods.", *_DISEASE_FIX),
+    (r"guarante\w*|zehnmal", "MISLEADING", "Garantieversprechen für Wirkungen sind nicht zulässig.",
      "Guarantees of effects are not permitted.", *_MUSCLE),
     (r"muskelaufbau|muskelwachstum|muskeln\s+aufbauen", "NOT_AUTH",
      "Nur die zugelassene Formulierung zur Muskelmasse ist erlaubt.",

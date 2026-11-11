@@ -75,6 +75,34 @@ def test_allowlist_sentences_are_not_sent_to_the_model():
         assert pre.allowed == [s] and pre.suspicious == [], s
 
 
+def test_english_allowlist_sentences_are_not_sent_to_the_model():
+    for s in ("Protein contributes to a growth in muscle mass.",
+              "Vitamin C contributes to the normal function of the immune system.",
+              "Vitamin D contributes to the maintenance of normal bones.",
+              "Magnesium contributes to normal muscle function and to the reduction of tiredness and fatigue.",
+              "Zinc contributes to the protection of cells from oxidative stress.",
+              "Creatine increases physical performance in successive bursts of short-term, high-intensity exercise.",
+              "DHA contributes to the maintenance of normal brain function."):
+        pre = prefilter(product("Shake", description=s))
+        assert pre.allowed == [s] and pre.suspicious == [], s
+
+
+def test_english_allowed_claim_with_extra_promise_still_goes_to_the_model():
+    s = "Zinc contributes to the normal function of the immune system and cures colds."
+    assert prefilter(product("Shake", description=s)).suspicious == [s]
+
+
+def test_english_suspicious_keywords_and_other_languages_without_keyword_stay_local():
+    for word in ("boosts your immune system", "burns fat", "cures colds", "prevents disease", "is guaranteed",
+                 "supports detox", "speeds up your metabolism", "helps you lose weight", "is clinically proven"):
+        assert L.SUSPICIOUS_RE.search(f"This product {word}."), word
+    for neutral in ("Poudre de protéines saveur chocolat.", "Proteína de suero sabor vainilla.",
+                    "Barretta proteica al cioccolato.", "Odżywka białkowa o smaku waniliowym.",
+                    "Mix with 300 ml of water."):
+        pre = prefilter(product(neutral))
+        assert pre.suspicious == [] and pre.allowed == [], neutral
+
+
 def test_allowed_claim_with_extra_promise_still_goes_to_the_model():
     s = "Zink trägt zu einer normalen Funktion des Immunsystems bei und heilt Erkältungen."
     assert prefilter(product("Shake", description=s)).suspicious == [s]

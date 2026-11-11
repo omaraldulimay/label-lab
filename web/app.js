@@ -24,6 +24,7 @@ const I18N = {
     n_sugars: "davon Zucker", n_protein: "Eiweiß", n_salt: "Salz",
     gap: "Datenlücke", complete: "Vollständig", statGap: "Datenlücke", statComplete: "vollständig",
     offNote: "Geprüft werden die Einträge in der offenen Datenbank Open Food Facts, nicht die Produkte oder Verpackungen der Hersteller.",
+    more: (n) => `Mehr laden (${n} weitere)`, country: "Land", allCountries: "Alle Länder",
     locale: "de-DE",
   },
   en: {
@@ -51,6 +52,7 @@ const I18N = {
     n_sugars: "of which sugars", n_protein: "Protein", n_salt: "Salt",
     gap: "Data gap", complete: "Complete", statGap: "data gap", statComplete: "complete",
     offNote: "What is checked are the entries in the open database Open Food Facts, not the manufacturers' products or packaging.",
+    more: (n) => `Load more (${n} more)`, country: "Country", allCountries: "All countries",
     locale: "en-GB",
   },
 };
@@ -59,7 +61,8 @@ const STATUSES = ["red", "yellow", "green"];
 const NUTRIENTS = {"energy-kcal_100g": "n_energy", fat_100g: "n_fat", "saturated-fat_100g": "n_sat",
   carbohydrates_100g: "n_carbs", sugars_100g: "n_sugars", proteins_100g: "n_protein", salt_100g: "n_salt"};
 const FIELDS = {name: "fieldName", generic_name: "fieldGeneric", labels: "fieldLabels", description: "fieldDescription"};
-const state = {source: "brand", status: "all", check: "all", q: "", data: null, lang: "de", applied: {}, open: null};
+const PAGE = 50;  // Zeilen pro Seite, der Rest kommt mit "Mehr laden"
+const state = {source: "brand", status: "all", country: "all", shown: PAGE, check: "all", q: "", data: null, lang: "de", applied: {}, open: null};
 
 function store(key, value) {  // localStorage kann fehlen oder werfen (privates Fenster), dann einfach ohne
   try {
@@ -114,7 +117,7 @@ function sourceChips() {
   for (const [value, key] of [["brand", "brandSource"], ["off", "offSource"]]) {
     const n = state.data.results.filter((r) => r.source === value).length;
     box.append(el("button", {class: "chip", "aria-pressed": String(state.source === value), text: `${t(key)} (${n})`,
-      onclick: () => { state.source = value; sourceChips(); filterChips(); renderStats(); render(); }}));
+      onclick: () => { state.source = value; state.country = "all"; state.shown = PAGE; sourceChips(); filterChips(); renderStats(); render(); }}));
   }
 }
 
@@ -122,7 +125,7 @@ function chips(box, items, key) {
   box.replaceChildren();
   for (const [value, label] of items) {
     box.append(el("button", {class: "chip", "aria-pressed": String(state[key] === value), text: label,
-      onclick: () => { state[key] = value; chips(box, items, key); render(); }}));
+      onclick: () => { state[key] = value; state.shown = PAGE; chips(box, items, key); render(); }}));
   }
 }
 function filterChips() {
@@ -130,6 +133,9 @@ function filterChips() {
   if (off && state.status === "red") state.status = "all";
   chips($("statusFilter"), [["all", t("all")], ...STATUSES.filter((s) => !off || s !== "red").map((s) => [s, lab(s)])], "status");
   chips($("checkFilter"), [["all", t("allChecks")], ...CHECKS.map((c) => [c, t(c)])], "check");
+  const codes = [...new Set(sourceRows().map((r) => r.country).filter(Boolean))].sort();
+  $("countryFilter").hidden = !off || codes.length < 2;
+  chips($("countryFilter"), [["all", t("allCountries")], ...codes.map((c) => [c, c.toUpperCase()])], "country");
 }
 
 function sourceRows() { return state.data.results.filter((r) => r.source === state.source); }
@@ -160,23 +166,32 @@ function visible() {
   return sourceRows().filter((r) => {
     const e = eff(r);
     return (state.status === "all" || e.status === state.status) &&
+      (state.country === "all" || r.country === state.country) &&
       (state.check === "all" || e.checks[state.check] !== "green") &&
       (!q || (r.name + " " + r.brand).toLowerCase().includes(q));
   });
 }
 
+function row(r) {
+  const e = eff(r);
+  return el("li", {class: "row", tabindex: "0", role: "button", onclick: () => openDetail(r),
+    onkeydown: (ev) => { if (ev.key === "Enter") openDetail(r); }},
+    dot(e.status),
+    el("div", {}, el("div", {class: "name", text: r.name}), el("div", {class: "brand", text: r.brand || t("noBrand")})),
+    el("div", {class: "mini"}, ...CHECKS.map((k) => dot(e.checks[k]))),
+    el("div", {class: "time", text: r.llm.cached ? t("cacheShort") : r.llm.seconds + " s"}));
+}
+
+// Nur eine Seite voll Zeilen im DOM (50), damit auch 2.000 Eintraege flüssig bleiben
 function render() {
   const rows = visible();
   $("count").textContent = t("count", rows.length, sourceRows().length);
-  $("list").replaceChildren(...rows.map((r) => {
-    const e = eff(r);
-    return el("li", {class: "row", tabindex: "0", role: "button", onclick: () => openDetail(r),
-      onkeydown: (ev) => { if (ev.key === "Enter") openDetail(r); }},
-      dot(e.status),
-      el("div", {}, el("div", {class: "name", text: r.name}), el("div", {class: "brand", text: r.brand || t("noBrand")})),
-      el("div", {class: "mini"}, ...CHECKS.map((k) => dot(e.checks[k]))),
-      el("div", {class: "time", text: r.llm.cached ? t("cacheShort") : r.llm.seconds + " s"}));
-  }));
+  const items = rows.slice(0, state.shown).map(row);
+  if (rows.length > state.shown) {
+    items.push(el("li", {class: "more"}, el("button", {class: "chip", text: t("more", rows.length - state.shown),
+      onclick: () => { state.shown += PAGE; render(); }})));
+  }
+  $("list").replaceChildren(...items);
 }
 
 function renderAll() {
@@ -267,15 +282,38 @@ const table = (rows) => el("table", {}, ...rows.map(([a, b]) => el("tr", {}, el(
 
 $("close").onclick = () => { $("detail").hidden = true; };
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("detail").hidden = true; });
-$("search").oninput = (e) => { state.q = e.target.value; render(); };
+let searchTimer;  // kurz warten, damit nicht jede Taste die ganze Liste neu filtert
+$("search").oninput = (e) => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { state.q = e.target.value; state.shown = PAGE; render(); }, 120);
+};
 
 const savedLang = store("labellab.lang");
 if (savedLang === "de" || savedLang === "en") state.lang = savedLang;
 document.documentElement.lang = state.lang;
 renderStatic();
 
+// results.json ist kompakt (siehe compact() in pipeline.py): Standardwerte und Rechtsgrundlagen wieder einsetzen
+function expand(data) {
+  const rules = data.meta.rules || [], m = data.meta;
+  const llmDefaults = {cached: false, seconds: 0, tokens_in: 0, tokens_out: 0, error: "", cost_usd: 0, allowed: 0, suspicious: 0};
+  for (const r of data.results) {
+    r.brand = r.brand || "";
+    r.llm = Object.assign({model: m.model, mode: m.mode}, llmDefaults, r.llm);
+    r.product = Object.assign({generic_name: "", labels: "", description: null, ingredients: "", nutriments: {},
+      allergens_tags: [], serving_size: ""}, r.product);
+    if (r.source === "off") r.product.url = "https://world.openfoodfacts.org/product/" + r.code;
+    for (const f of r.findings) {
+      const [de, en] = f.rule_i === undefined ? ["", ""] : rules[f.rule_i];
+      f.rule = de; f.rule_en = en; f.message_en = f.message_en || f.message;
+      f.suggestion = f.suggestion || ""; f.suggestion_en = f.suggestion_en || "";
+    }
+  }
+  return data;
+}
+
 fetch("public/results.json").then((r) => r.json()).then((data) => {
-  state.data = data;
+  state.data = expand(data);
   try {  // gemerkte Korrekturen nur, wenn sie zu diesem results.json gehoeren (Indizes sonst falsch)
     const saved = JSON.parse(store("labellab.applied") || "null");
     state.applied = saved && saved.gen === data.meta.generated ? saved.map : {};

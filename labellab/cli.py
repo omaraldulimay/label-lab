@@ -2,20 +2,23 @@
 
   python -m labellab.cli            # Modus aus LLM_MODE (Standard fake)
   python -m labellab.cli --rescore  # Ampel in results.json neu berechnen, ohne Modellaufruf
+  python -m labellab.cli --estimate # Modellaufrufe zaehlen und Kosten schaetzen, ohne Modellaufruf
 """
-import json
 import sys
 import time
 
 from .llm import LLMError, get_llm
-from .pipeline import RESULTS_JSON, default_cache, export_results, load_products, rescore, run_all
+from .pipeline import default_cache, estimate_model_load, export_results, load_products, read_results, rescore, run_all, write_results
 
 
 def main() -> int:
     if "--rescore" in sys.argv:
-        data = rescore(json.loads(RESULTS_JSON.read_text()))
-        RESULTS_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1))
+        data = rescore(read_results())
+        write_results(data)
         print(data["meta"]["sources"])
+        return 0
+    if "--estimate" in sys.argv:  # zaehlt Modellaufrufe und schaetzt Kosten, ruft kein Modell auf
+        print(estimate_model_load(load_products(), default_cache()))
         return 0
     try:
         llm = get_llm()

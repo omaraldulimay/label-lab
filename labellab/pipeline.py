@@ -6,7 +6,8 @@ from pathlib import Path
 
 from . import rules
 from .allergens import check_allergens
-from .llm import BUDGET_USD, ResultCache, check_claims, get_llm
+from .llm import (BUDGET_USD, DEFAULT_CLAUDE_MODEL, PRICE_IN, PRICE_OUT, ResultCache, cache_key, check_claims,
+                  get_llm, prefilter, system_prompt, user_prompt)
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAPSHOT = ROOT / "data" / "products.json"
@@ -78,6 +79,7 @@ def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
                 "cost_usd": round(res.cost_usd, 6), "allowed": res.allowed, "suspicious": res.suspicious},
         "product": {k: p.get(k) for k in ("generic_name", "labels", "description", "ingredients", "allergens_tags",
                                            "serving_size", "nutriments", "url")},
+        **({"country": p["country"]} if p.get("country") else {}),
     }
 
 
@@ -152,11 +154,70 @@ def run_all(products: list[dict], llm=None, cache: ResultCache | None = None, pr
     return results
 
 
+LLM_DEFAULTS = {"cached": False, "seconds": 0.0, "tokens_in": 0, "tokens_out": 0, "error": "", "cost_usd": 0.0,
+                "allowed": 0, "suspicious": 0}
+
+
+def compact(data: dict) -> dict:
+    """results.json klein halten: Rechtsgrundlagen einmal in meta.rules, leere Felder und Standardwerte weglassen.
+
+    expand() macht es rueckgaengig (ausser der Open Food Facts URL, die das Dashboard aus dem Code baut).
+    """
+    rules: list[list[str]] = []
+    index: dict[tuple[str, str], int] = {}
+    results = []
+    for r in data["results"]:
+        findings = []
+        for f in r["findings"]:
+            f = dict(f)
+            key = (f.pop("rule", ""), f.pop("rule_en", ""))
+            if key != ("", ""):
+                f["rule_i"] = index.setdefault(key, len(index))
+                if f["rule_i"] == len(rules):
+                    rules.append(list(key))
+            if f.get("message_en") == f.get("message"):
+                f.pop("message_en", None)
+            findings.append({k: v for k, v in f.items() if v not in ("", None)})
+        product = {k: v for k, v in r["product"].items() if v not in ("", None, [], {}) and k != "url"}
+        llm = {k: v for k, v in r["llm"].items() if k in LLM_DEFAULTS and v != LLM_DEFAULTS[k]}
+        row = dict(r, findings=findings, product=product, llm=llm)
+        row.pop("checks", None)
+        row["checks"] = {c: ampel([f for f in findings if f["check"] == c]) for c in CHECKS}
+        results.append({k: v for k, v in row.items() if v not in ("", None)})
+    return {"meta": dict(data["meta"], rules=rules), "results": results}
+
+
+def expand(data: dict) -> dict:
+    """Gegenstueck zu compact(): Standardwerte, Rechtsgrundlagen und Modellname wieder einsetzen."""
+    meta = dict(data["meta"])
+    rules = meta.pop("rules", [])
+    results = []
+    for r in data["results"]:
+        findings = []
+        for f in r["findings"]:
+            f = dict(f)
+            de, en = rules[f.pop("rule_i")] if "rule_i" in f else ("", "")
+            findings.append(dict({"rule": de, "rule_en": en, "message_en": f["message"]}, **f))
+        llm = dict(LLM_DEFAULTS, model=meta.get("model", ""), mode=meta.get("mode", ""), **r["llm"])
+        product = dict({"generic_name": "", "labels": "", "description": None, "ingredients": "",
+                        "allergens_tags": [], "serving_size": "", "nutriments": {}}, **r["product"])
+        results.append(dict(r, brand=r.get("brand", ""), findings=findings, llm=llm, product=product))
+    return {"meta": meta, "results": results}
+
+
+def write_results(data: dict, path: Path = RESULTS_JSON) -> None:
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    Path(path).write_text(json.dumps(compact(data), ensure_ascii=False, separators=(",", ":")))
+
+
+def read_results(path: Path = RESULTS_JSON) -> dict:
+    return expand(json.loads(Path(path).read_text()))
+
+
 def export_results(results: list[dict], llm, path: Path = RESULTS_JSON) -> dict:
     meta = summarize(results, llm)
     results = sorted(results, key=lambda r: (-ORDER[r["status"]], r["name"].lower()))
-    Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text(json.dumps({"meta": meta, "results": results}, ensure_ascii=False, indent=1))
+    write_results({"meta": meta, "results": results}, path)
     return meta
 
 
@@ -165,3 +226,32 @@ def default_cache(llm=None) -> ResultCache:
     if llm is not None and llm.mode == "fake":
         return ResultCache(None)
     return ResultCache(os.environ.get("LLM_CACHE", CACHE_FILE))
+
+
+OUT_TOKENS_PER_SENTENCE = 210  # gemessen im echten Lauf: 3371 Token Ausgabe fuer 16 Saetze
+
+
+def estimate_model_load(products: list[dict], cache: ResultCache | None = None,
+                        model: str = DEFAULT_CLAUDE_MODEL) -> dict:
+    """Ohne Modellaufruf zaehlen, wie viele Produkte und Saetze ans Modell gingen, und die Kosten schaetzen.
+
+    Gleicher Vorfilter wie im echten Lauf. Treffer im Cache kosten nichts. Pro Aufruf wird der volle
+    Systemprompt gerechnet (ohne Prompt Caching), die Schaetzung ist also eine Obergrenze.
+    """
+    sys_tokens = len(system_prompt(english=True)) // 3 + 1
+    calls = sentences = cached = 0
+    cost = 0.0
+    for p in products:
+        pre = prefilter(p)
+        if not pre.suspicious:
+            continue
+        if cache is not None and cache.get(cache_key(model, "\n".join(pre.suspicious))):
+            cached += 1
+            continue
+        calls += 1
+        sentences += len(pre.suspicious)
+        t_in = sys_tokens + len(user_prompt(pre.suspicious)) // 3 + 1
+        t_out = OUT_TOKENS_PER_SENTENCE * len(pre.suspicious) + 50
+        cost += (t_in * PRICE_IN + t_out * PRICE_OUT) / 1_000_000
+    return {"products": len(products), "model_calls": calls, "sentences": sentences, "cached_calls": cached,
+            "est_cost_usd": round(cost, 4), "budget_usd": BUDGET_USD}

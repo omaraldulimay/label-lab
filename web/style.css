@@ -66,3 +66,4 @@ ins{color:var(--gold);text-decoration:none;background:rgba(240,191,90,.1);border
 .field{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:10px 0 2px}
 .note{border:1px solid var(--gold);border-left-width:4px;border-radius:8px;background:var(--panel);padding:12px 16px;margin:16px 0 0;font-weight:500}
 .note[hidden]{display:none}
+.more{list-style:none;text-align:center;padding:16px 0}

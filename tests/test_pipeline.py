@@ -11,10 +11,14 @@ def test_ampel():
     assert ampel([{"severity": "warn"}, {"severity": "error"}]) == "red"
 
 
-def test_snapshot_has_about_200_products():
+def test_snapshot_is_large_unique_and_multi_country():
     snap = load_snapshot()
-    assert 150 <= len(snap["products"]) <= 250 and "ODbL" in snap["source"]
-    names = " ".join(p["name"].lower() for p in snap["products"])
+    prods = snap["products"]
+    assert 1500 <= len(prods) <= 2100 and "ODbL" in snap["source"]
+    assert len({p["code"] for p in prods}) == len(prods)  # keine Duplikate
+    assert len({p["country"] for p in prods if p.get("country")}) >= 8
+    assert {"protein", "riegel", "creatin", "amino", "vitamine", "omega", "pre"} <= {p["category"] for p in prods}
+    names = " ".join(p["name"].lower() for p in prods)
     for food in ("linsen", "baked beans", "nudeln"):
         assert food not in names
 
@@ -101,3 +105,61 @@ def test_rescore_keeps_claims_and_cost_without_model(tmp_path):
         assert [f for f in r["findings"] if f["check"] == "claims"] == \
             [dict(f, severity="warn") if r["source"] == "off" else f
              for f in old[r["code"]]["findings"] if f["check"] == "claims"]
+
+
+def test_compact_roundtrip_and_size(tmp_path):
+    from labellab.pipeline import read_results, write_results
+    llm = FakeLLM()
+    prods = load_products()[:30] + [dict(_off_product(), code="9", description="Das verbrennt Fett.")]
+    results = run_all(prods, llm)
+    meta = export_results(results, llm, tmp_path / "r.json")
+    raw = json.loads((tmp_path / "r.json").read_text())
+    assert raw["meta"]["rules"] and '"rule":' not in json.dumps(raw["results"], separators=(",", ":"))
+    data = read_results(tmp_path / "r.json")
+    by = {r["code"]: r for r in data["results"]}
+    for r in results:
+        out = by[r["code"]]
+        assert out["status"] == r["status"] and out["checks"] == r["checks"]
+        assert out["findings"] == r["findings"] and out["llm"] == r["llm"]
+    write_results(data, tmp_path / "r2.json")  # nochmal schreiben aendert nichts
+    assert json.loads((tmp_path / "r2.json").read_text())["results"] == raw["results"]
+    assert meta["products"] == len(prods)
+
+
+def test_estimate_counts_model_load_without_calling_a_model(tmp_path):
+    from labellab.llm import ResultCache
+    from labellab.pipeline import estimate_model_load
+    prods = [dict(_off_product(), code=str(i), description="Das verbrennt Fett. Heilt Erkältungen.")
+             for i in range(3)] + [dict(_off_product(), code="x", description="Neutral.")]
+    est = estimate_model_load(prods, ResultCache(None))
+    assert est["model_calls"] == 3 and est["sentences"] == 6 and est["cached_calls"] == 0
+    assert 0 < est["est_cost_usd"] < 0.01
+    assert estimate_model_load(prods[3:], ResultCache(None))["model_calls"] == 0
+
+
+def test_real_cache_hits_are_counted_in_the_estimate(tmp_path):
+    from labellab.llm import DEFAULT_CLAUDE_MODEL, ResultCache, cache_key, prefilter
+    from labellab.pipeline import estimate_model_load
+    p = dict(_off_product(), description="Das verbrennt Fett.")
+    cache = ResultCache(tmp_path / "c.json")
+    cache.set(cache_key(DEFAULT_CLAUDE_MODEL, "\n".join(prefilter(p).suspicious)), {"verdicts": []})
+    est = estimate_model_load([p], cache)
+    assert est["cached_calls"] == 1 and est["model_calls"] == 0 and est["est_cost_usd"] == 0
+
+
+def test_full_snapshot_rules_and_export_are_fast(tmp_path):
+    import time
+    products = load_products()
+    assert len(products) >= 1500
+    llm = FakeLLM()
+    start = time.monotonic()
+    results = run_all(products, llm)
+    export_results(results, llm, tmp_path / "r.json")
+    assert time.monotonic() - start < 10
+    assert (tmp_path / "r.json").stat().st_size < 3_000_000
+
+
+def test_shipped_estimate_stays_under_budget_with_real_cache():
+    from labellab.pipeline import default_cache, estimate_model_load
+    est = estimate_model_load(load_products(), default_cache())
+    assert est["est_cost_usd"] <= 0.25

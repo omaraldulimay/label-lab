@@ -4,7 +4,7 @@ Produktdaten Check für Supplements und Proteinprodukte. Gedacht für Fitness Ma
 
 ## Das Problem
 
-Bei Proteinpulver und Riegeln stecken die Fehler oft in den Daten: Nährwerte fehlen, Zucker ist höher als Kohlenhydrate, die Kalorien passen nicht zu den Makros, ein Allergen steht in den Zutaten, aber nicht in der Deklaration. Dazu kommen Werbeaussagen, die nach der EU Verordnung 1924/2006 nicht zulässig sind. Label Lab prüft das für rund 250 Produkte aus zwei Quellen und zeigt das Ergebnis als Ampel. Die Standardansicht ist der Katalog der Marke RAWFORM, daneben lassen sich rund 200 Supplements von Open Food Facts umschalten.
+Bei Proteinpulver und Riegeln stecken die Fehler oft in den Daten: Nährwerte fehlen, Zucker ist höher als Kohlenhydrate, die Kalorien passen nicht zu den Makros, ein Allergen steht in den Zutaten, aber nicht in der Deklaration. Dazu kommen Werbeaussagen, die nach der EU Verordnung 1924/2006 nicht zulässig sind. Label Lab prüft das für rund 1.800 Produkte aus zwei Quellen und zeigt das Ergebnis als Ampel. Die Standardansicht ist der Katalog der Marke RAWFORM, daneben lassen sich rund 1.700 echte Supplements aus ganz Europa von Open Food Facts umschalten (Filter nach Land, Liste mit "Mehr laden").
 
 RAWFORM ist eine fiktive Marke, Name und Texte sind erfunden. Der Katalog (`data/brand_catalog.json`) ist dem Sortiment einer typischen D2C Fitnessmarke nachgebaut.
 
