@@ -369,7 +369,7 @@ def test_pipeline_records_cost_per_product_and_total(tmp_path):
 
 
 def test_pipeline_status_and_llm_fields(tmp_path):
-    r = check_product(product("Shake", description="Das verbrennt Fett."), FakeLLM(),
+    r = check_product(product("Shake", description="Das verbrennt Fett.", source="brand"), FakeLLM(),
                       ResultCache(tmp_path / "c.json"))
     assert r["status"] == "red" and r["checks"]["claims"] == "red"
     assert r["llm"]["mode"] == "fake" and "seconds" in r["llm"] and r["llm"]["cost_usd"] == 0

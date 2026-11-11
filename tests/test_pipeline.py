@@ -1,7 +1,7 @@
 import json
 
 from labellab.llm import FakeLLM
-from labellab.pipeline import (ampel, export_results, load_brand_catalog, load_products, load_snapshot,
+from labellab.pipeline import (ampel, check_product, export_results, load_brand_catalog, load_products, load_snapshot,
                                run_all)
 
 
@@ -57,3 +57,47 @@ def test_sources_are_tagged_and_summarized(tmp_path):
     export_results(run_all(products[:5] + products[-5:], llm), llm, tmp_path / "r.json")
     meta = json.loads((tmp_path / "r.json").read_text())["meta"]
     assert meta["sources"]["brand"]["products"] == 5 and meta["sources"]["off"]["products"] == 5
+
+
+def _off_product():
+    return {"code": "1", "name": "x", "brand": "ESN", "source": "off", "ingredients": "", "serving_size": "",
+            "allergens_tags": [], "nutriments": {}}
+
+
+def test_off_findings_are_at_most_warn_and_neutral():
+    from labellab.llm import FakeLLM as F
+    r = check_product(_off_product(), F())
+    assert r["status"] == "yellow" and all(f["severity"] == "warn" for f in r["findings"])
+    msgs = {f["code"]: f for f in r["findings"]}
+    assert msgs["zutaten_fehlen"]["message"] == "Im Datenbankeintrag fehlt die Zutatenliste."
+    assert msgs["zutaten_fehlen"]["message_en"] == "The database entry has no ingredient list."
+    brand = check_product(dict(_off_product(), source="brand"), F())
+    assert brand["status"] == "red"
+
+
+def test_off_allergen_and_contradiction_are_warn():
+    from labellab.llm import FakeLLM as F
+    p = dict(_off_product(), ingredients="Sojalecithin", serving_size="30 g",
+             nutriments={"energy-kcal_100g": 900, "fat_100g": 1, "carbohydrates_100g": 1, "sugars_100g": 5,
+                         "proteins_100g": 1, "salt_100g": 0.1})
+    r = check_product(p, F())
+    assert {"allergene", "widersprueche"} <= {f["check"] for f in r["findings"]}
+    assert r["status"] == "yellow" and "Datenbankeintrag" in r["findings"][0]["message"]
+
+
+def test_rescore_keeps_claims_and_cost_without_model(tmp_path):
+    from labellab.pipeline import rescore
+    llm = FakeLLM()
+    prods = [dict(_off_product(), description="Das verbrennt Fett."), dict(load_products()[0])]
+    results = run_all(prods, llm)
+    export_results(results, llm, tmp_path / "r.json")
+    data = json.loads((tmp_path / "r.json").read_text())
+    out = rescore(data)
+    assert out["meta"]["api_cost_usd"] == data["meta"]["api_cost_usd"]
+    assert out["meta"]["sources"]["off"]["counts"]["red"] == 0
+    old = {r["code"]: r for r in data["results"]}
+    for r in out["results"]:
+        assert r["llm"] == old[r["code"]]["llm"]
+        assert [f for f in r["findings"] if f["check"] == "claims"] == \
+            [dict(f, severity="warn") if r["source"] == "off" else f
+             for f in old[r["code"]]["findings"] if f["check"] == "claims"]

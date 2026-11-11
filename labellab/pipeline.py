@@ -38,6 +38,11 @@ def ampel(findings: list[dict]) -> str:
     return "yellow" if findings else "green"
 
 
+def cap_warn(findings: list[dict]) -> list[dict]:
+    """Open Food Facts: Funde sind Luecken im Datenbankeintrag, hoechstens gelb."""
+    return [dict(f, severity="warn") for f in findings]
+
+
 def claim_findings(res) -> list[dict]:
     out = []
     for f in res.findings:
@@ -53,12 +58,15 @@ def claim_findings(res) -> list[dict]:
 
 def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
     res = check_claims(p, llm, cache)
+    off = p.get("source", "off") != "brand"
     per_check = {
-        "luecken": rules.check_gaps(p),
-        "widersprueche": rules.check_contradictions(p),
-        "allergene": check_allergens(p.get("ingredients", ""), p.get("allergens_tags", [])),
+        "luecken": rules.check_gaps(p, off),
+        "widersprueche": rules.check_contradictions(p, off),
+        "allergene": check_allergens(p.get("ingredients", ""), p.get("allergens_tags", []), off),
         "claims": claim_findings(res),
     }
+    if off:
+        per_check = {c: cap_warn(fs) for c, fs in per_check.items()}
     findings = [f for c in CHECKS for f in per_check[c]]
     return {
         "code": p["code"], "name": p["name"], "brand": p.get("brand", ""), "source": p.get("source", "off"),
@@ -71,6 +79,38 @@ def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
         "product": {k: p.get(k) for k in ("generic_name", "labels", "description", "ingredients", "allergens_tags",
                                            "serving_size", "nutriments", "url")},
     }
+
+
+def _counts(rs: list[dict]) -> dict:
+    return {s: sum(1 for r in rs if r["status"] == s) for s in ORDER}
+
+
+def rescore(data: dict) -> dict:
+    """Regeln und Ampel aus vorhandenen Ergebnissen neu berechnen, ohne Modellaufruf.
+
+    Die Claim Funde und der KI Teil (llm, meta Kosten) bleiben unveraendert.
+    """
+    results = []
+    for r in data["results"]:
+        p = dict(r["product"], code=r["code"], name=r["name"], brand=r["brand"], source=r["source"])
+        off = r["source"] != "brand"
+        per_check = {
+            "luecken": rules.check_gaps(p, off),
+            "widersprueche": rules.check_contradictions(p, off),
+            "allergene": check_allergens(p.get("ingredients", ""), p.get("allergens_tags", []), off),
+            "claims": [f for f in r["findings"] if f["check"] == "claims"],
+        }
+        if off:
+            per_check = {c: cap_warn(fs) for c, fs in per_check.items()}
+        findings = [f for c in CHECKS for f in per_check[c]]
+        results.append(dict(r, status=ampel(findings), checks={c: ampel(per_check[c]) for c in CHECKS},
+                            findings=findings))
+    results.sort(key=lambda r: (-ORDER[r["status"]], r["name"].lower()))
+    meta = dict(data["meta"], counts=_counts(results), rescored_from=data["meta"]["generated"],
+                generated=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    meta["sources"] = {s: {"products": sum(1 for r in results if r["source"] == s),
+                           "counts": _counts([r for r in results if r["source"] == s])} for s in ("brand", "off")}
+    return {"meta": meta, "results": results}
 
 
 def summarize(results: list[dict], llm) -> dict:

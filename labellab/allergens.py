@@ -88,7 +88,7 @@ def strip_traces(text: str) -> str:
     return _TRACES.sub(" ", text or "")
 
 
-def check_allergens(ingredients: str, allergens_tags: list[str]) -> list[dict]:
+def check_allergens(ingredients: str, allergens_tags: list[str], off: bool = False) -> list[dict]:
     """Zutaten gegen deklarierte Allergene abgleichen."""
     if not (ingredients or "").strip():
         return []  # ohne Zutaten ist kein Abgleich moeglich, die Luecke meldet eine andere Regel
@@ -99,14 +99,18 @@ def check_allergens(ingredients: str, allergens_tags: list[str]) -> list[dict]:
     for key, hit in in_text.items():
         if key not in declared:
             a = ALLERGENS[key]
-            out.append({"check": "allergene", "code": "allergen_nicht_deklariert", "severity": "error",
-                        "message": f"Zutaten nennen \"{hit}\" ({a['label']}), das Allergen ist nicht deklariert.",
-                        "message_en": f"Ingredients mention \"{hit}\" ({a['en']}), the allergen is not declared.",
+            out.append({"check": "allergene", "code": "allergen_nicht_deklariert", "severity": "warn" if off else "error",
+                        "message": (f"Im Datenbankeintrag nennen die Zutaten \"{hit}\" ({a['label']}), das Allergen ist nicht getaggt."
+                                    if off else f"Zutaten nennen \"{hit}\" ({a['label']}), das Allergen ist nicht deklariert."),
+                        "message_en": (f"In the database entry the ingredients mention \"{hit}\" ({a['en']}), the allergen is not tagged."
+                                       if off else f"Ingredients mention \"{hit}\" ({a['en']}), the allergen is not declared."),
                         "rule": RULE_UNDECLARED[0], "rule_en": RULE_UNDECLARED[1]})
     for key in declared - set(anywhere):
         a = ALLERGENS[key]
         out.append({"check": "allergene", "code": "allergen_ohne_zutat", "severity": "warn",
-                    "message": f"{a['label']} ist deklariert, aber in den Zutaten nicht zu finden.",
-                    "message_en": f"{a['en']} is declared but not found in the ingredients.",
+                    "message": (f"Im Datenbankeintrag ist {a['label']} als Allergen getaggt, steht aber nicht in den Zutaten."
+                                if off else f"{a['label']} ist deklariert, aber in den Zutaten nicht zu finden."),
+                    "message_en": (f"In the database entry {a['en']} is tagged as an allergen but is not in the ingredients."
+                                   if off else f"{a['en']} is declared but not found in the ingredients."),
                     "rule": RULE_NO_INGREDIENT[0], "rule_en": RULE_NO_INGREDIENT[1]})
     return out

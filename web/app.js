@@ -22,6 +22,8 @@ const I18N = {
     fieldName: "Name", fieldGeneric: "Bezeichnung", fieldLabels: "Hinweise", fieldDescription: "Beschreibung",
     n_energy: "Energie (kcal)", n_fat: "Fett", n_sat: "davon gesättigt", n_carbs: "Kohlenhydrate",
     n_sugars: "davon Zucker", n_protein: "Eiweiß", n_salt: "Salz",
+    gap: "Datenlücke", complete: "Vollständig", statGap: "Datenlücke", statComplete: "vollständig",
+    offNote: "Geprüft werden die Einträge in der offenen Datenbank Open Food Facts, nicht die Produkte oder Verpackungen der Hersteller.",
     locale: "de-DE",
   },
   en: {
@@ -47,6 +49,8 @@ const I18N = {
     fieldName: "Name", fieldGeneric: "Designation", fieldLabels: "Labels", fieldDescription: "Description",
     n_energy: "Energy (kcal)", n_fat: "Fat", n_sat: "of which saturated", n_carbs: "Carbohydrates",
     n_sugars: "of which sugars", n_protein: "Protein", n_salt: "Salt",
+    gap: "Data gap", complete: "Complete", statGap: "data gap", statComplete: "complete",
+    offNote: "What is checked are the entries in the open database Open Food Facts, not the manufacturers' products or packaging.",
     locale: "en-GB",
   },
 };
@@ -79,7 +83,9 @@ function el(tag, attrs = {}, ...kids) {
 }
 const fmt = (n, d) => new Intl.NumberFormat(t("locale"),
   d === undefined ? {} : {minimumFractionDigits: d, maximumFractionDigits: d}).format(n);
-const dot = (s) => el("span", {class: "dot " + s, title: t(s)});
+// Open Food Facts: gelb heisst Datenluecke, gruen vollstaendig (Rot gibt es dort nicht)
+const lab = (s, src = state.source) => src === "off" ? (s === "green" ? t("complete") : t("gap")) : t(s);
+const dot = (s, src) => el("span", {class: "dot " + s, title: lab(s, src)});
 
 // Ergebnis eines Produkts unter Beruecksichtigung uebernommener Korrekturen
 const appliedOf = (r) => state.applied[r.code] || [];
@@ -108,7 +114,7 @@ function sourceChips() {
   for (const [value, key] of [["brand", "brandSource"], ["off", "offSource"]]) {
     const n = state.data.results.filter((r) => r.source === value).length;
     box.append(el("button", {class: "chip", "aria-pressed": String(state.source === value), text: `${t(key)} (${n})`,
-      onclick: () => { state.source = value; sourceChips(); renderStats(); render(); }}));
+      onclick: () => { state.source = value; sourceChips(); filterChips(); renderStats(); render(); }}));
   }
 }
 
@@ -120,7 +126,9 @@ function chips(box, items, key) {
   }
 }
 function filterChips() {
-  chips($("statusFilter"), [["all", t("all")], ...STATUSES.map((s) => [s, t(s)])], "status");
+  const off = state.source === "off";
+  if (off && state.status === "red") state.status = "all";
+  chips($("statusFilter"), [["all", t("all")], ...STATUSES.filter((s) => !off || s !== "red").map((s) => [s, lab(s)])], "status");
   chips($("checkFilter"), [["all", t("allChecks")], ...CHECKS.map((c) => [c, t(c)])], "check");
 }
 
@@ -134,9 +142,12 @@ function renderStats() {
   $("claim").replaceChildren(t("checked", fmt(meta.products)).replace(/, $/, " "), ...(paid
     ? [el("b", {text: t("paid", cents)})]
     : [el("b", {text: t("cost")}), t("localMin", fmt(meta.llm_minutes))]));
+  const off = state.source === "off";
+  $("offNote").hidden = !off;
   const items = [
-    [fmt(rows.length), t("statProducts")], [fmt(c.red), t("statRed")], [fmt(c.yellow), t("statYellow")],
-    [fmt(c.green), t("statGreen")], [paid ? cents : "0 €", paid ? t("centsLabel") : t("statCost")],
+    [fmt(rows.length), t("statProducts")],
+    ...(off ? [[fmt(c.green), t("statComplete")], [fmt(c.yellow + c.red), t("statGap")]]
+      : [[fmt(c.red), t("statRed")], [fmt(c.yellow), t("statYellow")], [fmt(c.green), t("statGreen")]]), [paid ? cents : "0 €", paid ? t("centsLabel") : t("statCost")],
     [fmt(meta.llm_minutes) + " Min.", t(paid ? "statRuntimeApi" : "statRuntime", meta.model)],
     [fmt(meta.tokens_in + meta.tokens_out), t("statTokens")],
   ];
@@ -171,6 +182,7 @@ function render() {
 function renderAll() {
   renderStatic();
   if (!state.data) return;
+  $("offNote").textContent = t("offNote");
   $("placeholder").hidden = !state.data.meta.placeholder;
   renderStats(); sourceChips(); filterChips(); render();
   if (state.open && !$("detail").hidden) openDetail(state.open, true);
@@ -202,8 +214,8 @@ function openDetail(r, keepScroll = false, flash = false) {
   const scroll = $("detail").scrollTop;
   body.replaceChildren(el("h2", {text: r.name}),
     el("p", {class: "muted", text: `${r.brand || t("noBrand")} · ${r.source === "brand" ? t("artNo") : t("ean")} ${r.code}`}));
-  const light = el("div", {class: "light " + e.status + (flash ? " flash" : "")}, dot(e.status), el("b", {text: t(e.status)}));
-  if (e.status !== r.status) light.append(el("span", {class: "was", text: t("was", t(r.status))}));
+  const light = el("div", {class: "light " + e.status + (flash ? " flash" : "")}, dot(e.status, r.source), el("b", {text: lab(e.status, r.source)}));
+  if (e.status !== r.status) light.append(el("span", {class: "was", text: t("was", lab(r.status, r.source))}));
   body.append(light);
   if (applied.length) body.append(el("p", {class: "muted"}, `${t("resetHint")} `,
     el("button", {class: "reset", text: t("reset"), onclick: () => resetFix(r)})));

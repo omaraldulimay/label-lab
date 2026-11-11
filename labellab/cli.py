@@ -1,15 +1,22 @@
 """Ohne Datenbank und Docker: Snapshot pruefen und results.json schreiben.
 
   python -m labellab.cli            # Modus aus LLM_MODE (Standard fake)
+  python -m labellab.cli --rescore  # Ampel in results.json neu berechnen, ohne Modellaufruf
 """
+import json
 import sys
 import time
 
 from .llm import LLMError, get_llm
-from .pipeline import default_cache, export_results, load_products, run_all
+from .pipeline import RESULTS_JSON, default_cache, export_results, load_products, rescore, run_all
 
 
 def main() -> int:
+    if "--rescore" in sys.argv:
+        data = rescore(json.loads(RESULTS_JSON.read_text()))
+        RESULTS_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1))
+        print(data["meta"]["sources"])
+        return 0
     try:
         llm = get_llm()
     except LLMError as exc:
