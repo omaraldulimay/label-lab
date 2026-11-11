@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-11T11:26:25+00:00",
+  "generated": "2026-11-11T11:27:56+00:00",
   "source": "Markenkatalog und Open Food Facts (ODbL), https://world.openfoodfacts.org",
   "sources": {
    "brand": {
@@ -20,23 +20,23 @@
     }
    }
   },
-  "mode": "fake",
-  "model": "fake",
-  "placeholder": true,
+  "mode": "claude",
+  "model": "claude-haiku-5-5",
+  "placeholder": false,
   "products": 251,
   "counts": {
    "green": 76,
    "yellow": 29,
    "red": 146
   },
-  "api_cost_usd": 0.0,
-  "budget_usd": 0,
+  "api_cost_usd": 0.002,
+  "budget_usd": 0.3,
   "claims_allowed": 39,
   "claims_to_model": 18,
-  "tokens_in": 4351,
-  "tokens_out": 1362,
-  "llm_seconds": 0.0,
-  "llm_minutes": 0.0,
+  "tokens_in": 14267,
+  "tokens_out": 3641,
+  "llm_seconds": 25.3,
+  "llm_minutes": 0.4,
   "cached": 2,
   "llm_errors": 0
  },
@@ -74,8 +74,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -146,8 +146,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -198,8 +198,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -270,8 +270,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -333,8 +333,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -382,8 +382,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -454,8 +454,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -526,8 +526,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -580,8 +580,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -634,8 +634,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -680,8 +680,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -734,8 +734,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -780,8 +780,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -834,8 +834,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -906,8 +906,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -968,8 +968,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1037,8 +1037,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1083,8 +1083,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1129,8 +1129,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1183,8 +1183,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1246,8 +1246,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1303,8 +1303,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1357,8 +1357,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1411,8 +1411,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1465,8 +1465,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1521,8 +1521,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1586,8 +1586,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1640,8 +1640,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1703,8 +1703,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1759,8 +1759,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1813,8 +1813,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1867,8 +1867,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1939,8 +1939,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -1994,8 +1994,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2057,8 +2057,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2108,8 +2108,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2171,8 +2171,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2234,8 +2234,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2291,8 +2291,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2345,8 +2345,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2399,8 +2399,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2458,8 +2458,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2532,8 +2532,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2592,8 +2592,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2646,8 +2646,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2709,8 +2709,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2787,8 +2787,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2858,8 +2858,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2904,8 +2904,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -2976,8 +2976,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3031,8 +3031,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3101,8 +3101,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3156,8 +3156,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3210,8 +3210,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3272,8 +3272,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3340,8 +3340,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3386,8 +3386,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3441,8 +3441,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3510,8 +3510,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3568,8 +3568,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3631,8 +3631,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3699,8 +3699,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3763,8 +3763,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3827,8 +3827,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3891,8 +3891,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -3945,8 +3945,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4008,8 +4008,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4059,8 +4059,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4114,8 +4114,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4186,8 +4186,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4241,8 +4241,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4301,8 +4301,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4361,8 +4361,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4421,8 +4421,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4476,8 +4476,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4535,8 +4535,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4598,8 +4598,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4651,8 +4651,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4705,8 +4705,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4786,8 +4786,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4844,8 +4844,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4904,8 +4904,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -4958,8 +4958,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5032,8 +5032,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5092,8 +5092,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5155,8 +5155,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5211,26 +5211,40 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "message_en": "\"Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.\": Disease related statements are prohibited for foods.",
+     "message": "\"Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.\": Der Satz verspricht Hilfe bei Depressionen, Angstzuständen und Schlafstörungen sowie eine Blutdrucksenkung, also krankheitsbezogene Wirkungen.",
+     "message_en": "\"Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.\": The sentence claims help with depression, anxiety and sleep disorders and a reduction of blood pressure, i.e. disease-related effects.",
      "claim": "Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.",
-     "reason": "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "reason_en": "Disease related statements are prohibited for foods.",
+     "reason": "Der Satz verspricht Hilfe bei Depressionen, Angstzuständen und Schlafstörungen sowie eine Blutdrucksenkung, also krankheitsbezogene Wirkungen.",
+     "reason_en": "The sentence claims help with depression, anxiety and sleep disorders and a reduction of blood pressure, i.e. disease-related effects.",
      "rule": "Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
      "rule_en": "Art. 7(3) Reg. (EU) 1169/2011, reference to disease",
-     "suggestion": "Dieses Produkt ist ein Nahrungsergänzungsmittel und ersetzt keine ausgewogene Ernährung.",
-     "suggestion_en": "This product is a food supplement and does not replace a balanced diet."
+     "suggestion": "Ashwagandha ist ein Kräuterextrakt, der in einer ausgewogenen Ernährung enthalten sein kann.",
+     "suggestion_en": "Ashwagandha is an herbal extract that can be part of a balanced diet."
+    },
+    {
+     "check": "claims",
+     "code": "claim_unzulaessig",
+     "severity": "error",
+     "message": "\"Die Wirkung ist klinisch belegt.\": Die Behauptung einer klinischen Belegung ist eine nicht belegbare Wirkungsgarantie, die nicht im EU Register zugelassen ist.",
+     "message_en": "\"Die Wirkung ist klinisch belegt.\": The claim of clinical proof is an unverifiable efficacy guarantee not authorized in the EU register.",
+     "claim": "Die Wirkung ist klinisch belegt.",
+     "reason": "Die Behauptung einer klinischen Belegung ist eine nicht belegbare Wirkungsgarantie, die nicht im EU Register zugelassen ist.",
+     "reason_en": "The claim of clinical proof is an unverifiable efficacy guarantee not authorized in the EU register.",
+     "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
+     "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
+     "suggestion": "",
+     "suggestion_en": ""
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 440,
-    "tokens_out": 135,
+    "seconds": 2.67,
+    "tokens_in": 1436,
+    "tokens_out": 422,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000234,
     "allowed": 0,
     "suspicious": 2
    },
@@ -5270,40 +5284,40 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.\": Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "message_en": "\"BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.\": Guarantees of effects are not permitted.",
+     "message": "\"BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.\": Erfundene Zahl (zehnmal schneller) und übertriebene Wirkversprechen zum Muskelwachstum sind nicht belegt.",
+     "message_en": "\"BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.\": Invented figure (ten times faster) and exaggerated muscle growth claims are not substantiated.",
      "claim": "BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.",
-     "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "reason_en": "Guarantees of effects are not permitted.",
+     "reason": "Erfundene Zahl (zehnmal schneller) und übertriebene Wirkversprechen zum Muskelwachstum sind nicht belegt.",
+     "reason_en": "Invented figure (ten times faster) and exaggerated muscle growth claims are not substantiated.",
      "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
      "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
-     "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
-     "suggestion_en": "Protein contributes to a growth in muscle mass."
+     "suggestion": "BCAA 2:1:1 ist ein Proteinprodukt mit verzweigtkettigen Aminosäuren und kann im Rahmen einer ausgewogenen Ernährung und Training eingesetzt werden.",
+     "suggestion_en": "BCAA 2:1:1 is a protein product with branched-chain amino acids and can be used as part of a balanced diet and training."
     },
     {
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Keine Pause mehr, kein Muskelkater, garantiert.\": Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "message_en": "\"Keine Pause mehr, kein Muskelkater, garantiert.\": Guarantees of effects are not permitted.",
+     "message": "\"Keine Pause mehr, kein Muskelkater, garantiert.\": Garantie und Wirkversprechen (keine Muskelkater) sind nicht zulässig.",
+     "message_en": "\"Keine Pause mehr, kein Muskelkater, garantiert.\": Guarantee and efficacy claim (no muscle soreness) are not permitted.",
      "claim": "Keine Pause mehr, kein Muskelkater, garantiert.",
-     "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "reason_en": "Guarantees of effects are not permitted.",
+     "reason": "Garantie und Wirkversprechen (keine Muskelkater) sind nicht zulässig.",
+     "reason_en": "Guarantee and efficacy claim (no muscle soreness) are not permitted.",
      "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
      "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
-     "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
-     "suggestion_en": "Protein contributes to a growth in muscle mass."
+     "suggestion": "Dieses Produkt enthält Aminosäuren und eignet sich als Ergänzung zu einer proteinreichen Ernährung.",
+     "suggestion_en": "This product contains amino acids and is suitable as a supplement to a protein-rich diet."
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 443,
-    "tokens_out": 171,
+    "seconds": 2.62,
+    "tokens_in": 1445,
+    "tokens_out": 481,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000264,
     "allowed": 0,
     "suspicious": 2
    },
@@ -5359,8 +5373,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5415,8 +5429,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5464,26 +5478,26 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.\": Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "message_en": "\"Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.\": Guarantees of effects are not permitted.",
+     "message": "\"Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.\": Der Satz enthält eine Garantie und eine übertriebene Superlativaussage zur Wirkung, die nicht belegt ist.",
+     "message_en": "\"Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.\": The sentence contains a guarantee and an exaggerated superlative claim about the effect that is not substantiated.",
      "claim": "Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.",
-     "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "reason_en": "Guarantees of effects are not permitted.",
+     "reason": "Der Satz enthält eine Garantie und eine übertriebene Superlativaussage zur Wirkung, die nicht belegt ist.",
+     "reason_en": "The sentence contains a guarantee and an exaggerated superlative claim about the effect that is not substantiated.",
      "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
      "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
-     "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
-     "suggestion_en": "Protein contributes to a growth in muscle mass."
+     "suggestion": "Creatin HCl kann im Rahmen eines Trainingsprogramms zur Unterstützung der Muskelmasse beitragen.",
+     "suggestion_en": "Creatin HCl can contribute to supporting muscle mass as part of a training program."
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 430,
-    "tokens_out": 85,
+    "seconds": 2.09,
+    "tokens_in": 1411,
+    "tokens_out": 233,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000137,
     "allowed": 0,
     "suspicious": 1
    },
@@ -5530,8 +5544,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5576,8 +5590,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5632,8 +5646,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5686,8 +5700,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -5735,40 +5749,40 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.\": Immunversprechen ist für diese Zutat nicht zugelassen.",
-     "message_en": "\"Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.\": An immune claim is not authorised for this ingredient.",
+     "message": "\"Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.\": Versprechen, das Immunsystem zu stärken, ist nicht im EU-Register zugelassen; zusätzlich wird ein Schutz vor Erkältungen und Infekten behauptet, was einen Krankheitsbezug darstellt.",
+     "message_en": "\"Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.\": Claims to strengthen the immune system are not authorised in the EU register; additionally, protection against colds and infections is claimed, which is a disease reference.",
      "claim": "Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.",
-     "reason": "Immunversprechen ist für diese Zutat nicht zugelassen.",
-     "reason_en": "An immune claim is not authorised for this ingredient.",
+     "reason": "Versprechen, das Immunsystem zu stärken, ist nicht im EU-Register zugelassen; zusätzlich wird ein Schutz vor Erkältungen und Infekten behauptet, was einen Krankheitsbezug darstellt.",
+     "reason_en": "Claims to strengthen the immune system are not authorised in the EU register; additionally, protection against colds and infections is claimed, which is a disease reference.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
      "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Vitamin C trägt zur Verringerung von Müdigkeit und Ermüdung bei.",
-     "suggestion_en": "Vitamin C contributes to the reduction of tiredness and fatigue."
+     "suggestion": "Unser Multivitamin ergänzt die tägliche Ernährung mit wichtigen Vitaminen und Mineralstoffen.",
+     "suggestion_en": "Our multivitamin supplements your daily diet with important vitamins and minerals."
     },
     {
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Bei regelmäßiger Einnahme wirst du seltener krank.\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "message_en": "\"Bei regelmäßiger Einnahme wirst du seltener krank.\": Disease related statements are prohibited for foods.",
+     "message": "\"Bei regelmäßiger Einnahme wirst du seltener krank.\": Die Aussage verweist auf Krankheiten (seltener krank) und suggeriert eine krankheitsvorbeugende Wirkung.",
+     "message_en": "\"Bei regelmäßiger Einnahme wirst du seltener krank.\": The statement refers to illness (getting sick less often) and implies a disease-preventing effect.",
      "claim": "Bei regelmäßiger Einnahme wirst du seltener krank.",
-     "reason": "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "reason_en": "Disease related statements are prohibited for foods.",
+     "reason": "Die Aussage verweist auf Krankheiten (seltener krank) und suggeriert eine krankheitsvorbeugende Wirkung.",
+     "reason_en": "The statement refers to illness (getting sick less often) and implies a disease-preventing effect.",
      "rule": "Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
      "rule_en": "Art. 7(3) Reg. (EU) 1169/2011, reference to disease",
-     "suggestion": "Dieses Produkt ist ein Nahrungsergänzungsmittel und ersetzt keine ausgewogene Ernährung.",
-     "suggestion_en": "This product is a food supplement and does not replace a balanced diet."
+     "suggestion": "Dieses Produkt ergänzt eine ausgewogene Ernährung und Lebensweise.",
+     "suggestion_en": "This product complements a balanced diet and lifestyle."
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 440,
-    "tokens_out": 200,
+    "seconds": 2.57,
+    "tokens_in": 1435,
+    "tokens_out": 480,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000263,
     "allowed": 0,
     "suspicious": 2
    },
@@ -5808,26 +5822,26 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "message_en": "\"Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.\": Disease related statements are prohibited for foods.",
+     "message": "\"Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.\": Der Satz verweist auf Krankheiten (Herzinfarkt, Schlaganfall) und behauptet Krankheitsvorbeugung sowie Linderung von Beschwerden, was nicht zugelassen ist.",
+     "message_en": "\"Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.\": The sentence refers to diseases (heart attack, stroke) and claims disease prevention and relief of symptoms, which is not authorized.",
      "claim": "Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.",
-     "reason": "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "reason_en": "Disease related statements are prohibited for foods.",
+     "reason": "Der Satz verweist auf Krankheiten (Herzinfarkt, Schlaganfall) und behauptet Krankheitsvorbeugung sowie Linderung von Beschwerden, was nicht zugelassen ist.",
+     "reason_en": "The sentence refers to diseases (heart attack, stroke) and claims disease prevention and relief of symptoms, which is not authorized.",
      "rule": "Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
      "rule_en": "Art. 7(3) Reg. (EU) 1169/2011, reference to disease",
-     "suggestion": "Dieses Produkt ist ein Nahrungsergänzungsmittel und ersetzt keine ausgewogene Ernährung.",
-     "suggestion_en": "This product is a food supplement and does not replace a balanced diet."
+     "suggestion": "Unser Fischöl enthält Omega-3-Fettsäuren und ist Teil einer ausgewogenen Ernährung.",
+     "suggestion_en": "Our fish oil contains omega-3 fatty acids and is part of a balanced diet."
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 427,
-    "tokens_out": 103,
+    "seconds": 3.12,
+    "tokens_in": 1415,
+    "tokens_out": 272,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000157,
     "allowed": 1,
     "suspicious": 1
    },
@@ -5869,68 +5883,54 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"RAWFORM Pre Workout Inferno Fatburner 300 g\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"RAWFORM Pre Workout Inferno Fatburner 300 g\": A promise of fat burning is not authorised.",
-     "claim": "RAWFORM Pre Workout Inferno Fatburner 300 g",
-     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "reason_en": "A promise of fat burning is not authorised.",
-     "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
-     "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
-     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
-    },
-    {
-     "check": "claims",
-     "code": "claim_unzulaessig",
-     "severity": "error",
-     "message": "\"Pre Workout Pulver mit Fatburner Formel\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"Pre Workout Pulver mit Fatburner Formel\": A promise of fat burning is not authorised.",
+     "message": "\"Pre Workout Pulver mit Fatburner Formel\": Die Bezeichnung Fatburner verspricht eine nicht zugelassene fettverbrennende Wirkung.",
+     "message_en": "\"Pre Workout Pulver mit Fatburner Formel\": The term fat burner promises an unapproved fat-burning effect.",
      "claim": "Pre Workout Pulver mit Fatburner Formel",
-     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "reason_en": "A promise of fat burning is not authorised.",
+     "reason": "Die Bezeichnung Fatburner verspricht eine nicht zugelassene fettverbrennende Wirkung.",
+     "reason_en": "The term fat burner promises an unapproved fat-burning effect.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
      "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
-     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+     "suggestion": "Pre Workout Pulver mit Koffein und Vitaminen für das Training.",
+     "suggestion_en": "Pre workout powder with caffeine and vitamins for training."
     },
     {
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.\": A promise of fat burning is not authorised.",
+     "message": "\"Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.\": Garantie und Fettverbrennungsversprechen sind unzulässig und irreführend.",
+     "message_en": "\"Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.\": The guarantee and fat-loss promise are impermissible and misleading.",
      "claim": "Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.",
-     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "reason_en": "A promise of fat burning is not authorised.",
-     "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
-     "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
-     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+     "reason": "Garantie und Fettverbrennungsversprechen sind unzulässig und irreführend.",
+     "reason_en": "The guarantee and fat-loss promise are impermissible and misleading.",
+     "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
+     "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
+     "suggestion": "Inferno ist ein Pre Workout Pulver für Training mit Koffein.",
+     "suggestion_en": "Inferno is a pre workout powder for training with caffeine."
     },
     {
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.\": Entgiftungsversprechen ist nicht zugelassen.",
-     "message_en": "\"Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.\": A detox promise is not authorised.",
+     "message": "\"Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.\": Entgiftung und Stoffwechselanregung um 40 % sind nicht zugelassene Wirkversprechen mit erfundener Zahl.",
+     "message_en": "\"Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.\": Detoxification and a 40 % metabolism boost are unapproved health claims with an invented figure.",
      "claim": "Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.",
-     "reason": "Entgiftungsversprechen ist nicht zugelassen.",
-     "reason_en": "A detox promise is not authorised.",
+     "reason": "Entgiftung und Stoffwechselanregung um 40 % sind nicht zugelassene Wirkversprechen mit erfundener Zahl.",
+     "reason_en": "Detoxification and a 40 % metabolism boost are unapproved health claims with an invented figure.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
      "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Koffein erhöht die Aufmerksamkeit und die Konzentration.",
-     "suggestion_en": "Caffeine increases alertness and concentration."
+     "suggestion": "Die Formel liefert Koffein und B-Vitamine, die zu einem normalen Energiestoffwechsel beitragen.",
+     "suggestion_en": "The formula provides caffeine and B vitamins that contribute to normal energy metabolism."
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 466,
-    "tokens_out": 358,
+    "seconds": 3.19,
+    "tokens_in": 1489,
+    "tokens_out": 678,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000367,
     "allowed": 0,
     "suspicious": 4
    },
@@ -5977,12 +5977,12 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": true,
-    "seconds": 0.0,
-    "tokens_in": 411,
-    "tokens_out": 31,
+    "seconds": 1.55,
+    "tokens_in": 1380,
+    "tokens_out": 135,
     "error": "",
     "cost_usd": 0.0,
     "allowed": 0,
@@ -6033,12 +6033,12 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": true,
-    "seconds": 0.0,
-    "tokens_in": 411,
-    "tokens_out": 31,
+    "seconds": 1.55,
+    "tokens_in": 1380,
+    "tokens_out": 135,
     "error": "",
     "cost_usd": 0.0,
     "allowed": 0,
@@ -6090,8 +6090,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6137,40 +6137,54 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.\": A promise of fat burning is not authorised.",
+     "message": "\"Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.\": Wirkversprechen zur Fettverbrennung, das nicht im EU Register zugelassen ist.",
+     "message_en": "\"Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.\": Claims that the protein accelerates fat burning, a health effect not authorised in the EU register.",
      "claim": "Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.",
-     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "reason_en": "A promise of fat burning is not authorised.",
+     "reason": "Wirkversprechen zur Fettverbrennung, das nicht im EU Register zugelassen ist.",
+     "reason_en": "Claims that the protein accelerates fat burning, a health effect not authorised in the EU register.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
      "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
-     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+     "suggestion": "Unser Whey Protein liefert 24 g hochwertiges Eiweiß pro Portion und ist ein Teil einer ausgewogenen Ernährung.",
+     "suggestion_en": "Our whey protein provides 24 g of high-quality protein per serving and is part of a balanced diet."
     },
     {
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.\": A promise of fat burning is not authorised.",
+     "message": "\"Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.\": Behauptet eine gesteigerte Kalorienverbrennung in Ruhe, eine nicht zugelassene Wirkung.",
+     "message_en": "\"Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.\": Claims increased calorie burning at rest, an unauthorised health effect.",
      "claim": "Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.",
-     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "reason_en": "A promise of fat burning is not authorised.",
+     "reason": "Behauptet eine gesteigerte Kalorienverbrennung in Ruhe, eine nicht zugelassene Wirkung.",
+     "reason_en": "Claims increased calorie burning at rest, an unauthorised health effect.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
      "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
-     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
-     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+     "suggestion": "Die Rezeptur enthält 110 kcal pro Portion und passt in eine kalorienbewusste Ernährung.",
+     "suggestion_en": "The recipe contains 110 kcal per serving and fits into a calorie-conscious diet."
+    },
+    {
+     "check": "claims",
+     "code": "claim_unzulaessig",
+     "severity": "error",
+     "message": "\"Eine Portion täglich genügt für sichtbare Ergebnisse in zwei Wochen.\": Verspricht sichtbare Ergebnisse in einem festen Zeitraum, was einen Gewichts- oder Körperveränderungsbezug in bestimmter Zeit darstellt.",
+     "message_en": "\"Eine Portion täglich genügt für sichtbare Ergebnisse in zwei Wochen.\": Promises visible results within a fixed period, a time-bound body change claim.",
+     "claim": "Eine Portion täglich genügt für sichtbare Ergebnisse in zwei Wochen.",
+     "reason": "Verspricht sichtbare Ergebnisse in einem festen Zeitraum, was einen Gewichts- oder Körperveränderungsbezug in bestimmter Zeit darstellt.",
+     "reason_en": "Promises visible results within a fixed period, a time-bound body change claim.",
+     "rule": "Art. 12 Buchst. b VO (EG) 1924/2006, Gewichtsverlust",
+     "rule_en": "Art. 12(b) Reg. (EC) 1924/2006, weight loss",
+     "suggestion": "Eine Portion täglich ist Teil einer ausgewogenen Ernährung und eines aktiven Lebensstils.",
+     "suggestion_en": "One serving daily is part of a balanced diet and an active lifestyle."
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 472,
-    "tokens_out": 217,
+    "seconds": 4.41,
+    "tokens_in": 1496,
+    "tokens_out": 670,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 0.000518,
     "allowed": 0,
     "suspicious": 3
    },
@@ -6237,8 +6251,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6296,8 +6310,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6348,8 +6362,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6420,8 +6434,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6496,8 +6510,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6551,8 +6565,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6597,8 +6611,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6643,8 +6657,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6707,8 +6721,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6762,8 +6776,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6808,8 +6822,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6863,8 +6877,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6927,8 +6941,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -6991,8 +7005,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7055,8 +7069,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7101,8 +7115,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7174,8 +7188,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7236,8 +7250,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7317,8 +7331,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7381,8 +7395,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7427,8 +7441,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7482,8 +7496,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7546,8 +7560,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7595,8 +7609,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7649,8 +7663,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7712,8 +7726,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7777,8 +7791,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7839,8 +7853,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7892,8 +7906,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -7964,8 +7978,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8031,8 +8045,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8082,8 +8096,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8136,8 +8150,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8199,8 +8213,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8253,8 +8267,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8309,8 +8323,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8363,8 +8377,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8417,8 +8431,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8471,8 +8485,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8525,8 +8539,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8588,8 +8602,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8650,8 +8664,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8703,8 +8717,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8766,8 +8780,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8822,8 +8836,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8889,8 +8903,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8942,8 +8956,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -8996,8 +9010,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9053,8 +9067,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9107,8 +9121,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9158,8 +9172,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9224,8 +9238,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9270,8 +9284,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Gluten ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Gluten is declared but not found in the ingredients.",
+     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Milk is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     },
@@ -9279,8 +9293,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Milk is declared but not found in the ingredients.",
+     "message": "Gluten ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Gluten is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     },
@@ -9295,8 +9309,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9353,8 +9367,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9410,8 +9424,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9468,8 +9482,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Eier ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Eggs is declared but not found in the ingredients.",
+     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Milk is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     },
@@ -9477,8 +9491,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Milk is declared but not found in the ingredients.",
+     "message": "Eier ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Eggs is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     },
@@ -9493,8 +9507,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9551,8 +9565,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9606,8 +9620,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9663,8 +9677,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9719,8 +9733,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9776,8 +9790,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9842,8 +9856,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9899,8 +9913,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -9955,8 +9969,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10013,8 +10027,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10067,8 +10081,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10124,8 +10138,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10179,8 +10193,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10230,8 +10244,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10290,8 +10304,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10357,8 +10371,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10414,8 +10428,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10471,8 +10485,8 @@
     }
    ],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10517,8 +10531,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10566,8 +10580,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10614,8 +10628,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10658,8 +10672,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10704,8 +10718,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10750,8 +10764,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10796,8 +10810,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10842,8 +10856,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10886,8 +10900,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10930,8 +10944,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -10976,8 +10990,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11020,8 +11034,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11067,8 +11081,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11114,8 +11128,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11161,8 +11175,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11208,8 +11222,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11252,8 +11266,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11301,8 +11315,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11352,8 +11366,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11399,8 +11413,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11448,8 +11462,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11495,8 +11509,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11544,8 +11558,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11591,8 +11605,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11637,8 +11651,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11681,8 +11695,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11725,8 +11739,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11771,8 +11785,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11817,8 +11831,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11863,8 +11877,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11907,8 +11921,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11951,8 +11965,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -11995,8 +12009,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12039,8 +12053,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12083,8 +12097,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12129,8 +12143,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12175,8 +12189,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12221,8 +12235,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12265,8 +12279,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12312,8 +12326,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12356,8 +12370,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12400,8 +12414,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12444,8 +12458,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12488,14 +12502,14 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
-    "seconds": 0.0,
-    "tokens_in": 411,
-    "tokens_out": 31,
+    "seconds": 1.55,
+    "tokens_in": 1380,
+    "tokens_out": 135,
     "error": "",
-    "cost_usd": 0.0,
+    "cost_usd": 8.5e-05,
     "allowed": 0,
     "suspicious": 1
    },
@@ -12536,8 +12550,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12582,8 +12596,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12629,8 +12643,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12675,8 +12689,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12719,8 +12733,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12763,8 +12777,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12807,8 +12821,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12851,8 +12865,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12895,8 +12909,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12941,8 +12955,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -12988,8 +13002,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13034,8 +13048,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13080,8 +13094,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13126,8 +13140,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13172,8 +13186,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13216,8 +13230,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13263,8 +13277,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13310,8 +13324,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13357,8 +13371,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13401,8 +13415,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13450,8 +13464,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13494,8 +13508,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13538,8 +13552,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13582,8 +13596,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13626,8 +13640,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13672,8 +13686,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13719,8 +13733,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13765,8 +13779,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13812,8 +13826,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13858,8 +13872,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13904,8 +13918,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
@@ -13950,8 +13964,8 @@
    },
    "findings": [],
    "llm": {
-    "model": "fake",
-    "mode": "fake",
+    "model": "claude-haiku-5-5",
+    "mode": "claude",
     "cached": false,
     "seconds": 0.0,
     "tokens_in": 0,
