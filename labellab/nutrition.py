@@ -134,14 +134,13 @@ def nutrition_finding(c: dict, p: dict) -> dict | None:
     short = c["field"] != "description"
     claim = c["phrase"] if short else c["sentence"]
     rest = _without(p.get(c["field"]) or c["sentence"], c["phrase"]) if short else _without(c["sentence"], c["phrase"])
-    phrase = c["phrase"]
     if c["status"] == "fail":
-        reason = f"Nährwertangabe nicht erfüllt: \"{phrase}\". Bedingung: {cond}."
-        reason_en = f"Nutrition claim not met: \"{phrase}\". Condition: {cond_en}."
+        reason = f"Nährwertangabe nicht erfüllt. Bedingung: {cond}."
+        reason_en = f"Nutrition claim not met. Condition: {cond_en}."
         return {"claim": claim, "verdict": "nicht_erfuellt", "reason": reason, "reason_en": reason_en,
                 "rule": R_NUTRITION[0], "rule_en": R_NUTRITION[1],
                 "suggestion": rest or "Angabe streichen", "suggestion_en": rest or "Remove the claim"}
-    reason = f"Nährwertangabe nicht prüfbar: \"{phrase}\". Bedingung: {cond}, aber {miss}."
-    reason_en = f"Nutrition claim cannot be checked: \"{phrase}\". Condition: {cond_en}, but {miss_en}."
+    reason = f"Nährwertangabe nicht prüfbar. Bedingung: {cond}, aber {miss}."
+    reason_en = f"Nutrition claim cannot be checked. Condition: {cond_en}, but {miss_en}."
     return {"claim": claim, "verdict": "nicht_pruefbar", "reason": reason, "reason_en": reason_en,
             "rule": R_UNKNOWN[0], "rule_en": R_UNKNOWN[1], "suggestion": "", "suggestion_en": ""}
