@@ -3,7 +3,7 @@
 Ablauf pro Produkt:
 1. Produkttext in Saetze zerlegen.
 2. Saetze, die einem zugelassenen EU Health Claim entsprechen, sind zulaessig und gehen nicht ans Modell.
-3. Nährwertangabe "proteinreich" prueft Python selbst (Eiweissanteil an der Energie).
+3. Nährwertangaben (high protein, source of protein, no added sugar usw.) prueft nur Python (labellab/nutrition.py).
 4. Nur verdaechtige Saetze (Keyword Heuristik) gehen in EINEM Aufruf an das Modell.
 5. Das Modell liefert pro Satz Urteil, rule_id, Grund und Ersatz. Regeltexte kommen aus RULES.
 Ergebnisse werden per Hash der verdaechtigen Saetze gecacht.
@@ -15,6 +15,8 @@ import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
+
+from .nutrition import NUTRITION_RE, check_nutrition, nutrition_finding, strip_claims
 
 PROMPT_VERSION = "3"
 DEFAULT_MODEL = "qwen2.5:3b"  # Ollama
@@ -49,9 +51,6 @@ RULES = {
                    "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
                    "Garantien, erfundene Zahlen oder übertriebene Superlative zur Wirkung"),
 }
-# Nur Python: Nährwertbezogene Angabe "proteinreich", Bedingung nicht erfüllt
-R_NUTRITION = ("Art. 8 Abs. 1 VO (EG) 1924/2006 und Anhang, Bedingung nicht erfüllt",
-               "Art. 8(1) Reg. (EC) 1924/2006 and Annex, condition not met")
 NO_RULE = "KEINE"
 MODEL_RULE_IDS = list(RULES)
 
@@ -237,8 +236,6 @@ SUSPICIOUS_RE = re.compile(
     r"inmun\w*|adelgaz\w*|quema\s+grasa|brûle\w*\s+(?:les\s+)?graisses|minceur|perte\s+de\s+poids|"
     r"dimagr\w*|brucia\w*\s+grass\w*|odchudz\w*|spala\w*\s+tłuszcz",
     re.IGNORECASE)
-NUTRITION_CLAIM_RE = re.compile(r"proteinreich|high\s?protein|rich\s+in\s+protein|eiweißreich|eiweissreich", re.IGNORECASE)
-PROTEIN_RICH_MIN = 20.0  # % der Energie aus Eiweiß (VO 1924/2006 Anhang)
 
 
 @dataclass
@@ -250,13 +247,13 @@ class Prefilter:
 
 def prefilter(p: dict) -> Prefilter:
     pre = Prefilter([], [], [])
-    share = protein_share(p)
+    checks = check_nutrition(p)  # Nährwertangaben prüft nur Python, nie das Modell
+    pre.local_findings = [f for f in (nutrition_finding(c, p) for c in checks) if f]
+    pre.allowed = [c["sentence"] for c in checks if c["status"] == "ok"]
     for s in split_sentences(product_text(p)):
-        if NUTRITION_CLAIM_RE.search(s):  # Python rechnet, kein Modell
-            if share is not None and share >= PROTEIN_RICH_MIN:
-                pre.allowed.append(s)
-            else:
-                pre.local_findings.append(_nutrition_finding(s, share))
+        if NUTRITION_RE.search(s):  # Rest des Satzes ohne die Angabe, nur noch echte Werbeversprechen gehen ans Modell
+            if SUSPICIOUS_RE.search(_ALLOWED_RE.sub(" ", strip_claims(s))):
+                pre.suspicious.append(s)
             continue
         rest = _ALLOWED_RE.sub(" ", s)
         if rest != s and not SUSPICIOUS_RE.search(rest):
@@ -264,17 +261,6 @@ def prefilter(p: dict) -> Prefilter:
         elif SUSPICIOUS_RE.search(rest):
             pre.suspicious.append(s)
     return pre
-
-
-def _nutrition_finding(sentence: str, share: float | None) -> dict:
-    known = f"nur {share} %" if share is not None else "unbekannt"
-    known_en = f"only {share} %" if share is not None else "unknown"
-    return {"claim": sentence, "verdict": "pruefen",
-            "reason": f"\"Proteinreich\" braucht mindestens 20 % der Energie aus Eiweiß, hier {known}.",
-            "reason_en": f"\"High protein\" needs at least 20 % of the energy from protein, here {known_en}.",
-            "rule": R_NUTRITION[0], "rule_en": R_NUTRITION[1],
-            "suggestion": "Quelle von Eiweiß, falls mindestens 12 % der Energie aus Eiweiß stammen.",
-            "suggestion_en": "Source of protein, if at least 12 % of the energy comes from protein."}
 
 
 def user_prompt(sentences: list[str]) -> str:

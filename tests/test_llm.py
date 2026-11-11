@@ -139,8 +139,8 @@ def test_proteinreich_is_checked_in_python_without_the_model():
     llm = CountingLLM()
     ok = check_claims(product("Proteinreich Pulver"), llm)           # 68 g -> 68 % der Energie
     low = check_claims(product("Proteinreich Müsli", nutriments={"energy-kcal_100g": 400, "proteins_100g": 10}), llm)
-    assert ok.findings == [] and low.findings[0]["verdict"] == "pruefen" and llm.calls == 0
-    assert low.findings[0]["rule"].startswith("Art. 8 Abs. 1")
+    assert ok.findings == [] and low.findings[0]["verdict"] == "nicht_erfuellt" and llm.calls == 0
+    assert low.findings[0]["rule"].startswith("Anhang VO (EG) 1924/2006")
 
 
 def test_clean_text_no_findings_and_no_call():

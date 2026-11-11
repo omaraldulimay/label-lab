@@ -6,6 +6,7 @@ from pathlib import Path
 
 from . import rules
 from .allergens import check_allergens
+from .nutrition import NUTRITION_RE, check_nutrition, nutrition_finding
 from .llm import (BUDGET_USD, DEFAULT_CLAUDE_MODEL, PRICE_IN, PRICE_OUT, ResultCache, cache_key, check_claims,
                   get_llm, prefilter, system_prompt, user_prompt)
 
@@ -15,6 +16,7 @@ BRAND_CATALOG = ROOT / "data" / "brand_catalog.json"
 RESULTS_JSON = ROOT / "web" / "public" / "results.json"
 CACHE_FILE = ROOT / "data" / "llm_cache.json"
 CHECKS = ["luecken", "widersprueche", "allergene", "claims"]
+CLAIM_CODES = {"nicht_erfuellt": "claim_nutrition", "nicht_pruefbar": "claim_unverifiable"}
 ORDER = {"green": 0, "yellow": 1, "red": 2}
 
 
@@ -45,10 +47,14 @@ def cap_warn(findings: list[dict]) -> list[dict]:
 
 
 def claim_findings(res) -> list[dict]:
+    return claim_dicts(res.findings)
+
+
+def claim_dicts(findings: list[dict]) -> list[dict]:
     out = []
-    for f in res.findings:
-        out.append({"check": "claims", "code": "claim_" + f["verdict"],
-                    "severity": "error" if f["verdict"] == "unzulaessig" else "warn",
+    for f in findings:
+        out.append({"check": "claims", "code": CLAIM_CODES.get(f["verdict"], "claim_" + f["verdict"]),
+                    "severity": "error" if f["verdict"] in ("unzulaessig", "nicht_erfuellt") else "warn",
                     "message": f"\"{f['claim']}\": {f['reason']}",
                     "message_en": f"\"{f['claim']}\": {f['reason_en']}",
                     "claim": f["claim"], "reason": f["reason"], "reason_en": f["reason_en"],
@@ -87,6 +93,13 @@ def _counts(rs: list[dict]) -> dict:
     return {s: sum(1 for r in rs if r["status"] == s) for s in ORDER}
 
 
+def rescore_claims(r: dict, p: dict) -> list[dict]:
+    """Modellfunde bleiben (ausser zu Nährwertangaben), Nährwertangaben prüft Python neu."""
+    kept = [f for f in r["findings"] if f["check"] == "claims" and f["code"] != "claim_pruefen"
+            and not NUTRITION_RE.search(f.get("claim", ""))]
+    return kept + claim_dicts([f for f in (nutrition_finding(c, p) for c in check_nutrition(p)) if f])
+
+
 def rescore(data: dict) -> dict:
     """Regeln und Ampel aus vorhandenen Ergebnissen neu berechnen, ohne Modellaufruf.
 
@@ -100,7 +113,7 @@ def rescore(data: dict) -> dict:
             "luecken": rules.check_gaps(p, off),
             "widersprueche": rules.check_contradictions(p, off),
             "allergene": check_allergens(p.get("ingredients", ""), p.get("allergens_tags", []), off),
-            "claims": [f for f in r["findings"] if f["check"] == "claims"],
+            "claims": rescore_claims(r, p),
         }
         if off:
             per_check = {c: cap_warn(fs) for c, fs in per_check.items()}
