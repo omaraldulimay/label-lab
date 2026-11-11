@@ -3,7 +3,7 @@ ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 WORKDIR /app
 COPY pyproject.toml ./
 COPY labellab ./labellab
-RUN pip install .
+RUN pip install ".[anthropic]"
 COPY data ./data
 COPY web ./web
 EXPOSE 8000

@@ -25,7 +25,7 @@ def test_run_and_export(tmp_path):
     results = run_all(products, llm)
     meta = export_results(results, llm, tmp_path / "r.json")
     data = json.loads((tmp_path / "r.json").read_text())
-    assert meta["placeholder"] is True and meta["api_cost_eur"] == 0 and meta["products"] == 20
+    assert meta["placeholder"] is True and meta["api_cost_usd"] == 0 and meta["products"] == 20
     assert sum(meta["counts"].values()) == 20 and len(data["results"]) == 20
     assert data["results"][0]["status"] == "red" or meta["counts"]["red"] == 0  # rote zuerst
 

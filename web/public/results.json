@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-10T16:33:31+00:00",
+  "generated": "2026-11-11T11:26:25+00:00",
   "source": "Markenkatalog und Open Food Facts (ODbL), https://world.openfoodfacts.org",
   "sources": {
    "brand": {
@@ -29,12 +29,15 @@
    "yellow": 29,
    "red": 146
   },
-  "api_cost_eur": 0,
-  "tokens_in": 154944,
-  "tokens_out": 1728,
+  "api_cost_usd": 0.0,
+  "budget_usd": 0,
+  "claims_allowed": 39,
+  "claims_to_model": 18,
+  "tokens_in": 4351,
+  "tokens_out": 1362,
   "llm_seconds": 0.0,
   "llm_minutes": 0.0,
-  "cached": 5,
+  "cached": 2,
   "llm_errors": 0
  },
  "results": [
@@ -75,9 +78,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -144,9 +150,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -193,9 +202,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -262,9 +274,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -322,9 +337,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -368,9 +386,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -437,9 +458,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -506,9 +530,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -557,9 +584,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 612,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -608,9 +638,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Brausetabletten mit Zitronengeschmack",
@@ -651,9 +684,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -702,9 +738,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -745,9 +784,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -796,9 +838,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -865,9 +910,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -924,9 +972,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -990,9 +1041,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1033,9 +1087,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 588,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1076,9 +1133,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1127,9 +1187,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1187,9 +1250,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1241,9 +1307,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1292,9 +1361,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1343,9 +1415,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1394,9 +1469,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1447,9 +1525,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1509,9 +1590,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1560,9 +1644,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1620,9 +1707,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1673,9 +1763,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1724,9 +1817,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1775,9 +1871,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1844,9 +1943,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1896,9 +1998,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -1956,9 +2061,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2004,9 +2112,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 590,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2064,9 +2175,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2124,9 +2238,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2178,9 +2295,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2229,9 +2349,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2280,9 +2403,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2336,9 +2462,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 609,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 2,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2407,9 +2536,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2464,9 +2596,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2515,9 +2650,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2575,9 +2713,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 605,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2650,9 +2791,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2718,9 +2862,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 588,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2761,9 +2908,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2830,9 +2980,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2880,11 +3033,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": true,
+    "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -2949,9 +3105,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3001,9 +3160,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3052,9 +3214,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3111,9 +3276,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3176,9 +3344,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3219,9 +3390,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3271,9 +3445,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3337,9 +3514,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3392,9 +3572,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3452,9 +3635,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3517,9 +3703,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3578,9 +3767,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3639,9 +3831,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3700,9 +3895,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3751,9 +3949,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3811,9 +4012,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 608,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3859,9 +4063,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3911,9 +4118,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -3980,9 +4190,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4030,11 +4243,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": true,
+    "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4089,9 +4305,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4146,9 +4365,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4203,9 +4425,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4255,9 +4480,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4311,9 +4539,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4371,9 +4602,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4421,9 +4655,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4472,9 +4709,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4550,9 +4790,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4605,9 +4848,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4662,9 +4908,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4713,9 +4962,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4784,9 +5036,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4841,9 +5096,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4901,9 +5159,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -4950,9 +5211,9 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Depressionen\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "message_en": "\"Depressionen\": Disease related statements are prohibited for foods.",
-     "claim": "Depressionen",
+     "message": "\"Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
+     "message_en": "\"Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.\": Disease related statements are prohibited for foods.",
+     "claim": "Ashwagandha hilft nachweislich bei Depressionen, Angstzuständen und Schlafstörungen und senkt deinen Blutdruck auf natürliche Weise.",
      "reason": "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
      "reason_en": "Disease related statements are prohibited for foods.",
      "rule": "Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
@@ -4966,9 +5227,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 701,
-    "tokens_out": 133,
-    "error": ""
+    "tokens_in": 440,
+    "tokens_out": 135,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 2
    },
    "product": {
     "generic_name": "Ashwagandha Extrakt Kapseln, Nahrungsergänzungsmittel",
@@ -5006,9 +5270,9 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"garantiert\": Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "message_en": "\"garantiert\": Guarantees of effects are not permitted.",
-     "claim": "garantiert",
+     "message": "\"BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.\": Garantieversprechen für Wirkungen sind nicht zulässig.",
+     "message_en": "\"BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.\": Guarantees of effects are not permitted.",
+     "claim": "BCAA 2:1:1 bringt deinen Muskelaufbau auf ein neues Level und sorgt für zehnmal schnelleres Muskelwachstum als normales Protein.",
      "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
      "reason_en": "Guarantees of effects are not permitted.",
      "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
@@ -5018,15 +5282,15 @@
     },
     {
      "check": "claims",
-     "code": "claim_pruefen",
-     "severity": "warn",
-     "message": "\"Muskelaufbau\": Nur die zugelassene Formulierung zur Muskelmasse ist erlaubt.",
-     "message_en": "\"Muskelaufbau\": Only the authorised wording on muscle mass is permitted.",
-     "claim": "Muskelaufbau",
-     "reason": "Nur die zugelassene Formulierung zur Muskelmasse ist erlaubt.",
-     "reason_en": "Only the authorised wording on muscle mass is permitted.",
-     "rule": "Art. 13 Abs. 1 VO (EG) 1924/2006, nur zugelassene Formulierung",
-     "rule_en": "Art. 13(1) Reg. (EC) 1924/2006, only the authorised wording",
+     "code": "claim_unzulaessig",
+     "severity": "error",
+     "message": "\"Keine Pause mehr, kein Muskelkater, garantiert.\": Garantieversprechen für Wirkungen sind nicht zulässig.",
+     "message_en": "\"Keine Pause mehr, kein Muskelkater, garantiert.\": Guarantees of effects are not permitted.",
+     "claim": "Keine Pause mehr, kein Muskelkater, garantiert.",
+     "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
+     "reason_en": "Guarantees of effects are not permitted.",
+     "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
+     "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
      "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
      "suggestion_en": "Protein contributes to a growth in muscle mass."
     }
@@ -5036,9 +5300,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 686,
-    "tokens_out": 238,
-    "error": ""
+    "tokens_in": 443,
+    "tokens_out": 171,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 2
    },
    "product": {
     "generic_name": "BCAA Pulver, Cola Geschmack",
@@ -5096,9 +5363,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 679,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Micellares Caseinpulver mit Schokoladengeschmack",
@@ -5149,9 +5419,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 674,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Klares Molkenproteingetränkepulver, Zitrone",
@@ -5191,27 +5464,13 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"garantiert\": Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "message_en": "\"garantiert\": Guarantees of effects are not permitted.",
-     "claim": "garantiert",
+     "message": "\"Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.\": Garantieversprechen für Wirkungen sind nicht zulässig.",
+     "message_en": "\"Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.\": Guarantees of effects are not permitted.",
+     "claim": "Creatin HCl garantiert dir mehr Muskelaufbau in nur vier Wochen und macht dich nachweislich stärker als jedes andere Creatin.",
      "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
      "reason_en": "Guarantees of effects are not permitted.",
      "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
      "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
-     "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
-     "suggestion_en": "Protein contributes to a growth in muscle mass."
-    },
-    {
-     "check": "claims",
-     "code": "claim_pruefen",
-     "severity": "warn",
-     "message": "\"Muskelaufbau\": Nur die zugelassene Formulierung zur Muskelmasse ist erlaubt.",
-     "message_en": "\"Muskelaufbau\": Only the authorised wording on muscle mass is permitted.",
-     "claim": "Muskelaufbau",
-     "reason": "Nur die zugelassene Formulierung zur Muskelmasse ist erlaubt.",
-     "reason_en": "Only the authorised wording on muscle mass is permitted.",
-     "rule": "Art. 13 Abs. 1 VO (EG) 1924/2006, nur zugelassene Formulierung",
-     "rule_en": "Art. 13(1) Reg. (EC) 1924/2006, only the authorised wording",
      "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
      "suggestion_en": "Protein contributes to a growth in muscle mass."
     }
@@ -5221,9 +5480,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 686,
-    "tokens_out": 238,
-    "error": ""
+    "tokens_in": 430,
+    "tokens_out": 85,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 1
    },
    "product": {
     "generic_name": "Creatin Hydrochlorid Kapseln",
@@ -5272,9 +5534,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 682,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "EAA Aminosäurenpulver, Wassermelone",
@@ -5315,9 +5580,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 701,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinisolat mit Salted Caramel Geschmack",
@@ -5368,9 +5636,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 685,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Magnesiumcitrat Kapseln, Nahrungsergänzungsmittel",
@@ -5419,9 +5690,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 690,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Gainer Pulver mit Vanillegeschmack",
@@ -5461,9 +5735,9 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Immunsystem\": Immunversprechen ist für diese Zutat nicht zugelassen.",
-     "message_en": "\"Immunsystem\": An immune claim is not authorised for this ingredient.",
-     "claim": "Immunsystem",
+     "message": "\"Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.\": Immunversprechen ist für diese Zutat nicht zugelassen.",
+     "message_en": "\"Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.\": An immune claim is not authorised for this ingredient.",
+     "claim": "Unser Multivitamin stärkt dein Immunsystem dauerhaft und schützt dich zuverlässig vor Erkältungen und Infekten.",
      "reason": "Immunversprechen ist für diese Zutat nicht zugelassen.",
      "reason_en": "An immune claim is not authorised for this ingredient.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
@@ -5475,9 +5749,9 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Erkältungen\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "message_en": "\"Erkältungen\": Disease related statements are prohibited for foods.",
-     "claim": "Erkältungen",
+     "message": "\"Bei regelmäßiger Einnahme wirst du seltener krank.\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
+     "message_en": "\"Bei regelmäßiger Einnahme wirst du seltener krank.\": Disease related statements are prohibited for foods.",
+     "claim": "Bei regelmäßiger Einnahme wirst du seltener krank.",
      "reason": "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
      "reason_en": "Disease related statements are prohibited for foods.",
      "rule": "Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
@@ -5491,9 +5765,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 680,
-    "tokens_out": 263,
-    "error": ""
+    "tokens_in": 440,
+    "tokens_out": 200,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 2
    },
    "product": {
     "generic_name": "Multivitamin Kapseln, Nahrungsergänzungsmittel",
@@ -5531,9 +5808,9 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Cholesterinspiegel\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
-     "message_en": "\"Cholesterinspiegel\": Disease related statements are prohibited for foods.",
-     "claim": "Cholesterinspiegel",
+     "message": "\"Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.\": Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
+     "message_en": "\"Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.\": Disease related statements are prohibited for foods.",
+     "claim": "Unser Fischöl senkt deinen Cholesterinspiegel, beugt Herzinfarkt und Schlaganfall vor und lindert Gelenkschmerzen.",
      "reason": "Krankheitsbezogene Aussagen sind für Lebensmittel verboten.",
      "reason_en": "Disease related statements are prohibited for foods.",
      "rule": "Art. 7 Abs. 3 VO (EU) 1169/2011, Krankheitsbezug",
@@ -5547,9 +5824,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 683,
-    "tokens_out": 135,
-    "error": ""
+    "tokens_in": 427,
+    "tokens_out": 103,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 1
    },
    "product": {
     "generic_name": "Omega 3 Fischöl Kapseln, Nahrungsergänzungsmittel",
@@ -5589,9 +5869,9 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Fatburner\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"Fatburner\": A promise of fat burning is not authorised.",
-     "claim": "Fatburner",
+     "message": "\"RAWFORM Pre Workout Inferno Fatburner 300 g\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "message_en": "\"RAWFORM Pre Workout Inferno Fatburner 300 g\": A promise of fat burning is not authorised.",
+     "claim": "RAWFORM Pre Workout Inferno Fatburner 300 g",
      "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
      "reason_en": "A promise of fat burning is not authorised.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
@@ -5603,29 +5883,43 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"entgiftet\": Entgiftungsversprechen ist nicht zugelassen.",
-     "message_en": "\"entgiftet\": A detox promise is not authorised.",
-     "claim": "entgiftet",
+     "message": "\"Pre Workout Pulver mit Fatburner Formel\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "message_en": "\"Pre Workout Pulver mit Fatburner Formel\": A promise of fat burning is not authorised.",
+     "claim": "Pre Workout Pulver mit Fatburner Formel",
+     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "reason_en": "A promise of fat burning is not authorised.",
+     "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
+     "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
+     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
+     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+    },
+    {
+     "check": "claims",
+     "code": "claim_unzulaessig",
+     "severity": "error",
+     "message": "\"Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "message_en": "\"Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.\": A promise of fat burning is not authorised.",
+     "claim": "Inferno ist der Fatburner für alle, die ihr Körperfett schnell und garantiert loswerden wollen.",
+     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "reason_en": "A promise of fat burning is not authorised.",
+     "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
+     "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
+     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
+     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+    },
+    {
+     "check": "claims",
+     "code": "claim_unzulaessig",
+     "severity": "error",
+     "message": "\"Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.\": Entgiftungsversprechen ist nicht zugelassen.",
+     "message_en": "\"Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.\": A detox promise is not authorised.",
+     "claim": "Die Formel entgiftet deinen Körper und heizt den Stoffwechsel um bis zu 40 % an.",
      "reason": "Entgiftungsversprechen ist nicht zugelassen.",
      "reason_en": "A detox promise is not authorised.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
      "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
      "suggestion": "Koffein erhöht die Aufmerksamkeit und die Konzentration.",
      "suggestion_en": "Caffeine increases alertness and concentration."
-    },
-    {
-     "check": "claims",
-     "code": "claim_unzulaessig",
-     "severity": "error",
-     "message": "\"garantiert\": Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "message_en": "\"garantiert\": Guarantees of effects are not permitted.",
-     "claim": "garantiert",
-     "reason": "Garantieversprechen für Wirkungen sind nicht zulässig.",
-     "reason_en": "Guarantees of effects are not permitted.",
-     "rule": "Art. 3 Buchst. a VO (EG) 1924/2006, irreführende Angabe",
-     "rule_en": "Art. 3(a) Reg. (EC) 1924/2006, misleading claim",
-     "suggestion": "Eiweiß trägt zu einer Zunahme an Muskelmasse bei.",
-     "suggestion_en": "Protein contributes to a growth in muscle mass."
     }
    ],
    "llm": {
@@ -5633,9 +5927,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 702,
-    "tokens_out": 351,
-    "error": ""
+    "tokens_in": 466,
+    "tokens_out": 358,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 4
    },
    "product": {
     "generic_name": "Pre Workout Pulver mit Fatburner Formel",
@@ -5682,11 +5979,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": false,
+    "cached": true,
     "seconds": 0.0,
-    "tokens_in": 680,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 411,
+    "tokens_out": 31,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 1
    },
    "product": {
     "generic_name": "Proteinriegel mit Erdnuss Geschmack",
@@ -5735,11 +6035,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": false,
+    "cached": true,
     "seconds": 0.0,
-    "tokens_in": 677,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 411,
+    "tokens_out": 31,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 1
    },
    "product": {
     "generic_name": "Proteinriegel mit Vanille Mandel Geschmack",
@@ -5791,9 +6094,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 684,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pflanzliches Proteinpulver mit Schokoladengeschmack",
@@ -5831,9 +6137,23 @@
      "check": "claims",
      "code": "claim_unzulaessig",
      "severity": "error",
-     "message": "\"Fettverbrennung\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
-     "message_en": "\"Fettverbrennung\": A promise of fat burning is not authorised.",
-     "claim": "Fettverbrennung",
+     "message": "\"Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "message_en": "\"Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.\": A promise of fat burning is not authorised.",
+     "claim": "Unser Whey Core Burn ist mehr als ein Shake: Das Protein beschleunigt deine Fettverbrennung und hilft dir, im Training schneller Körperfett abzubauen.",
+     "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "reason_en": "A promise of fat burning is not authorised.",
+     "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
+     "rule_en": "Art. 10(1) Reg. (EC) 1924/2006, claim not authorised",
+     "suggestion": "Enthält Eiweiß, das zum Erhalt der Muskelmasse beiträgt.",
+     "suggestion_en": "Contains protein, which contributes to the maintenance of muscle mass."
+    },
+    {
+     "check": "claims",
+     "code": "claim_unzulaessig",
+     "severity": "error",
+     "message": "\"Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.\": Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
+     "message_en": "\"Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.\": A promise of fat burning is not authorised.",
+     "claim": "Dank der speziellen Formel verbrennst du auch in Ruhe mehr Kalorien.",
      "reason": "Wirkversprechen zur Fettverbrennung ist nicht zugelassen.",
      "reason_en": "A promise of fat burning is not authorised.",
      "rule": "Art. 10 Abs. 1 VO (EG) 1924/2006, nicht zugelassene Angabe",
@@ -5847,9 +6167,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 721,
-    "tokens_out": 126,
-    "error": ""
+    "tokens_in": 472,
+    "tokens_out": 217,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 3
    },
    "product": {
     "generic_name": "Molkenproteinpulver mit Keksgeschmack",
@@ -5918,9 +6241,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -5974,9 +6300,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6023,9 +6352,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6092,9 +6424,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6165,9 +6500,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 588,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6217,9 +6555,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6260,9 +6601,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6301,11 +6645,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": true,
+    "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6362,11 +6709,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": true,
+    "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6414,11 +6764,14 @@
    "llm": {
     "model": "fake",
     "mode": "fake",
-    "cached": true,
+    "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6459,9 +6812,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Vitamin D Ergänzung.",
@@ -6511,9 +6867,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6572,9 +6931,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 592,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6633,9 +6995,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6694,9 +7059,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 590,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6737,9 +7105,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6807,9 +7178,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6866,9 +7240,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -6944,9 +7321,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7005,9 +7385,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7048,9 +7431,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7100,9 +7486,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 591,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7161,9 +7550,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 589,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7207,9 +7599,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7258,9 +7653,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7318,9 +7716,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7380,9 +7781,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7439,9 +7843,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7489,9 +7896,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7558,9 +7968,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7622,9 +8035,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7670,9 +8086,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7721,9 +8140,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7781,9 +8203,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7832,9 +8257,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7885,9 +8313,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7936,9 +8367,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -7987,9 +8421,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8038,9 +8475,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8089,9 +8529,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Whey Protein Schokolade",
@@ -8149,9 +8592,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8208,9 +8654,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8258,9 +8707,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8318,9 +8770,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8371,9 +8826,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8435,9 +8893,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 594,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8485,9 +8946,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8536,9 +9000,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8590,9 +9057,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8641,9 +9111,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 625,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Kreatinmonohydrat als Pulver zum Anmischen Geschmacksneutral. Nahrungsergänzungsmittel",
@@ -8689,9 +9162,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8752,9 +9228,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 617,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Nahrungsergänzungsmittel mit Omega 3 Fettsäuren, Vitamin D3 und Vitamin K2.",
@@ -8791,15 +9270,6 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Soja ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Soy is declared but not found in the ingredients.",
-     "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
-     "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
-    },
-    {
-     "check": "allergene",
-     "code": "allergen_ohne_zutat",
-     "severity": "warn",
      "message": "Gluten ist deklariert, aber in den Zutaten nicht zu finden.",
      "message_en": "Gluten is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
@@ -8813,6 +9283,15 @@
      "message_en": "Milk is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
+    },
+    {
+     "check": "allergene",
+     "code": "allergen_ohne_zutat",
+     "severity": "warn",
+     "message": "Soja ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Soy is declared but not found in the ingredients.",
+     "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
+     "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     }
    ],
    "llm": {
@@ -8820,9 +9299,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8875,9 +9357,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 593,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -8929,9 +9414,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 620,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Nahrungsergänzungsmittel mit BCAAs (verzweigtkettige Aminosäuren) und Süßungsmitteln",
@@ -9009,9 +9497,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 614,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Protoinriegal mit Schokoüberzug",
@@ -9064,9 +9555,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9116,9 +9610,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9170,9 +9667,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9223,9 +9723,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 606,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9277,9 +9780,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9320,8 +9826,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Soja ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Soy is declared but not found in the ingredients.",
+     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Milk is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     },
@@ -9329,8 +9835,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Milk is declared but not found in the ingredients.",
+     "message": "Soja ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Soy is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     }
@@ -9340,9 +9846,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9394,9 +9903,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 600,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9447,9 +9959,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 683,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Proteinriegel mit Brownie Geschmack",
@@ -9502,9 +10017,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 670,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Proteinriegel mit Salted Caramel Geschmack",
@@ -9553,9 +10071,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 675,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Proteinriegel mit Joghurt Zitrone Geschmack",
@@ -9607,9 +10128,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9659,9 +10183,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9707,9 +10234,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9764,9 +10294,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9808,8 +10341,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Soja ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Soy is declared but not found in the ingredients.",
+     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Milk is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     },
@@ -9817,8 +10350,8 @@
      "check": "allergene",
      "code": "allergen_ohne_zutat",
      "severity": "warn",
-     "message": "Milch ist deklariert, aber in den Zutaten nicht zu finden.",
-     "message_en": "Milk is declared but not found in the ingredients.",
+     "message": "Soja ist deklariert, aber in den Zutaten nicht zu finden.",
+     "message_en": "Soy is declared but not found in the ingredients.",
      "rule": "VO (EU) 1169/2011 Art. 21 Abs. 1, Anhang II (Angabe muss zur Zutat passen)",
      "rule_en": "VO (EU) 1169/2011 Art. 21(1), Annex II (declaration must match the ingredient)"
     }
@@ -9828,9 +10361,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 605,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9882,9 +10418,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 599,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9936,9 +10475,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 608,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -9979,9 +10521,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 619,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10025,9 +10570,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 608,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10070,9 +10618,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 590,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10111,9 +10662,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 606,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10154,9 +10708,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 605,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10197,9 +10754,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 622,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10240,9 +10800,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10283,9 +10846,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10324,9 +10890,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Kreatin Monohydrat",
@@ -10365,9 +10934,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 635,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10408,9 +10980,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10449,9 +11024,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 608,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10493,9 +11071,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10537,9 +11118,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10581,9 +11165,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 607,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10625,9 +11212,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 606,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10666,9 +11256,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 611,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10712,9 +11305,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10760,9 +11356,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 621,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Riegel mit Erdnüssen, Erdnusspaste und Sonnenblumenprotein-Reis-Crisps",
@@ -10804,9 +11403,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10850,9 +11452,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 611,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -10894,9 +11499,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 657,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Eiweißriegel mit Erdnüssen, Mandeln und Überzug mit salzigem Karamell-Geschmack",
@@ -10940,9 +11548,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 615,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Proteinriegel",
@@ -10984,9 +11595,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -11027,9 +11641,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 601,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -11068,9 +11685,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 672,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Beta Alanin Kapseln",
@@ -11109,9 +11729,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 670,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Micellares Caseinpulver mit Vanillegeschmack",
@@ -11152,9 +11775,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 678,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Klares Molkenproteingetränkepulver, Kirsche",
@@ -11195,9 +11821,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 696,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Klares Molkenproteingetränkepulver, Pfirsich Eistee",
@@ -11238,9 +11867,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 675,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Kollagenhydrolysat Pulver, neutral",
@@ -11279,9 +11911,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 692,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Fruchtgummi mit Creatin, Beerengeschmack",
@@ -11320,9 +11955,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 675,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Creatin Monohydrat Kapseln",
@@ -11361,9 +11999,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 693,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Creatin Monohydrat Pulver",
@@ -11402,9 +12043,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 677,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Elektrolyt Getränkepulver, Zitrone",
@@ -11443,9 +12087,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 681,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinisolat, geschmacksneutral",
@@ -11486,9 +12133,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 695,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinisolat mit Schokoladengeschmack",
@@ -11529,9 +12179,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 695,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinisolat mit Vanillegeschmack",
@@ -11572,9 +12225,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 667,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "L Glutamin Pulver, neutral",
@@ -11613,9 +12269,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 682,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Gainer Pulver mit Schokoladengeschmack",
@@ -11657,9 +12316,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 688,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Omega 3 Algenöl Kapseln, vegan",
@@ -11698,9 +12360,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 704,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pre Workout Pulver, Blaue Himbeere",
@@ -11739,9 +12404,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 697,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pre Workout Pulver, Tropical",
@@ -11780,9 +12448,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 679,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pre Workout Pulver ohne Koffein, Orange",
@@ -11821,9 +12492,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 670,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 411,
+    "tokens_out": 31,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 1
    },
    "product": {
     "generic_name": "Proteinriegel mit Cookie Dough Geschmack",
@@ -11866,9 +12540,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 683,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Veganer Proteinriegel mit Haselnuss Geschmack",
@@ -11909,9 +12586,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 682,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Backmischung mit Eiweiß, Pfannkuchen",
@@ -11953,9 +12633,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 685,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pflanzliches Proteinpulver, Erdnuss Karamell",
@@ -11996,9 +12679,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 665,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pflanzliches Proteinpulver, geschmacksneutral",
@@ -12037,9 +12723,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 685,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Pflanzliches Proteinpulver mit Vanillegeschmack",
@@ -12078,9 +12767,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 676,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 2,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Vitamin B Komplex Kapseln, Nahrungsergänzungsmittel",
@@ -12119,9 +12811,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 668,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Vitamin C Kapseln, Nahrungsergänzungsmittel",
@@ -12160,9 +12855,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 696,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Vitamin D3 und K2 Tropfen, Nahrungsergänzungsmittel",
@@ -12201,9 +12899,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 676,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 2,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinpulver mit Bananengeschmack",
@@ -12244,9 +12945,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 679,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinpulver mit Keksgeschmack",
@@ -12288,9 +12992,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 683,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 2,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinpulver mit Erdbeergeschmack",
@@ -12331,9 +13038,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 690,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinpulver mit Schokoladengeschmack",
@@ -12374,9 +13084,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 688,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinpulver mit Vanillegeschmack",
@@ -12417,9 +13130,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 690,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Molkenproteinhydrolysat Pulver, neutral",
@@ -12460,9 +13176,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 691,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 1,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Zink Tabletten, Nahrungsergänzungsmittel",
@@ -12501,9 +13220,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12545,9 +13267,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 609,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12589,9 +13314,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12633,9 +13361,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 613,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 2,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12674,9 +13405,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 603,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12720,9 +13454,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 611,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12761,9 +13498,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 617,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "Nahrungsergänzungsmittel mit Vitamin D3",
@@ -12802,9 +13542,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12843,9 +13586,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 595,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12884,9 +13630,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 602,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12927,9 +13676,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -12971,9 +13723,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 597,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -13014,9 +13769,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 606,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -13058,9 +13816,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 606,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -13101,9 +13862,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 596,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -13144,9 +13908,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 604,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",
@@ -13187,9 +13954,12 @@
     "mode": "fake",
     "cached": false,
     "seconds": 0.0,
-    "tokens_in": 598,
-    "tokens_out": 1,
-    "error": ""
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "error": "",
+    "cost_usd": 0.0,
+    "allowed": 0,
+    "suspicious": 0
    },
    "product": {
     "generic_name": "",

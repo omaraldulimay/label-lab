@@ -1,6 +1,6 @@
 PY := .venv/bin/python
 export OLLAMA_MODEL ?= qwen2.5:3b
-.PHONY: setup run test check-all up down real pull
+.PHONY: setup run test check-all up down real real-ollama pull
 
 setup:
 	python3.12 -m venv .venv
@@ -26,8 +26,12 @@ up:
 down:
 	docker compose down
 
-# Echter Lauf mit lokalem Modell (Ollama muss laufen)
+# Echter Lauf mit Claude Haiku (braucht ANTHROPIC_API_KEY in der Umgebung, Budget 0,30 USD)
 real:
+	LLM_MODE=claude $(PY) -m labellab.cli
+
+# Echter Lauf mit lokalem Modell (Ollama muss laufen)
+real-ollama:
 	LLM_MODE=ollama $(PY) -m labellab.cli
 
 # Modell fuer den echten Lauf laden (Ollama muss laufen)

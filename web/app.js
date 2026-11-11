@@ -4,11 +4,12 @@ const I18N = {
     light: "Ampel", checktype: "Prüfungsart", close: "Schließen",
     placeholder: "Platzhalter: Diese Ergebnisse stammen aus dem Fake Modus, die Claim Funde sind nicht von einem echten Modell.",
     foot1: "Die Quelle Open Food Facts: Produktdaten von <a href=\"https://world.openfoodfacts.org\">Open Food Facts</a>, Lizenz <a href=\"https://opendatacommons.org/licenses/odbl/1-0/\">ODbL</a>. Eine Zusammenstellung der Daten bleibt unter ODbL.",
-    foot2: "Regeln laufen in Python, ein lokales Modell prüft nur die Sprache der Werbeaussagen.",
+    foot2: "Regeln und ein Vorfilter laufen in Python, ein Sprachmodell prüft nur die verdächtigen Werbesätze.",
     brandSource: "RAWFORM", offSource: "Open Food Facts", noBrand: "ohne Marke",
     luecken: "Lücken", widersprueche: "Widersprüche", allergene: "Allergene", claims: "Claims",
     red: "Rot", yellow: "Gelb", green: "Grün", all: "Alle", allChecks: "Alle Prüfungen",
     checked: (n) => `${n} Produkte geprüft, `, cost: "0 € API Kosten", localMin: (n) => `, ${n} Minuten lokal.`,
+    centsShort: "US Cent", paid: (c) => `für ${c} US Cent.`, centsLabel: "US Cent API Kosten", statRuntimeApi: (m) => `Laufzeit, Modell ${m}`,
     statProducts: "Produkte in dieser Quelle", statRed: "rot", statYellow: "gelb", statGreen: "grün",
     statCost: "API Kosten", statRuntime: (m) => `Laufzeit lokal, Modell ${m}`, statTokens: "Token gesamt",
     count: (a, b) => `${a} von ${b} Produkten`, noResults: "results.json nicht gefunden. Zuerst make check-all ausführen.",
@@ -28,11 +29,12 @@ const I18N = {
     light: "Traffic light", checktype: "Check type", close: "Close",
     placeholder: "Placeholder: these results come from the fake mode, the claim findings are not from a real model.",
     foot1: "The source Open Food Facts: product data from <a href=\"https://world.openfoodfacts.org\">Open Food Facts</a>, licence <a href=\"https://opendatacommons.org/licenses/odbl/1-0/\">ODbL</a>. A compilation of the data stays under ODbL.",
-    foot2: "Rules run in Python, a local model only checks the wording of the advertising claims. Product texts stay in German.",
+    foot2: "Rules and a prefilter run in Python, a language model only checks the suspicious advertising sentences. Product texts stay in German.",
     brandSource: "RAWFORM", offSource: "Open Food Facts", noBrand: "no brand",
     luecken: "Gaps", widersprueche: "Contradictions", allergene: "Allergens", claims: "Claims",
     red: "Red", yellow: "Yellow", green: "Green", all: "All", allChecks: "All checks",
     checked: (n) => `${n} products checked, `, cost: "€0 API cost", localMin: (n) => `, ${n} minutes local.`,
+    centsShort: "US cents", paid: (c) => `for ${c} US cents.`, centsLabel: "US cents API cost", statRuntimeApi: (m) => `runtime, model ${m}`,
     statProducts: "products in this source", statRed: "red", statYellow: "yellow", statGreen: "green",
     statCost: "API cost", statRuntime: (m) => `local runtime, model ${m}`, statTokens: "tokens in total",
     count: (a, b) => `${a} of ${b} products`, noResults: "results.json not found. Run make check-all first.",
@@ -75,7 +77,8 @@ function el(tag, attrs = {}, ...kids) {
   kids.forEach((c) => e.append(c));
   return e;
 }
-const fmt = (n) => new Intl.NumberFormat(t("locale")).format(n);
+const fmt = (n, d) => new Intl.NumberFormat(t("locale"),
+  d === undefined ? {} : {minimumFractionDigits: d, maximumFractionDigits: d}).format(n);
 const dot = (s) => el("span", {class: "dot " + s, title: t(s)});
 
 // Ergebnis eines Produkts unter Beruecksichtigung uebernommener Korrekturen
@@ -127,10 +130,14 @@ function renderStats() {
   const meta = state.data.meta, rows = sourceRows();
   const c = {red: 0, yellow: 0, green: 0};
   rows.forEach((r) => { c[eff(r).status] += 1; });
-  $("claim").replaceChildren(t("checked", fmt(meta.products)), el("b", {text: t("cost")}), t("localMin", fmt(meta.llm_minutes)));
+  const paid = meta.mode === "claude", cents = fmt((meta.api_cost_usd || 0) * 100, 2);
+  $("claim").replaceChildren(t("checked", fmt(meta.products)).replace(/, $/, " "), ...(paid
+    ? [el("b", {text: t("paid", cents)})]
+    : [el("b", {text: t("cost")}), t("localMin", fmt(meta.llm_minutes))]));
   const items = [
     [fmt(rows.length), t("statProducts")], [fmt(c.red), t("statRed")], [fmt(c.yellow), t("statYellow")],
-    [fmt(c.green), t("statGreen")], ["0 €", t("statCost")], [fmt(meta.llm_minutes) + " Min.", t("statRuntime", meta.model)],
+    [fmt(c.green), t("statGreen")], [paid ? cents : "0 €", paid ? t("centsLabel") : t("statCost")],
+    [fmt(meta.llm_minutes) + " Min.", t(paid ? "statRuntimeApi" : "statRuntime", meta.model)],
     [fmt(meta.tokens_in + meta.tokens_out), t("statTokens")],
   ];
   $("stats").replaceChildren(...items.map(([n, l]) =>
@@ -235,7 +242,7 @@ function openDetail(r, keepScroll = false, flash = false) {
   body.append(el("h3", {text: t("llmRun")}), table([
     [t("model"), `${r.llm.model} (${r.llm.mode})`], [t("runtime"), r.llm.seconds + " s"],
     [t("tokens"), `${fmt(r.llm.tokens_in)} / ${fmt(r.llm.tokens_out)}`],
-    [t("apiCost"), "0 €"], [t("cache"), r.llm.cached ? t("yes") : t("no")]]));
+    [t("apiCost"), r.llm.mode === "claude" ? `${fmt((r.llm.cost_usd || 0) * 100, 3)} ${t("centsShort")}` : "0 €"], [t("cache"), r.llm.cached ? t("yes") : t("no")]]));
   const n = r.product.nutriments || {};
   body.append(el("h3", {text: t("nutrients")}), table(Object.entries(NUTRIENTS).map(
     ([k, l]) => [t(l), n[k] === undefined ? t("missing") : String(n[k])])));

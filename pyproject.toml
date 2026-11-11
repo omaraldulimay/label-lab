@@ -8,6 +8,7 @@ dependencies = ["fastapi", "uvicorn", "psycopg[binary]", "httpx"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
+anthropic = ["anthropic"]
 
 [tool.setuptools]
 packages = ["labellab"]

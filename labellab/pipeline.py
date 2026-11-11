@@ -6,7 +6,7 @@ from pathlib import Path
 
 from . import rules
 from .allergens import check_allergens
-from .llm import ResultCache, check_claims, get_llm
+from .llm import BUDGET_USD, ResultCache, check_claims, get_llm
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAPSHOT = ROOT / "data" / "products.json"
@@ -66,7 +66,8 @@ def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
         "checks": {c: ampel(per_check[c]) for c in CHECKS},
         "findings": findings,
         "llm": {"model": res.model, "mode": res.mode, "cached": res.cached, "seconds": res.seconds,
-                "tokens_in": res.tokens_in, "tokens_out": res.tokens_out, "error": res.error},
+                "tokens_in": res.tokens_in, "tokens_out": res.tokens_out, "error": res.error,
+                "cost_usd": round(res.cost_usd, 6), "allowed": res.allowed, "suspicious": res.suspicious},
         "product": {k: p.get(k) for k in ("generic_name", "labels", "description", "ingredients", "allergens_tags",
                                            "serving_size", "nutriments", "url")},
     }
@@ -75,6 +76,7 @@ def check_product(p: dict, llm, cache: ResultCache | None = None) -> dict:
 def summarize(results: list[dict], llm) -> dict:
     counts = {s: sum(1 for r in results if r["status"] == s) for s in ORDER}
     seconds = sum(r["llm"]["seconds"] for r in results)
+    cost = sum(r["llm"]["cost_usd"] for r in results)
     sources = {}
     for s in ("brand", "off"):
         rs = [r for r in results if r.get("source") == s]
@@ -86,7 +88,10 @@ def summarize(results: list[dict], llm) -> dict:
         "mode": llm.mode, "model": llm.model,
         "placeholder": llm.mode == "fake",
         "products": len(results), "counts": counts,
-        "api_cost_eur": 0,
+        "api_cost_usd": round(cost, 4),
+        "budget_usd": BUDGET_USD if llm.mode == "claude" else 0,
+        "claims_allowed": sum(r["llm"]["allowed"] for r in results),
+        "claims_to_model": sum(r["llm"]["suspicious"] for r in results),
         "tokens_in": sum(r["llm"]["tokens_in"] for r in results),
         "tokens_out": sum(r["llm"]["tokens_out"] for r in results),
         "llm_seconds": round(seconds, 1), "llm_minutes": round(seconds / 60, 1),
