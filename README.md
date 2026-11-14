@@ -6,7 +6,7 @@ Produktdaten Check für Supplements und Proteinprodukte. Gedacht für Fitness Ma
 
 ## Das Problem
 
-Bei Proteinpulver und Riegeln stecken die Fehler oft in den Daten: Nährwerte fehlen, Zucker ist höher als Kohlenhydrate, die Kalorien passen nicht zu den Makros, ein Allergen steht in den Zutaten, aber nicht in der Deklaration. Dazu kommen Werbeaussagen, die nach der EU Verordnung 1924/2006 nicht zulässig sind. Label Lab prüft das für 1.773 Produkte aus zwei Quellen und zeigt das Ergebnis als Ampel. Die Standardansicht ist der Katalog der Marke RAWFORM, daneben lassen sich rund 1.700 echte Supplements aus ganz Europa von Open Food Facts umschalten (Filter nach Land, Liste mit "Mehr laden").
+Bei Proteinpulver und Riegeln stecken die Fehler oft in den Daten: Nährwerte fehlen, Zucker ist höher als Kohlenhydrate, die Kalorien passen nicht zu den Makros, ein Allergen steht in den Zutaten, aber nicht in der Deklaration. Dazu kommen Werbeaussagen, die nach der EU Verordnung 1924/2006 nicht zulässig sind. Label Lab prüft das für 1.773 Produkte aus zwei Quellen und zeigt das Ergebnis als Ampel. Die Standardansicht ist der Katalog der Marke RAWFORM, daneben lassen sich 1.720 echte Supplements aus ganz Europa von Open Food Facts umschalten (Filter nach Land, Liste mit "Mehr laden").
 
 RAWFORM ist eine fiktive Marke, Name und Texte sind erfunden. Der Katalog (`data/brand_catalog.json`) ist dem Sortiment einer typischen D2C Fitnessmarke nachgebaut.
 
@@ -104,13 +104,13 @@ Wer kein Ollama auf dem eigenen Rechner hat, kann den echten Lauf in GitHub Code
 
 Die Ports 8000 (API und Dashboard) und 5678 (n8n) werden ebenfalls weitergeleitet, falls dort `docker compose up --build` laufen soll. Der Codespace sollte danach gelöscht werden, damit keine Stunden weiterlaufen.
 
-Die Ergebnisse in `web/public/results.json` stammen bis zum ersten echten Lauf aus dem Fake Modus. Das Dashboard zeigt dann ein Platzhalter Banner.
+Die Ergebnisse in `web/public/results.json` stammen aus einem echten Lauf mit Claude Haiku. Im Fake Modus zeigt das Dashboard ein Platzhalter Banner.
 
 ## Kosten
 
-Mit Claude Haiku: Das Dashboard zeigt "1.773 Produkte geprüft für X Cent" (US Cent) und die Kosten pro Produkt. Der Vorfilter hält die Aufrufe klein, bei den aktuellen Daten gehen nur wenige Produkte mit wenigen Sätzen ans Modell, das sind Bruchteile eines Cents bis wenige Cent pro Lauf. Mehr als 0,30 USD gibt die Budgetgrenze nicht frei.
+Mit Claude Haiku: Der echte Lauf hat 1.773 Produkte für 0,08 US Cent geprüft (0,0008 USD). Der Vorfilter hält die Aufrufe klein: Von 80 Werbeaussagen gingen nur 25 ans Modell, 40 Sekunden Rechenzeit. Mehr als 0,30 USD gibt die Budgetgrenze nicht frei.
 
-Mit Ollama: 0 € API Kosten, es entstehen nur Rechenzeit und Strom auf dem eigenen Rechner. Das Dashboard zeigt "1.773 Produkte geprüft, 0 € API Kosten, X Minuten lokal".
+Mit Ollama: 0 € API Kosten, es entstehen nur Rechenzeit und Strom auf dem eigenen Rechner. Das Dashboard zeigt dann die Produktzahl, 0 € API Kosten und die lokale Laufzeit.
 
 ## Daten und Lizenz
 
